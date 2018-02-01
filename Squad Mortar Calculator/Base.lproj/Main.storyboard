@@ -1,24 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Courier.ttc">
+            <string>Courier-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdb-gX-v7B">
+                                <rect key="frame" x="0.0" y="20" width="375" height="100"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Rgk-LQ-WuN"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="MPQ-Uw-oEX" kind="embed" id="Jof-MT-YWh"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kdb-gX-v7B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XWP-sL-zbg"/>
+                            <constraint firstItem="kdb-gX-v7B" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="dMn-0D-Vsy"/>
+                            <constraint firstItem="kdb-gX-v7B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="p6L-S9-ZED"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="108.39580209895054"/>
+        </scene>
+        <!--Mortar View Controller-->
+        <scene sceneID="uPJ-7F-N99">
+            <objects>
+                <viewController id="MPQ-Uw-oEX" customClass="MortarViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="64A-en-bBx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mortar Position" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMS-nZ-Id3">
+                                <rect key="frame" x="75.5" y="0.0" width="225.5" height="25"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8m-xK-ynM" userLabel="Mortar Fields View">
+                                <rect key="frame" x="10" y="35" width="250" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="A1" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EQe-zm-yqw" userLabel="Left Field" customClass="MaxLengthTextField" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="eht-12-qiF"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="rVa-t4-Ive"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLU-L5-H0j" userLabel="Left Dash">
+                                        <rect key="frame" x="50" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="ViY-Qh-otm"/>
+                                            <constraint firstAttribute="height" constant="50" id="nsL-IF-9zD"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="-">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="35"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.90000000000000002" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lKI-RC-ydu" userLabel="Middle Field" customClass="MaxLengthTextField" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="100" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="8cZ-OU-xUr"/>
+                                            <constraint firstAttribute="height" constant="50" id="Jxa-j4-R0M"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGj-lM-n45" userLabel="Right Dash">
+                                        <rect key="frame" x="150" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="W5I-Rk-7lg"/>
+                                            <constraint firstAttribute="width" constant="50" id="Yny-lF-y8U"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="-">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="35"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.90000000000000002" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VEL-T7-8AM" userLabel="Right Field" customClass="MaxLengthTextField" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="200" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="QcE-7f-rsO"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="SfK-8s-MaF"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="8NM-Es-8D5"/>
+                                    <constraint firstItem="VEL-T7-8AM" firstAttribute="width" secondItem="EQe-zm-yqw" secondAttribute="width" id="FoX-5d-gad"/>
+                                    <constraint firstItem="lKI-RC-ydu" firstAttribute="width" secondItem="EQe-zm-yqw" secondAttribute="width" id="IEY-0N-vBR"/>
+                                    <constraint firstAttribute="height" constant="50" id="hQU-TL-wNq"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHB-ef-LSq">
+                                <rect key="frame" x="280" y="35" width="85" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3GJ-38-eAJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
+                                <state key="normal" title="INPUT">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FMS-nZ-Id3" firstAttribute="centerX" secondItem="64A-en-bBx" secondAttribute="centerX" id="KbT-To-wld"/>
+                            <constraint firstItem="G8m-xK-ynM" firstAttribute="leading" secondItem="NWO-6U-afu" secondAttribute="leading" constant="10" id="TIF-s9-mPS"/>
+                            <constraint firstItem="PHB-ef-LSq" firstAttribute="leading" secondItem="G8m-xK-ynM" secondAttribute="trailing" constant="20" id="UgN-cE-Cr2"/>
+                            <constraint firstItem="G8m-xK-ynM" firstAttribute="top" secondItem="64A-en-bBx" secondAttribute="topMargin" constant="35" id="bHb-bH-EJj"/>
+                            <constraint firstItem="NWO-6U-afu" firstAttribute="trailing" secondItem="PHB-ef-LSq" secondAttribute="trailing" constant="10" id="oEe-70-P00"/>
+                            <constraint firstItem="FMS-nZ-Id3" firstAttribute="top" secondItem="64A-en-bBx" secondAttribute="topMargin" id="t29-xD-kMi"/>
+                            <constraint firstItem="PHB-ef-LSq" firstAttribute="top" secondItem="64A-en-bBx" secondAttribute="top" constant="35" id="vd0-kf-Rhn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NWO-6U-afu"/>
+                    </view>
+                    <connections>
+                        <outlet property="leftMortarField" destination="EQe-zm-yqw" id="5yx-ZW-d1m"/>
+                        <outlet property="middleMortarField" destination="lKI-RC-ydu" id="pxh-Y7-oEE"/>
+                        <outlet property="rightMortarField" destination="VEL-T7-8AM" id="Uyv-BK-9ew"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ugc-Eg-i3k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="476"/>
         </scene>
     </scenes>
 </document>
