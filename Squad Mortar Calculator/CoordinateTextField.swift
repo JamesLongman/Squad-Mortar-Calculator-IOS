@@ -1,23 +1,21 @@
 //
 //  CoordinateTextField.swift
 //  Squad Mortar Calculator
-//
-//
-
-import UIKit
-
-//  ===============================================
 //  This section of code was primarily written by
 //  Joey Devilla as shown on globalnerdy.com
 
-class MaxLengthTextField: UITextField, UITextFieldDelegate {
+import UIKit
+
+class CoordinatesTextField: UITextField, UITextFieldDelegate {
     private var characterLimit: Int?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         delegate = self
+        autocorrectionType = .no
     }
     
+    @IBInspectable var allowedChars: String = ""
     @IBInspectable var maxLength: Int {
         get {
             guard let length = characterLimit else {
@@ -37,9 +35,8 @@ class MaxLengthTextField: UITextField, UITextFieldDelegate {
         
         let currentText = textField.text ?? ""
         let prospectiveText = (currentText as NSString).replacingCharacters(in: range, with: string)
-        return prospectiveText.count <= maxLength
+        return prospectiveText.count <= maxLength && prospectiveText.containsOnlyCharactersIn(matchCharacters: allowedChars)
     }
-//  ===============================================
     
     
     // Allow keyboard to be dismissed via return key
@@ -47,4 +44,14 @@ class MaxLengthTextField: UITextField, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+}
+
+extension String {
+    
+    // Returns true if the string contains only characters found in matchCharacters.
+    func containsOnlyCharactersIn(matchCharacters: String) -> Bool {
+        let disallowedCharacterSet = NSCharacterSet(charactersIn: matchCharacters).inverted
+        return self.rangeOfCharacter(from: disallowedCharacterSet) == nil
+    }
+    
 }

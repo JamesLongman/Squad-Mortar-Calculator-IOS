@@ -65,7 +65,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8m-xK-ynM" userLabel="Mortar Fields View">
                                 <rect key="frame" x="10" y="35" width="250" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="A1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EQe-zm-yqw" userLabel="Left Field" customClass="MaxLengthTextField" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="A1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EQe-zm-yqw" userLabel="Left Field" customClass="CoordinatesTextField" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="eht-12-qiF"/>
@@ -77,6 +77,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
                                                 <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="A1B"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLU-L5-H0j" userLabel="Left Dash">
@@ -95,7 +96,7 @@
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lKI-RC-ydu" userLabel="Middle Field" customClass="MaxLengthTextField" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lKI-RC-ydu" userLabel="Middle Field" customClass="CoordinatesTextField" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
                                         <rect key="frame" x="100" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="8cZ-OU-xUr"/>
@@ -125,7 +126,7 @@
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VEL-T7-8AM" userLabel="Right Field" customClass="MaxLengthTextField" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VEL-T7-8AM" userLabel="Right Field" customClass="CoordinatesTextField" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
                                         <rect key="frame" x="200" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="QcE-7f-rsO"/>
@@ -172,9 +173,9 @@
                         <viewLayoutGuide key="safeArea" id="NWO-6U-afu"/>
                     </view>
                     <connections>
-                        <outlet property="leftMortarField" destination="EQe-zm-yqw" id="5yx-ZW-d1m"/>
-                        <outlet property="middleMortarField" destination="lKI-RC-ydu" id="pxh-Y7-oEE"/>
-                        <outlet property="rightMortarField" destination="VEL-T7-8AM" id="Uyv-BK-9ew"/>
+                        <outlet property="leftMortarField" destination="EQe-zm-yqw" id="UiU-t0-FbU"/>
+                        <outlet property="middleMortarField" destination="lKI-RC-ydu" id="gOW-4R-xfq"/>
+                        <outlet property="rightMortarField" destination="VEL-T7-8AM" id="eav-Ho-x0V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugc-Eg-i3k" userLabel="First Responder" sceneMemberID="firstResponder"/>

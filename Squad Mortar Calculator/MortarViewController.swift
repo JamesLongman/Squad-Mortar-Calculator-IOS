@@ -11,10 +11,11 @@ import UIKit
 class MortarViewController: UIViewController, UITextFieldDelegate {
 
     // 3 fields and button in Mortar view
+    @IBOutlet weak var leftMortarField: CoordinatesTextField!
+    @IBOutlet weak var middleMortarField: CoordinatesTextField!
+    @IBOutlet weak var rightMortarField: CoordinatesTextField!
     @IBOutlet weak var editButton: UIButton!
-    @IBOutlet weak var leftMortarField: MaxLengthTextField!
-    @IBOutlet weak var middleMortarField: MaxLengthTextField!
-    @IBOutlet weak var rightMortarField: MaxLengthTextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
