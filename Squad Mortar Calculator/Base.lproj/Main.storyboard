@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -148,39 +149,117 @@
                                     <constraint firstAttribute="height" constant="50" id="hQU-TL-wNq"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHB-ef-LSq">
-                                <rect key="frame" x="280" y="35" width="85" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4c-ly-Bw9">
+                                <rect key="frame" x="300" y="35" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="3GJ-38-eAJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="huJ-GP-fYP"/>
+                                    <constraint firstAttribute="width" constant="50" id="kwF-91-k9M"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
-                                <state key="normal" title="INPUT">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
+                                <connections>
+                                    <segue destination="29J-Vt-eAO" kind="embed" id="TAE-dC-p96"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="FMS-nZ-Id3" firstAttribute="centerX" secondItem="64A-en-bBx" secondAttribute="centerX" id="KbT-To-wld"/>
                             <constraint firstItem="G8m-xK-ynM" firstAttribute="leading" secondItem="NWO-6U-afu" secondAttribute="leading" constant="10" id="TIF-s9-mPS"/>
-                            <constraint firstItem="PHB-ef-LSq" firstAttribute="leading" secondItem="G8m-xK-ynM" secondAttribute="trailing" constant="20" id="UgN-cE-Cr2"/>
+                            <constraint firstItem="NWO-6U-afu" firstAttribute="trailing" secondItem="D4c-ly-Bw9" secondAttribute="trailing" constant="25" id="ZRW-dJ-ivD"/>
                             <constraint firstItem="G8m-xK-ynM" firstAttribute="top" secondItem="64A-en-bBx" secondAttribute="topMargin" constant="35" id="bHb-bH-EJj"/>
-                            <constraint firstItem="NWO-6U-afu" firstAttribute="trailing" secondItem="PHB-ef-LSq" secondAttribute="trailing" constant="10" id="oEe-70-P00"/>
+                            <constraint firstItem="NWO-6U-afu" firstAttribute="bottom" secondItem="D4c-ly-Bw9" secondAttribute="bottom" constant="15" id="pj9-1B-Tug"/>
                             <constraint firstItem="FMS-nZ-Id3" firstAttribute="top" secondItem="64A-en-bBx" secondAttribute="topMargin" id="t29-xD-kMi"/>
-                            <constraint firstItem="PHB-ef-LSq" firstAttribute="top" secondItem="64A-en-bBx" secondAttribute="top" constant="35" id="vd0-kf-Rhn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NWO-6U-afu"/>
                     </view>
                     <connections>
                         <outlet property="leftMortarField" destination="EQe-zm-yqw" id="UiU-t0-FbU"/>
                         <outlet property="middleMortarField" destination="lKI-RC-ydu" id="gOW-4R-xfq"/>
+                        <outlet property="mortarGrid" destination="D4c-ly-Bw9" id="chf-Bc-6Jp"/>
                         <outlet property="rightMortarField" destination="VEL-T7-8AM" id="eav-Ho-x0V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugc-Eg-i3k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="476"/>
+            <point key="canvasLocation" x="137" y="721"/>
+        </scene>
+        <!--Enlarged Mortar Grid View Controller-->
+        <scene sceneID="Eku-55-pRQ">
+            <objects>
+                <viewController storyboardIdentifier="EnlargedMortarGridView" id="uOB-Tw-l8b" customClass="Enlarged_Mortar_Grid_View_Controller" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7VQ-Ak-AFw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="iBf-dW-G6R">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iBf-dW-G6R" secondAttribute="height" multiplier="1:1" id="864-ZQ-ZYa"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="29J-Vt-eAO" kind="embed" id="uXi-eI-Hlx"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWj-tW-TTP">
+                                <rect key="frame" x="0.0" y="595" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButton:" destination="uOB-Tw-l8b" eventType="touchUpInside" id="nbl-8o-TC2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LWj-tW-TTP" firstAttribute="top" secondItem="iBf-dW-G6R" secondAttribute="bottom" constant="74" id="1WT-UB-uru"/>
+                            <constraint firstItem="iBf-dW-G6R" firstAttribute="centerY" secondItem="7VQ-Ak-AFw" secondAttribute="centerY" id="5hL-sr-QEp"/>
+                            <constraint firstItem="IoV-Wa-v9s" firstAttribute="trailing" secondItem="iBf-dW-G6R" secondAttribute="trailing" id="9lb-pu-nBd"/>
+                            <constraint firstItem="iBf-dW-G6R" firstAttribute="centerX" secondItem="7VQ-Ak-AFw" secondAttribute="centerX" id="JbC-jC-JaM"/>
+                            <constraint firstItem="LWj-tW-TTP" firstAttribute="leading" secondItem="iBf-dW-G6R" secondAttribute="leading" id="YdS-b8-gqP"/>
+                            <constraint firstItem="LWj-tW-TTP" firstAttribute="trailing" secondItem="iBf-dW-G6R" secondAttribute="trailing" id="anP-fK-uyG"/>
+                            <constraint firstItem="iBf-dW-G6R" firstAttribute="leading" secondItem="IoV-Wa-v9s" secondAttribute="leading" id="mlu-Wg-VNb"/>
+                            <constraint firstItem="IoV-Wa-v9s" firstAttribute="bottom" secondItem="LWj-tW-TTP" secondAttribute="bottom" constant="42" id="zXx-Y8-ssO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IoV-Wa-v9s"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cGN-j9-8hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930" y="802"/>
+        </scene>
+        <!--Mortar Grid View Controller-->
+        <scene sceneID="daF-aI-uvi">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYY-WI-I2i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="29J-Vt-eAO" customClass="MortarGridViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qTa-c0-Qmq">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="4" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ggz-dU-xul">
+                                <rect key="frame" x="0.0" y="17" width="50" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ggz-dU-xul" secondAttribute="trailing" id="GNc-Pe-C20"/>
+                            <constraint firstItem="7iL-U9-miD" firstAttribute="bottom" secondItem="ggz-dU-xul" secondAttribute="bottom" constant="6" id="Hc8-EP-eUT"/>
+                            <constraint firstItem="ggz-dU-xul" firstAttribute="leading" secondItem="qTa-c0-Qmq" secondAttribute="leading" id="UGl-h0-NMO"/>
+                            <constraint firstItem="ggz-dU-xul" firstAttribute="top" secondItem="7iL-U9-miD" secondAttribute="top" constant="17" id="lJT-lt-yhQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7iL-U9-miD"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="134.40000000000001" y="1146.0269865067467"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="TAE-dC-p96"/>
+    </inferredMetricsTieBreakers>
 </document>

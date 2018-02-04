@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E6891B5E2023172F0065492F /* Retina HD 4.7 Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = E6891B5D2023172F0065492F /* Retina HD 4.7 Portrait.png */; };
-		E6891B60202317350065492F /* Retina HD 5.5 Portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = E6891B5F202317350065492F /* Retina HD 5.5 Portrait.png */; };
+		E66FFE922026692B007B730B /* MortarGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66FFE912026692B007B730B /* MortarGridViewController.swift */; };
+		E66FFE94202735A2007B730B /* Enlarged Mortar Grid View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66FFE93202735A2007B730B /* Enlarged Mortar Grid View Controller.swift */; };
 		E6891B64202369DD0065492F /* MortarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6891B63202369DD0065492F /* MortarViewController.swift */; };
 		E6A11E872023AEE400A0643A /* CoordinateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A11E862023AEE400A0643A /* CoordinateTextField.swift */; };
 		E6D4CFDF2022EA0900FF5658 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D4CFDE2022EA0900FF5658 /* AppDelegate.swift */; };
@@ -38,8 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E6891B5D2023172F0065492F /* Retina HD 4.7 Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Retina HD 4.7 Portrait.png"; path = "../../../../Downloads/Retina HD 4.7 Portrait.png"; sourceTree = "<group>"; };
-		E6891B5F202317350065492F /* Retina HD 5.5 Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Retina HD 5.5 Portrait.png"; path = "../../../../Downloads/Retina HD 5.5 Portrait.png"; sourceTree = "<group>"; };
+		E66FFE8F2026610A007B730B /* Retina HD 5.5 Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Retina HD 5.5 Portrait.png"; sourceTree = "<group>"; };
+		E66FFE902026610B007B730B /* Retina HD 4.7 Portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Retina HD 4.7 Portrait.png"; sourceTree = "<group>"; };
+		E66FFE912026692B007B730B /* MortarGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortarGridViewController.swift; sourceTree = "<group>"; };
+		E66FFE93202735A2007B730B /* Enlarged Mortar Grid View Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Enlarged Mortar Grid View Controller.swift"; sourceTree = "<group>"; };
 		E6891B63202369DD0065492F /* MortarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortarViewController.swift; sourceTree = "<group>"; };
 		E6A11E862023AEE400A0643A /* CoordinateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateTextField.swift; sourceTree = "<group>"; };
 		E6D4CFDB2022EA0900FF5658 /* Squad Mortar Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Squad Mortar Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E66FFE8E202660F6007B730B /* Launch Images */ = {
+			isa = PBXGroup;
+			children = (
+				E6D4D0112023060800FF5658 /* iPhone X portrait.png */,
+				E66FFE8F2026610A007B730B /* Retina HD 5.5 Portrait.png */,
+				E66FFE902026610B007B730B /* Retina HD 4.7 Portrait.png */,
+			);
+			path = "Launch Images";
+			sourceTree = "<group>";
+		};
 		E6D4CFD22022EA0900FF5658 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +122,8 @@
 				E6D4CFDE2022EA0900FF5658 /* AppDelegate.swift */,
 				E6D4CFE02022EA0900FF5658 /* ViewController.swift */,
 				E6D4CFE22022EA0900FF5658 /* Main.storyboard */,
+				E66FFE93202735A2007B730B /* Enlarged Mortar Grid View Controller.swift */,
+				E66FFE912026692B007B730B /* MortarGridViewController.swift */,
 				E6A11E862023AEE400A0643A /* CoordinateTextField.swift */,
 				E6891B63202369DD0065492F /* MortarViewController.swift */,
 				E6D4CFE52022EA0900FF5658 /* Assets.xcassets */,
@@ -140,9 +154,7 @@
 		E6D4D010202305F900FF5658 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				E6D4D0112023060800FF5658 /* iPhone X portrait.png */,
-				E6891B5F202317350065492F /* Retina HD 5.5 Portrait.png */,
-				E6891B5D2023172F0065492F /* Retina HD 4.7 Portrait.png */,
+				E66FFE8E202660F6007B730B /* Launch Images */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -254,11 +266,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6891B5E2023172F0065492F /* Retina HD 4.7 Portrait.png in Resources */,
 				E6D4CFE92022EA0900FF5658 /* LaunchScreen.storyboard in Resources */,
 				E6D4CFE62022EA0900FF5658 /* Assets.xcassets in Resources */,
 				E6D4CFE42022EA0900FF5658 /* Main.storyboard in Resources */,
-				E6891B60202317350065492F /* Retina HD 5.5 Portrait.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,10 +293,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E66FFE922026692B007B730B /* MortarGridViewController.swift in Sources */,
 				E6A11E872023AEE400A0643A /* CoordinateTextField.swift in Sources */,
 				E6D4CFE12022EA0900FF5658 /* ViewController.swift in Sources */,
 				E6D4CFDF2022EA0900FF5658 /* AppDelegate.swift in Sources */,
 				E6891B64202369DD0065492F /* MortarViewController.swift in Sources */,
+				E66FFE94202735A2007B730B /* Enlarged Mortar Grid View Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
