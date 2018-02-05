@@ -1,20 +1,18 @@
 //
-//  Enlarged Mortar Grid View Controller.swift
+//  EnlargedMortarGridViewController.swift
 //  Squad Mortar Calculator
 //
-//  Created by James Longman on 04/02/2018.
+//  Created by James Longman on 05/02/2018.
 //  Copyright © 2018 James Longman. All rights reserved.
 //
 
 import UIKit
 
-class Enlarged_Mortar_Grid_View_Controller: UIViewController {
-    @IBAction func doneButton(_ sender: Any) {
-        presentingViewController?.dismiss(animated: true, completion: nil)
-    }
-    
+class EnlargedMortarGridViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 

@@ -182,25 +182,16 @@
             </objects>
             <point key="canvasLocation" x="137" y="721"/>
         </scene>
-        <!--Enlarged Mortar Grid View Controller-->
+        <!--Enlarged Mortar View Controller-->
         <scene sceneID="Eku-55-pRQ">
             <objects>
-                <viewController storyboardIdentifier="EnlargedMortarGridView" id="uOB-Tw-l8b" customClass="Enlarged_Mortar_Grid_View_Controller" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EnlargedMortarView" id="uOB-Tw-l8b" customClass="EnlargedMortarViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7VQ-Ak-AFw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="iBf-dW-G6R">
-                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="iBf-dW-G6R" secondAttribute="height" multiplier="1:1" id="864-ZQ-ZYa"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="29J-Vt-eAO" kind="embed" id="uXi-eI-Hlx"/>
-                                </connections>
-                            </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWj-tW-TTP">
-                                <rect key="frame" x="0.0" y="595" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="577" width="375" height="48"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Done">
@@ -210,24 +201,43 @@
                                     <action selector="doneButton:" destination="uOB-Tw-l8b" eventType="touchUpInside" id="nbl-8o-TC2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddK-Gf-8z2">
+                                <rect key="frame" x="0.0" y="63" width="375" height="48"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Center">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEm-Tx-j6D">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SEm-Tx-j6D" secondAttribute="height" multiplier="1:1" id="GLb-cL-eeB"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="aMc-I2-uxg" kind="embed" id="Jpf-fX-fDC"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="LWj-tW-TTP" firstAttribute="top" secondItem="iBf-dW-G6R" secondAttribute="bottom" constant="74" id="1WT-UB-uru"/>
-                            <constraint firstItem="iBf-dW-G6R" firstAttribute="centerY" secondItem="7VQ-Ak-AFw" secondAttribute="centerY" id="5hL-sr-QEp"/>
-                            <constraint firstItem="IoV-Wa-v9s" firstAttribute="trailing" secondItem="iBf-dW-G6R" secondAttribute="trailing" id="9lb-pu-nBd"/>
-                            <constraint firstItem="iBf-dW-G6R" firstAttribute="centerX" secondItem="7VQ-Ak-AFw" secondAttribute="centerX" id="JbC-jC-JaM"/>
-                            <constraint firstItem="LWj-tW-TTP" firstAttribute="leading" secondItem="iBf-dW-G6R" secondAttribute="leading" id="YdS-b8-gqP"/>
-                            <constraint firstItem="LWj-tW-TTP" firstAttribute="trailing" secondItem="iBf-dW-G6R" secondAttribute="trailing" id="anP-fK-uyG"/>
-                            <constraint firstItem="iBf-dW-G6R" firstAttribute="leading" secondItem="IoV-Wa-v9s" secondAttribute="leading" id="mlu-Wg-VNb"/>
-                            <constraint firstItem="IoV-Wa-v9s" firstAttribute="bottom" secondItem="LWj-tW-TTP" secondAttribute="bottom" constant="42" id="zXx-Y8-ssO"/>
+                            <constraint firstItem="LWj-tW-TTP" firstAttribute="trailing" secondItem="SEm-Tx-j6D" secondAttribute="trailing" id="2Wt-67-8hz"/>
+                            <constraint firstItem="LWj-tW-TTP" firstAttribute="top" secondItem="SEm-Tx-j6D" secondAttribute="bottom" constant="56" id="8FL-vS-4W2"/>
+                            <constraint firstItem="IoV-Wa-v9s" firstAttribute="trailing" secondItem="SEm-Tx-j6D" secondAttribute="trailing" id="8tH-R0-Q8c"/>
+                            <constraint firstItem="ddK-Gf-8z2" firstAttribute="leading" secondItem="SEm-Tx-j6D" secondAttribute="leading" id="Aqn-H2-wTY"/>
+                            <constraint firstItem="ddK-Gf-8z2" firstAttribute="top" secondItem="IoV-Wa-v9s" secondAttribute="top" constant="43" id="FhF-DS-ANw"/>
+                            <constraint firstItem="LWj-tW-TTP" firstAttribute="leading" secondItem="SEm-Tx-j6D" secondAttribute="leading" id="f9G-Fo-Hrb"/>
+                            <constraint firstItem="ddK-Gf-8z2" firstAttribute="trailing" secondItem="SEm-Tx-j6D" secondAttribute="trailing" id="n5a-5n-VB8"/>
+                            <constraint firstItem="SEm-Tx-j6D" firstAttribute="centerX" secondItem="7VQ-Ak-AFw" secondAttribute="centerX" id="pa8-zI-nhm"/>
+                            <constraint firstItem="SEm-Tx-j6D" firstAttribute="leading" secondItem="IoV-Wa-v9s" secondAttribute="leading" id="pez-w4-ZPh"/>
+                            <constraint firstItem="SEm-Tx-j6D" firstAttribute="centerY" secondItem="7VQ-Ak-AFw" secondAttribute="centerY" id="zeg-8K-xaB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IoV-Wa-v9s"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGN-j9-8hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="930" y="802"/>
+            <point key="canvasLocation" x="882" y="798"/>
         </scene>
         <!--Mortar Grid View Controller-->
         <scene sceneID="daF-aI-uvi">
@@ -235,31 +245,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYY-WI-I2i" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="29J-Vt-eAO" customClass="MortarGridViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qTa-c0-Qmq">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xYt-9a-zZD" userLabel="Mortar Grid">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mortar_green_dot" translatesAutoresizingMaskIntoConstraints="NO" id="QpQ-En-7Fh" userLabel="Mortar Pin">
+                                <rect key="frame" x="22.5" y="22.5" width="5" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xYt-9a-zZD" firstAttribute="leading" secondItem="7iL-U9-miD" secondAttribute="leading" id="2eP-vh-qdh"/>
+                            <constraint firstItem="7iL-U9-miD" firstAttribute="bottom" secondItem="xYt-9a-zZD" secondAttribute="bottom" id="Fg3-Cd-UXp"/>
+                            <constraint firstItem="xYt-9a-zZD" firstAttribute="top" secondItem="7iL-U9-miD" secondAttribute="top" id="Gav-t6-2Cb"/>
+                            <constraint firstItem="7iL-U9-miD" firstAttribute="trailing" secondItem="xYt-9a-zZD" secondAttribute="trailing" id="xv6-L9-aIe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7iL-U9-miD"/>
+                    </view>
+                    <connections>
+                        <outlet property="mortarPin" destination="QpQ-En-7Fh" id="A0T-M8-mrd"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="136" y="1047"/>
+        </scene>
+        <!--Enlarged Mortar Grid View Controller-->
+        <scene sceneID="GgB-wS-ej9">
+            <objects>
+                <viewController id="aMc-I2-uxg" customClass="EnlargedMortarGridViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mko-Xn-OkB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="4" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ggz-dU-xul">
-                                <rect key="frame" x="0.0" y="17" width="375" height="352"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e7A-iG-vWK" userLabel="Mortar Grid">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mortar_green_dot" translatesAutoresizingMaskIntoConstraints="NO" id="hcq-ew-Zb5" userLabel="Mortar Pin">
+                                <rect key="frame" x="177" y="178" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVO-2D-ZIs">
+                                <rect key="frame" x="166" y="120" width="271" height="167"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ggz-dU-xul" secondAttribute="trailing" id="GNc-Pe-C20"/>
-                            <constraint firstItem="7iL-U9-miD" firstAttribute="bottom" secondItem="ggz-dU-xul" secondAttribute="bottom" constant="6" id="Hc8-EP-eUT"/>
-                            <constraint firstItem="ggz-dU-xul" firstAttribute="leading" secondItem="qTa-c0-Qmq" secondAttribute="leading" id="UGl-h0-NMO"/>
-                            <constraint firstItem="ggz-dU-xul" firstAttribute="top" secondItem="7iL-U9-miD" secondAttribute="top" constant="17" id="lJT-lt-yhQ"/>
+                            <constraint firstItem="e7A-iG-vWK" firstAttribute="leading" secondItem="Mko-Xn-OkB" secondAttribute="leading" id="ExO-7b-DCX"/>
+                            <constraint firstAttribute="trailing" secondItem="e7A-iG-vWK" secondAttribute="trailing" id="SWY-6d-EMg"/>
+                            <constraint firstItem="e7A-iG-vWK" firstAttribute="top" secondItem="Mko-Xn-OkB" secondAttribute="top" id="ZTI-bH-U37"/>
+                            <constraint firstAttribute="bottom" secondItem="e7A-iG-vWK" secondAttribute="bottom" id="vF9-Mi-EHR"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="7iL-U9-miD"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="COK-CU-mgn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134.40000000000001" y="1146.0269865067467"/>
+            <point key="canvasLocation" x="233" y="1323"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="uXi-eI-Hlx"/>
-    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="mortar_green_dot" width="300" height="300"/>
+    </resources>
 </document>
