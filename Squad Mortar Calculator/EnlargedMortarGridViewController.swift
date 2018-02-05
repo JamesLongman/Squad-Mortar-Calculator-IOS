@@ -25,26 +25,22 @@ class EnlargedMortarGridViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    // Set pin position to the position of any touch within the view
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch : UITouch! = touches.first! as UITouch
         pinPosition = touch.location(in: self.view)
         mortarPin.center = pinPosition
     }
     
+    // Allow the user to drag the pin as long as they don't drag it out of the view contaner
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
         let touch : UITouch! = touches.first! as UITouch
-        pinPosition = touch.location(in: self.view)
-        mortarPin.center = pinPosition
+        let candidatePosition = touch.location(in: self.view)
+        if self.view.point(inside: candidatePosition, with: event) {
+            pinPosition = candidatePosition
+            mortarPin.center = pinPosition
+        }
     }
 
 }
