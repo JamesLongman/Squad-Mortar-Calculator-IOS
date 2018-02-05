@@ -10,6 +10,10 @@ import UIKit
 
 class EnlargedMortarGridViewController: UIViewController {
 
+    var pinPosition = CGPoint(x: 0, y: 0)
+    
+    @IBOutlet weak var mortarPin: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,5 +35,16 @@ class EnlargedMortarGridViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch : UITouch! = touches.first! as UITouch
+        pinPosition = touch.location(in: self.view)
+        mortarPin.center = pinPosition
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch : UITouch! = touches.first! as UITouch
+        pinPosition = touch.location(in: self.view)
+        mortarPin.center = pinPosition
+    }
 
 }

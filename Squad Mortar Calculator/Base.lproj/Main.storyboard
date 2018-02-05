@@ -292,7 +292,7 @@
                                 <rect key="frame" x="166" y="120" width="271" height="167"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -304,6 +304,9 @@
                             <constraint firstAttribute="bottom" secondItem="e7A-iG-vWK" secondAttribute="bottom" id="vF9-Mi-EHR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mortarPin" destination="hcq-ew-Zb5" id="3hE-SQ-GSG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="COK-CU-mgn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
