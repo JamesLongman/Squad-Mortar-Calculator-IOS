@@ -9,9 +9,17 @@
 import UIKit
 
 class EnlargedMortarViewController: UIViewController {
+    var enlargedMortarGridViewController: EnlargedMortarGridViewController?
+    
     @IBAction func doneButton(_ sender: Any) {
         presentingViewController?.dismiss(animated: true, completion: nil)
     }
+    
+    
+    @IBAction func centerButton(_ sender: Any) {
+        enlargedMortarGridViewController!.center()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +29,12 @@ class EnlargedMortarViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "embeddedEnlargedMortarGridSegue") {
+            enlargedMortarGridViewController = (segue.destination as! EnlargedMortarGridViewController)
+        }
     }
     
 

@@ -208,6 +208,9 @@
                                 <state key="normal" title="Center">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="centerButton:" destination="uOB-Tw-l8b" eventType="touchUpInside" id="ADf-GB-Wdd"/>
+                                </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEm-Tx-j6D">
                                 <rect key="frame" x="0.0" y="146" width="375" height="375"/>
@@ -215,7 +218,7 @@
                                     <constraint firstAttribute="width" secondItem="SEm-Tx-j6D" secondAttribute="height" multiplier="1:1" id="GLb-cL-eeB"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="aMc-I2-uxg" kind="embed" id="Jpf-fX-fDC"/>
+                                    <segue destination="aMc-I2-uxg" kind="embed" identifier="embeddedEnlargedMortarGridSegue" id="Jpf-fX-fDC"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -242,7 +245,6 @@
         <!--Mortar Grid View Controller-->
         <scene sceneID="daF-aI-uvi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYY-WI-I2i" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="29J-Vt-eAO" customClass="MortarGridViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qTa-c0-Qmq">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -269,6 +271,7 @@
                         <outlet property="mortarPin" destination="QpQ-En-7Fh" id="A0T-M8-mrd"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYY-WI-I2i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136" y="1047"/>
         </scene>
@@ -303,6 +306,7 @@
                             <constraint firstItem="e7A-iG-vWK" firstAttribute="top" secondItem="Mko-Xn-OkB" secondAttribute="top" id="ZTI-bH-U37"/>
                             <constraint firstAttribute="bottom" secondItem="e7A-iG-vWK" secondAttribute="bottom" id="vF9-Mi-EHR"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="OJk-jv-FX5"/>
                     </view>
                     <connections>
                         <outlet property="mortarPin" destination="hcq-ew-Zb5" id="3hE-SQ-GSG"/>
