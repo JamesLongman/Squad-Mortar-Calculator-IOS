@@ -8,15 +8,20 @@
 
 import UIKit
 
+protocol PassMortarLoc1 {
+    func passMortar1(x: Double, y: Double)
+}
+
 class EnlargedMortarGridViewController: UIViewController {
 
-    var pinPosition = CGPoint(x: 0, y: 0)
+    var mortarSubgridXPos: Double = 100/6
+    var mortarSubgridYPos: Double = 100/6
+    var delegate: PassMortarLoc1?
     
     @IBOutlet weak var mortarPin: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -28,8 +33,7 @@ class EnlargedMortarGridViewController: UIViewController {
     // Set pin position to the position of any touch within the view
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch : UITouch! = touches.first! as UITouch
-        pinPosition = touch.location(in: self.view)
-        mortarPin.center = pinPosition
+        updatePosition(position: touch.location(in: self.view))
     }
     
     // Allow the user to drag the pin as long as they don't drag it out of the view contaner
@@ -38,15 +42,30 @@ class EnlargedMortarGridViewController: UIViewController {
         let touch : UITouch! = touches.first! as UITouch
         let candidatePosition = touch.location(in: self.view)
         if self.view.point(inside: candidatePosition, with: event) {
-            pinPosition = candidatePosition
-            mortarPin.center = pinPosition
+            updatePosition(position: candidatePosition)
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let xPoint = ((mortarSubgridXPos * Double(self.view!.bounds.width)) / (100/3))
+        let yPoint = ((mortarSubgridYPos * Double(self.view!.bounds.height)) / (100/3))
+        mortarPin.center = CGPoint(x: xPoint, y: yPoint)
     }
     
     // Called from center button in EnlargedMortarViewController.swift, centers pin
     func center() {
-        pinPosition = CGPoint(x: self.view!.bounds.width/2, y: self.view!.bounds.height/2)
-        mortarPin.center = pinPosition
+        updatePosition(position: CGPoint(x: self.view!.bounds.width/2, y: self.view!.bounds.height/2))
     }
+    
+    func updatePosition(position: CGPoint) {
+        mortarPin.center = position
+        
+        mortarSubgridXPos = Double(position.x / self.view!.bounds.width) * (100/3)
+        mortarSubgridYPos = Double(position.y / self.view!.bounds.height) * (100/3)
+        
+        delegate!.passMortar1(x: mortarSubgridXPos, y: mortarSubgridYPos)
+    }
+    
+    
 
 }

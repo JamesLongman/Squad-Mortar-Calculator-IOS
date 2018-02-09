@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MortarViewController: UIViewController, UITextFieldDelegate {
+class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc3 {
 
     // 3 fields and grid in Mortar view
     @IBOutlet weak var leftMortarField: CoordinatesTextField!
@@ -32,6 +32,17 @@ class MortarViewController: UIViewController, UITextFieldDelegate {
         leftMortarField.resignFirstResponder()
         middleMortarField.resignFirstResponder()
         rightMortarField.resignFirstResponder()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "embeddedMortarGridSegue") {
+            let mortarGridViewController = (segue.destination as! MortarGridViewController)
+            mortarGridViewController.delegate = self
+        }
+    }
+    
+    func passMortar3(x: Double, y: Double) {
+        
     }
 
 }
