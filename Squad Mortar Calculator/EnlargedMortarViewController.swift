@@ -51,7 +51,7 @@ class EnlargedMortarViewController: UIViewController, PassMortarLoc1 {
     func passMortar1(x: Double, y: Double) {
         mortarSubgridXPos = x
         mortarSubgridYPos = y
-        delegate!.passMortar2(x: x, y: x)
+        delegate!.passMortar2(x: x, y: y)
     }
     
 

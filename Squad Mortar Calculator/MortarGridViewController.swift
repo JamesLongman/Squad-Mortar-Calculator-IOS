@@ -14,13 +14,6 @@ protocol PassMortarLoc3 {
 
 class MortarGridViewController: UIViewController, PassMortarLoc2 {
     var delegate: PassMortarLoc3?
-    /*
-        Container view width = 50, height = 50
-        Pin width = 5, height = 5
-        Center coodinates = (view size - pin size)/2
-        ∴ Center coodinates are x = 22.5, y = 22.5
-    */
-    var mortarSubGridPosition = CGPoint(x: 22.5, y: 22.5)
     var mortarSubgridXPos: Double = 100/6
     var mortarSubgridYPos: Double = 100/6
     
@@ -48,14 +41,13 @@ class MortarGridViewController: UIViewController, PassMortarLoc2 {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        mortarPin.center = mortarSubGridPosition
+        let xPoint = mortarSubgridXPos * (3/2)
+        let yPoint = mortarSubgridYPos * (3/2)
+        mortarPin.center = CGPoint(x: xPoint, y: yPoint)
     }
     
     
     func passMortar2(x: Double, y: Double) {
-        mortarSubGridPosition.x = CGFloat(x * (3/2))
-        mortarSubGridPosition.y = CGFloat(y * (3/2))
-        
         mortarSubgridXPos = x
         mortarSubgridYPos = y
         
