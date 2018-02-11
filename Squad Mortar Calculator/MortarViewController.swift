@@ -11,9 +11,9 @@ import UIKit
 class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc3 {
 
     // 3 fields and grid in Mortar view
-    @IBOutlet weak var leftMortarField: CoordinatesTextField!
-    @IBOutlet weak var middleMortarField: CoordinatesTextField!
-    @IBOutlet weak var rightMortarField: CoordinatesTextField!
+    @IBOutlet weak var leftMortarField: CoordinatesTextField1!
+    @IBOutlet weak var middleMortarField: CoordinatesTextField2!
+    @IBOutlet weak var rightMortarField: CoordinatesTextField2!
     @IBOutlet weak var mortarGrid: UIView!
     
     override func viewDidLoad() {
