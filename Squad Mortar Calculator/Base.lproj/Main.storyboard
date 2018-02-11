@@ -82,6 +82,9 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="acceptableFirstCharacters" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="acceptableSecondCharacters" value="123456789"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="leftMortarFieldEnded:" destination="MPQ-Uw-oEX" eventType="editingDidEnd" id="mzr-qt-AB1"/>
+                                        </connections>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLU-L5-H0j" userLabel="Left Dash">
                                         <rect key="frame" x="50" y="0.0" width="50" height="50"/>
@@ -113,6 +116,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="123456789"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="middleMortarFieldEnded:" destination="MPQ-Uw-oEX" eventType="editingDidEnd" id="0ke-0C-7TD"/>
+                                        </connections>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGj-lM-n45" userLabel="Right Dash">
                                         <rect key="frame" x="150" y="0.0" width="50" height="50"/>
@@ -144,6 +150,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="123456789"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="rightMortarFieldEnded:" destination="MPQ-Uw-oEX" eventType="editingDidEnd" id="e46-WG-Ebm"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -184,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugc-Eg-i3k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="721"/>
+            <point key="canvasLocation" x="137" y="594"/>
         </scene>
         <!--Enlarged Mortar View Controller-->
         <scene sceneID="Eku-55-pRQ">
@@ -244,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGN-j9-8hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="882" y="798"/>
+            <point key="canvasLocation" x="852" y="849"/>
         </scene>
         <!--Mortar Grid View Controller-->
         <scene sceneID="daF-aI-uvi">
@@ -277,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYY-WI-I2i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136" y="1047"/>
+            <point key="canvasLocation" x="136" y="797"/>
         </scene>
         <!--Enlarged Mortar Grid View Controller-->
         <scene sceneID="GgB-wS-ej9">
@@ -318,7 +327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="COK-CU-mgn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="233" y="1323"/>
+            <point key="canvasLocation" x="137" y="1117"/>
         </scene>
     </scenes>
     <resources>
