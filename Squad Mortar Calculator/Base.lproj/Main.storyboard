@@ -592,7 +592,7 @@
                                     <segue destination="R5O-bV-097" kind="embed" identifier="embeddedEnlargedTargetGridSegue" id="GA4-Wb-glY"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="it1-Fu-Mn6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="it1-Fu-Mn6">
                                 <rect key="frame" x="0.0" y="568" width="375" height="48"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -607,15 +607,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="it1-Fu-Mn6" firstAttribute="trailing" secondItem="l1Y-N4-i2G" secondAttribute="trailing" id="3Sh-U9-CI8"/>
                             <constraint firstItem="gnB-8E-Bcr" firstAttribute="trailing" secondItem="JcX-jr-jqm" secondAttribute="trailing" id="Cfx-xH-cmC"/>
                             <constraint firstItem="l1Y-N4-i2G" firstAttribute="centerY" secondItem="L3b-fr-g35" secondAttribute="centerY" id="Tx4-e9-74u"/>
                             <constraint firstItem="l1Y-N4-i2G" firstAttribute="trailing" secondItem="JcX-jr-jqm" secondAttribute="trailing" id="b2Z-oz-qBS"/>
                             <constraint firstItem="gnB-8E-Bcr" firstAttribute="leading" secondItem="JcX-jr-jqm" secondAttribute="leading" id="gEL-vl-0aW"/>
-                            <constraint firstItem="it1-Fu-Mn6" firstAttribute="leading" secondItem="l1Y-N4-i2G" secondAttribute="leading" id="j7t-4A-XmM"/>
+                            <constraint firstItem="it1-Fu-Mn6" firstAttribute="leading" secondItem="l1Y-N4-i2G" secondAttribute="leading" id="gMr-lD-7sP"/>
                             <constraint firstItem="gnB-8E-Bcr" firstAttribute="top" secondItem="JcX-jr-jqm" secondAttribute="top" constant="43" id="jFR-bP-Bxz"/>
                             <constraint firstItem="l1Y-N4-i2G" firstAttribute="leading" secondItem="JcX-jr-jqm" secondAttribute="leading" id="sA8-Ag-Bmn"/>
-                            <constraint firstItem="it1-Fu-Mn6" firstAttribute="top" secondItem="l1Y-N4-i2G" secondAttribute="bottom" constant="49" id="v05-Al-AzC"/>
+                            <constraint firstItem="it1-Fu-Mn6" firstAttribute="trailing" secondItem="l1Y-N4-i2G" secondAttribute="trailing" id="wdS-jl-3DY"/>
+                            <constraint firstItem="it1-Fu-Mn6" firstAttribute="top" secondItem="l1Y-N4-i2G" secondAttribute="bottom" constant="47" id="xOw-b1-jGC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JcX-jr-jqm"/>
                     </view>
