@@ -10,11 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    // Global variables to hold positions in "A111" string format
-    var mortarPosition = ""
-    var targetPosition = ""
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

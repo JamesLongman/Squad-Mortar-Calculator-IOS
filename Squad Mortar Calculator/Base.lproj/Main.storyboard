@@ -25,7 +25,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdb-gX-v7B">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdb-gX-v7B" userLabel="Mortar Container">
                                 <rect key="frame" x="0.0" y="20" width="375" height="100"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -35,12 +35,24 @@
                                     <segue destination="MPQ-Uw-oEX" kind="embed" id="Jof-MT-YWh"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rU7-1B-Qb6" userLabel="Target Container">
+                                <rect key="frame" x="0.0" y="120" width="375" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="7ri-Tc-m3a"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="WdG-Na-hiJ" kind="embed" id="puN-Ej-Rmb"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rU7-1B-Qb6" secondAttribute="trailing" id="C18-Dx-LMZ"/>
+                            <constraint firstItem="rU7-1B-Qb6" firstAttribute="top" secondItem="kdb-gX-v7B" secondAttribute="bottom" id="OIi-Ve-wmP"/>
                             <constraint firstItem="kdb-gX-v7B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XWP-sL-zbg"/>
                             <constraint firstItem="kdb-gX-v7B" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="dMn-0D-Vsy"/>
                             <constraint firstItem="kdb-gX-v7B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="p6L-S9-ZED"/>
+                            <constraint firstItem="rU7-1B-Qb6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wMf-vH-CFL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -193,7 +205,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugc-Eg-i3k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="594"/>
+            <point key="canvasLocation" x="95" y="621"/>
         </scene>
         <!--Enlarged Mortar View Controller-->
         <scene sceneID="Eku-55-pRQ">
@@ -253,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGN-j9-8hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="852" y="849"/>
+            <point key="canvasLocation" x="810" y="876"/>
         </scene>
         <!--Mortar Grid View Controller-->
         <scene sceneID="daF-aI-uvi">
@@ -286,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYY-WI-I2i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136" y="797"/>
+            <point key="canvasLocation" x="93" y="840"/>
         </scene>
         <!--Enlarged Mortar Grid View Controller-->
         <scene sceneID="GgB-wS-ej9">
@@ -304,13 +316,6 @@
                                 <rect key="frame" x="177" y="178" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVO-2D-ZIs">
-                                <rect key="frame" x="166" y="120" width="271" height="167"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -327,7 +332,297 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="COK-CU-mgn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="1117"/>
+            <point key="canvasLocation" x="94" y="1165"/>
+        </scene>
+        <!--Target View Controller-->
+        <scene sceneID="jCa-0Y-5wG">
+            <objects>
+                <viewController id="WdG-Na-hiJ" userLabel="Target View Controller" customClass="TargetViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bE9-35-wea">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6J5-HP-iW0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Position" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9A-QV-8xU">
+                                        <rect key="frame" x="75.5" y="8" width="225.5" height="25"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIs-NX-iGf" userLabel="Target Fields View">
+                                        <rect key="frame" x="10" y="43" width="250" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="A1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3hl-Mr-cjZ" userLabel="Left Field" customClass="CoordinatesTextField1" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="XXY-u3-AdB"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="bFN-p1-CDT"/>
+                                                </constraints>
+                                                <attributedString key="attributedText"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="A1B"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="acceptableFirstCharacters" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="acceptableSecondCharacters" value="123456789"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="leftMortarFieldEnded:" destination="MPQ-Uw-oEX" eventType="editingDidEnd" id="oMB-z9-HDm"/>
+                                                    <action selector="leftTargetFieldEnded:" destination="WdG-Na-hiJ" eventType="editingDidEnd" id="cYc-Ml-hbA"/>
+                                                </connections>
+                                            </textField>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTk-At-cfs" userLabel="Left Dash">
+                                                <rect key="frame" x="50" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="7EZ-WY-dAm"/>
+                                                    <constraint firstAttribute="width" constant="50" id="82I-q4-vgg"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="-">
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="35"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.90000000000000002" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4aK-kE-zHA" userLabel="Middle Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="100" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="btj-sG-2hT"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="hvZ-Fk-rQd"/>
+                                                </constraints>
+                                                <attributedString key="attributedText"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="123456789"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="middleMortarFieldEnded:" destination="MPQ-Uw-oEX" eventType="editingDidEnd" id="mdd-3i-iGN"/>
+                                                    <action selector="middleTargetFieldEnded:" destination="WdG-Na-hiJ" eventType="editingDidEnd" id="Zmd-D5-axh"/>
+                                                </connections>
+                                            </textField>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iuj-xO-fJF" userLabel="Right Dash">
+                                                <rect key="frame" x="150" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="FPt-vj-XZu"/>
+                                                    <constraint firstAttribute="height" constant="50" id="MTD-C7-u5F"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="-">
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="system" size="35"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="0.90000000000000002" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Qh-c3-MeH" userLabel="Right Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="8MB-LK-Tzx"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="nyN-Pu-h5u"/>
+                                                </constraints>
+                                                <attributedString key="attributedText"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="123456789"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="rightMortarFieldEnded:" destination="MPQ-Uw-oEX" eventType="editingDidEnd" id="0ke-iS-uUe"/>
+                                                    <action selector="rightTargetFieldEnded:" destination="WdG-Na-hiJ" eventType="editingDidEnd" id="FeC-Vh-ZaY"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="4aK-kE-zHA" firstAttribute="width" secondItem="3hl-Mr-cjZ" secondAttribute="width" id="49X-Jk-aiO"/>
+                                            <constraint firstAttribute="width" constant="250" id="dJF-kA-jbH"/>
+                                            <constraint firstAttribute="height" constant="50" id="szI-ly-3kA"/>
+                                            <constraint firstItem="6Qh-c3-MeH" firstAttribute="width" secondItem="3hl-Mr-cjZ" secondAttribute="width" id="ykH-q3-vec"/>
+                                        </constraints>
+                                    </stackView>
+                                    <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TsD-9G-lba">
+                                        <rect key="frame" x="300" y="35" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="17T-wy-rjD"/>
+                                            <constraint firstAttribute="width" constant="50" id="hb6-RR-WCk"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="9Kh-e5-eeO" kind="embed" identifier="embeddedTargetGridSegue" id="oe7-BR-N2a"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="RgB-AZ-z5b" firstAttribute="bottom" secondItem="TsD-9G-lba" secondAttribute="bottom" constant="15" id="3hL-Kg-lBr"/>
+                                    <constraint firstItem="X9A-QV-8xU" firstAttribute="top" secondItem="6J5-HP-iW0" secondAttribute="topMargin" id="BIH-VK-qs7"/>
+                                    <constraint firstItem="aIs-NX-iGf" firstAttribute="leading" secondItem="RgB-AZ-z5b" secondAttribute="leading" constant="10" id="QQ0-U9-I85"/>
+                                    <constraint firstItem="RgB-AZ-z5b" firstAttribute="trailing" secondItem="TsD-9G-lba" secondAttribute="trailing" constant="25" id="cDA-IR-zlN"/>
+                                    <constraint firstItem="aIs-NX-iGf" firstAttribute="top" secondItem="6J5-HP-iW0" secondAttribute="topMargin" constant="35" id="e1f-ws-5Xe"/>
+                                    <constraint firstItem="X9A-QV-8xU" firstAttribute="centerX" secondItem="6J5-HP-iW0" secondAttribute="centerX" id="qwW-dE-IWz"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="RgB-AZ-z5b"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6J5-HP-iW0" firstAttribute="top" secondItem="bE9-35-wea" secondAttribute="top" id="3A4-Bj-B1J"/>
+                            <constraint firstAttribute="trailing" secondItem="6J5-HP-iW0" secondAttribute="trailing" id="I4L-tF-Vqy"/>
+                            <constraint firstItem="6J5-HP-iW0" firstAttribute="leading" secondItem="bE9-35-wea" secondAttribute="leading" id="dy6-pa-K9g"/>
+                            <constraint firstAttribute="bottom" secondItem="6J5-HP-iW0" secondAttribute="bottom" id="iHY-Ua-Xcc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="leftTargetField" destination="3hl-Mr-cjZ" id="Sd3-cW-sts"/>
+                        <outlet property="middleTargetField" destination="4aK-kE-zHA" id="5t0-Cw-bD1"/>
+                        <outlet property="rightTargetField" destination="6Qh-c3-MeH" id="Li8-Hu-XHa"/>
+                        <outlet property="targetGrid" destination="TsD-9G-lba" id="V1G-Ii-t3P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yGT-0K-hL8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1524" y="621"/>
+        </scene>
+        <!--Target Grid View Controller-->
+        <scene sceneID="yXy-v9-ZlW">
+            <objects>
+                <viewController id="9Kh-e5-eeO" customClass="TargetGridViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="knc-J2-WwO">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mortar_green_dot" translatesAutoresizingMaskIntoConstraints="NO" id="gGN-7F-hFu" userLabel="Mortar Pin">
+                                <rect key="frame" x="22" y="22" width="5" height="5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HGh-F1-iWn" userLabel="Target Grid">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HGh-F1-iWn" firstAttribute="top" secondItem="gS8-aS-34i" secondAttribute="top" id="95f-wG-vXu"/>
+                            <constraint firstItem="HGh-F1-iWn" firstAttribute="trailing" secondItem="gS8-aS-34i" secondAttribute="trailing" id="FOP-ks-NFh"/>
+                            <constraint firstItem="HGh-F1-iWn" firstAttribute="leading" secondItem="gS8-aS-34i" secondAttribute="leading" id="PrX-fa-ln7"/>
+                            <constraint firstItem="HGh-F1-iWn" firstAttribute="bottom" secondItem="gS8-aS-34i" secondAttribute="bottom" id="Sde-7y-TNu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gS8-aS-34i"/>
+                    </view>
+                    <connections>
+                        <outlet property="targetPin" destination="gGN-7F-hFu" id="ANy-X9-V56"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QXM-Nd-Z7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1523" y="841"/>
+        </scene>
+        <!--Enlarged Target Grid View Controller-->
+        <scene sceneID="gfF-If-5tM">
+            <objects>
+                <viewController id="R5O-bV-097" customClass="EnlargedTargetGridViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bDJ-Hk-4ck">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yyz-9U-Mv3" userLabel="Target Grid">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mortar_green_dot" translatesAutoresizingMaskIntoConstraints="NO" id="oR1-Se-9Q2" userLabel="Target Pin">
+                                <rect key="frame" x="177" y="177" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yyz-9U-Mv3" firstAttribute="leading" secondItem="kvE-I2-JAy" secondAttribute="leading" id="5tS-du-jrg"/>
+                            <constraint firstItem="yyz-9U-Mv3" firstAttribute="top" secondItem="kvE-I2-JAy" secondAttribute="top" id="eiS-Ym-xR0"/>
+                            <constraint firstItem="yyz-9U-Mv3" firstAttribute="bottom" secondItem="kvE-I2-JAy" secondAttribute="bottom" id="fVU-wr-1aH"/>
+                            <constraint firstItem="yyz-9U-Mv3" firstAttribute="trailing" secondItem="kvE-I2-JAy" secondAttribute="trailing" id="q7y-6l-p5C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kvE-I2-JAy"/>
+                    </view>
+                    <connections>
+                        <outlet property="targetPin" destination="oR1-Se-9Q2" id="e8J-Th-4dp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LRT-dK-7OS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1522" y="1164"/>
+        </scene>
+        <!--Enlarged Target View Controller-->
+        <scene sceneID="xa1-Ed-2ki">
+            <objects>
+                <viewController storyboardIdentifier="EnlargedTargetView" id="qyB-ob-piX" customClass="EnlargedTargetViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L3b-fr-g35">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnB-8E-Bcr">
+                                <rect key="frame" x="0.0" y="63" width="375" height="48"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Center">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="centerButton:" destination="uOB-Tw-l8b" eventType="touchUpInside" id="G9X-Ah-hcO"/>
+                                    <action selector="centerButton:" destination="qyB-ob-piX" eventType="touchUpInside" id="bOm-mr-BwY"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l1Y-N4-i2G">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="l1Y-N4-i2G" secondAttribute="height" multiplier="1:1" id="Riu-UX-YS1"/>
+                                    <constraint firstAttribute="width" secondItem="l1Y-N4-i2G" secondAttribute="height" multiplier="1:1" id="g9h-Jw-ZTc"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="R5O-bV-097" kind="embed" identifier="embeddedEnlargedTargetGridSegue" id="GA4-Wb-glY"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="it1-Fu-Mn6">
+                                <rect key="frame" x="0.0" y="568" width="375" height="48"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButton:" destination="qyB-ob-piX" eventType="touchUpInside" id="3Xu-dk-tWL"/>
+                                    <action selector="doneButton:" destination="uOB-Tw-l8b" eventType="touchUpInside" id="nqq-JZ-fPf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="it1-Fu-Mn6" firstAttribute="trailing" secondItem="l1Y-N4-i2G" secondAttribute="trailing" id="3Sh-U9-CI8"/>
+                            <constraint firstItem="gnB-8E-Bcr" firstAttribute="trailing" secondItem="JcX-jr-jqm" secondAttribute="trailing" id="Cfx-xH-cmC"/>
+                            <constraint firstItem="l1Y-N4-i2G" firstAttribute="centerY" secondItem="L3b-fr-g35" secondAttribute="centerY" id="Tx4-e9-74u"/>
+                            <constraint firstItem="l1Y-N4-i2G" firstAttribute="trailing" secondItem="JcX-jr-jqm" secondAttribute="trailing" id="b2Z-oz-qBS"/>
+                            <constraint firstItem="gnB-8E-Bcr" firstAttribute="leading" secondItem="JcX-jr-jqm" secondAttribute="leading" id="gEL-vl-0aW"/>
+                            <constraint firstItem="it1-Fu-Mn6" firstAttribute="leading" secondItem="l1Y-N4-i2G" secondAttribute="leading" id="j7t-4A-XmM"/>
+                            <constraint firstItem="gnB-8E-Bcr" firstAttribute="top" secondItem="JcX-jr-jqm" secondAttribute="top" constant="43" id="jFR-bP-Bxz"/>
+                            <constraint firstItem="l1Y-N4-i2G" firstAttribute="leading" secondItem="JcX-jr-jqm" secondAttribute="leading" id="sA8-Ag-Bmn"/>
+                            <constraint firstItem="it1-Fu-Mn6" firstAttribute="top" secondItem="l1Y-N4-i2G" secondAttribute="bottom" constant="49" id="v05-Al-AzC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JcX-jr-jqm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mxj-Qc-HdV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2238" y="876"/>
         </scene>
     </scenes>
     <resources>

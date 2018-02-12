@@ -64,7 +64,7 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
     }
     
     func updateMortar() {
-        if !checkFields() { return }
+        if !checkMortarFields() { return }
         
         // Insert code to pass up input to main level for calculation here
     }
@@ -72,39 +72,39 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
     // Checks input in all text fields is of an acceptable format
     // Note: It should be impossible to input incorrect formats into the middle and right fields so may remove checks if performance
     // becomes a concern
-    func checkFields() -> Bool {
+    func checkMortarFields() -> Bool {
         // Check left field input
         if (leftMortarField.text == "") { return false }
-        if !(leftMortarField.text!.count == 2) { rejectLeftField(); return false }
-        if !(leftMortarField.text![0].containedIn(matchCharacters: leftMortarField.acceptableFirstCharacters)) { rejectLeftField(); return false }
-        if !(leftMortarField.text![1].containedIn(matchCharacters: leftMortarField.acceptableSecondCharacters)) { rejectLeftField(); return false }
+        if !(leftMortarField.text!.count == 2) { rejectLeftMortarField(); return false }
+        if !(leftMortarField.text![0].containedIn(matchCharacters: leftMortarField.acceptableFirstCharacters)) { rejectLeftMortarField(); return false }
+        if !(leftMortarField.text![1].containedIn(matchCharacters: leftMortarField.acceptableSecondCharacters)) { rejectLeftMortarField(); return false }
         if (leftMortarField.backgroundColor !== UIColor.white) { leftMortarField.backgroundColor = UIColor.white }
         
         // Check middle field
         if (middleMortarField.text == "") { return false }
-        if !(middleMortarField.text?.count == 1) { rejectMiddleField(); return false }
-        if !((middleMortarField.text?.containsOnlyCharactersIn(matchCharacters: middleMortarField.allowedChars))!) { rejectMiddleField(); return false }
+        if !(middleMortarField.text?.count == 1) { rejectMiddleMortarField(); return false }
+        if !((middleMortarField.text?.containsOnlyCharactersIn(matchCharacters: middleMortarField.allowedChars))!) { rejectMiddleMortarField(); return false }
         if (middleMortarField.backgroundColor !== UIColor.white) { middleMortarField.backgroundColor = UIColor.white }
         
         // Check right field
         if (rightMortarField.text == "") { return false }
-        if !(rightMortarField.text?.count == 1) { rejectRightField(); return false }
-        if !((rightMortarField.text?.containsOnlyCharactersIn(matchCharacters: rightMortarField.allowedChars))!) { rejectRightField(); return false }
+        if !(rightMortarField.text?.count == 1) { rejectRightMortarField(); return false }
+        if !((rightMortarField.text?.containsOnlyCharactersIn(matchCharacters: rightMortarField.allowedChars))!) { rejectRightMortarField(); return false }
         if (rightMortarField.backgroundColor !== UIColor.white) { rightMortarField.backgroundColor = UIColor.white }
         
         // All text fields good
         return true
     }
     
-    func rejectLeftField() {
+    func rejectLeftMortarField() {
         leftMortarField.backgroundColor = UIColor.red
     }
     
-    func rejectMiddleField() {
+    func rejectMiddleMortarField() {
         middleMortarField.backgroundColor = UIColor.red
     }
     
-    func rejectRightField() {
+    func rejectRightMortarField() {
         rightMortarField.backgroundColor = UIColor.red
     }
 }
