@@ -512,7 +512,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VjP-gF-HuB">
                                 <rect key="frame" x="0.0" y="50" width="375" height="617"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYa-zi-kFZ" userLabel="App Description">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYa-zi-kFZ" userLabel="App Description">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -522,7 +522,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Created using:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i30-rN-bER" userLabel="Created Using:">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Created using:" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i30-rN-bER" userLabel="Created Using:">
                                         <rect key="frame" x="0.0" y="82" width="375" height="25"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -537,7 +537,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Xcode 9.2" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vuh-x6-0kk" userLabel="Xcode">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Xcode 9.2" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vuh-x6-0kk" userLabel="Xcode">
                                         <rect key="frame" x="0.0" y="107" width="375" height="25"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -546,7 +546,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Swift 4.1" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lqI-Vh-Mif" userLabel="Swift">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Swift 4.1" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lqI-Vh-Mif" userLabel="Swift">
                                         <rect key="frame" x="0.0" y="132" width="375" height="25"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -555,7 +555,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="License: MIT" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EXm-oV-M1l">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="License: MIT" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EXm-oV-M1l">
                                         <rect key="frame" x="0.0" y="162" width="375" height="25"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -564,7 +564,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QQy-tc-EED">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QQy-tc-EED">
                                         <rect key="frame" x="0.0" y="187" width="375" height="69"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
