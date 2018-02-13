@@ -9,7 +9,7 @@
 import UIKit
 
 class MoreViewController: UITableViewController {
-    let moreTable = ["User Guide", "About", "Leave A Review"]
+    let moreTable = ["User Guide", "About", "Leave A Review", "Project Github Page"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +51,8 @@ class MoreViewController: UITableViewController {
             self.present(aboutView, animated: true, completion: nil)
         } else if (moreTable[indexPath.row] == "Leave A Review") {
             print("REVIEW LINK")
+        } else if (moreTable[indexPath.row] == "Project Github Page") {
+            print("PROJECT LINK")
         } else {
             return
         }
