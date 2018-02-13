@@ -52,7 +52,7 @@ class MoreViewController: UITableViewController {
         } else if (moreTable[indexPath.row] == "Leave A Review") {
             print("REVIEW LINK")
         } else if (moreTable[indexPath.row] == "Project Github Page") {
-            print("PROJECT LINK")
+            UIApplication.shared.open(URL(string : "https://github.com/JamesLongman/Squad-Mortar-Calculator-IOS")!, options: [:], completionHandler: { (status) in})
         } else {
             return
         }
