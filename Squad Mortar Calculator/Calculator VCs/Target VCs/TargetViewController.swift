@@ -76,9 +76,12 @@ class TargetViewController: UIViewController, UITextFieldDelegate, PassTargetLoc
     func checkTargetFields() -> Bool {
         // Check left field input
         if (leftTargetField.text == "") { return false }
-        if !(leftTargetField.text!.count == 2) { rejectLeftTargetField(); return false }
+        if !(leftTargetField.text!.count == 2 || leftTargetField.text!.count == 3) { rejectLeftTargetField(); return false }
         if !(leftTargetField.text![0].containedIn(matchCharacters: leftTargetField.acceptableFirstCharacters)) { rejectLeftTargetField(); return false }
         if !(leftTargetField.text![1].containedIn(matchCharacters: leftTargetField.acceptableSecondCharacters)) { rejectLeftTargetField(); return false }
+        if (leftTargetField.text!.count == 3) {
+            if !(leftTargetField.text![2].containedIn(matchCharacters: leftTargetField.acceptableSecondCharacters)) { rejectLeftTargetField(); return false }
+        }
         if (leftTargetField.backgroundColor !== UIColor.white) { leftTargetField.backgroundColor = UIColor.white }
         
         // Check middle field

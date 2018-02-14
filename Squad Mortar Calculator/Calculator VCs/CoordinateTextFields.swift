@@ -38,8 +38,9 @@ class CoordinatesTextField1: UITextField, UITextFieldDelegate {
         let currentText = textField.text ?? ""
         let prospectiveText = (currentText as NSString).replacingCharacters(in: range, with: string)
         if prospectiveText.count > maxLength { return false }
-        if prospectiveText.count > 0 && !(prospectiveText[0].containedIn(matchCharacters: acceptableFirstCharacters)) { return false }
+        if prospectiveText.count == 1 && !(prospectiveText[0].containedIn(matchCharacters: acceptableFirstCharacters)) { return false }
         if prospectiveText.count > 1 && !(prospectiveText[1].containedIn(matchCharacters: acceptableSecondCharacters)) { return false }
+        if prospectiveText.count > 2 && !(prospectiveText[2].containedIn(matchCharacters: acceptableSecondCharacters)) { return false }
         return true
     }
     

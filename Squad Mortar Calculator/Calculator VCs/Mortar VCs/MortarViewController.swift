@@ -75,9 +75,12 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
     func checkMortarFields() -> Bool {
         // Check left field input
         if (leftMortarField.text == "") { return false }
-        if !(leftMortarField.text!.count == 2) { rejectLeftMortarField(); return false }
+        if !(leftMortarField.text!.count == 2 || leftMortarField.text!.count == 3) { rejectLeftMortarField(); return false }
         if !(leftMortarField.text![0].containedIn(matchCharacters: leftMortarField.acceptableFirstCharacters)) { rejectLeftMortarField(); return false }
         if !(leftMortarField.text![1].containedIn(matchCharacters: leftMortarField.acceptableSecondCharacters)) { rejectLeftMortarField(); return false }
+        if (leftMortarField.text!.count == 3) {
+            if !(leftMortarField.text![2].containedIn(matchCharacters: leftMortarField.acceptableSecondCharacters)) { rejectLeftMortarField(); return false }
+        }
         if (leftMortarField.backgroundColor !== UIColor.white) { leftMortarField.backgroundColor = UIColor.white }
         
         // Check middle field
