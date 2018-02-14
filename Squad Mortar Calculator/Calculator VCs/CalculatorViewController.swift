@@ -10,9 +10,14 @@ import UIKit
 
 class CalculatorViewController: UIViewController {
     
+    @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var midLabel: UILabel!
+    @IBOutlet weak var bottomLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        midLabel.text = "Awaiting input"
     }
     
 

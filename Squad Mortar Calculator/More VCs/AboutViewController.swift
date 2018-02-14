@@ -10,10 +10,19 @@ import UIKit
 
 class AboutViewController: UIViewController {
 
+    @IBOutlet weak var aboutText: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        var body = "Squad Mortar Calculator is a non-official community made application to calculate accurate calibrations for players to correctly align their mortars to certain points on the map"
+        body = body + "\n\nBuilt using:"
+        body = body + "\nXcode 9.2"
+        body = body + "\nSwift 4.1"
+        body = body + "\n\nLicense: MIT"
+        body = body + "\n\nThe project's code and information on how to contribute it available at the projects github repository, a link is under the \"More\" tab"
+        
+        aboutText.text = body
     }
 
     override func didReceiveMemoryWarning() {

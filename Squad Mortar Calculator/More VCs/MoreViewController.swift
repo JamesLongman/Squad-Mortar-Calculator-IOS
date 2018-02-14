@@ -9,7 +9,7 @@
 import UIKit
 
 class MoreViewController: UITableViewController {
-    let moreTable = ["User Guide", "About", "Leave A Review", "Project Github Page"]
+    let moreTable = ["User Guide", "About", "Leave A Review", "Project Github Repository"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,7 @@ class MoreViewController: UITableViewController {
             self.present(aboutView, animated: true, completion: nil)
         } else if (moreTable[indexPath.row] == "Leave A Review") {
             print("REVIEW LINK")
-        } else if (moreTable[indexPath.row] == "Project Github Page") {
+        } else if (moreTable[indexPath.row] == "Project Github Repository") {
             UIApplication.shared.open(URL(string : "https://github.com/JamesLongman/Squad-Mortar-Calculator-IOS")!, options: [:], completionHandler: { (status) in})
         } else {
             return
