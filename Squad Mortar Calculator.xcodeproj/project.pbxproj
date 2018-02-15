@@ -14,6 +14,7 @@
 		E61407DA2032868000F6FB49 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61407D92032868000F6FB49 /* MoreViewController.swift */; };
 		E61407E02032881C00F6FB49 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61407DF2032881C00F6FB49 /* GuideViewController.swift */; };
 		E61407E2203347AE00F6FB49 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61407E1203347AE00F6FB49 /* AboutViewController.swift */; };
+		E61407E42035275300F6FB49 /* PrimaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61407E32035275300F6FB49 /* PrimaryViewController.swift */; };
 		E66FFE922026692B007B730B /* MortarGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66FFE912026692B007B730B /* MortarGridViewController.swift */; };
 		E66FFE94202735A2007B730B /* EnlargedMortarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66FFE93202735A2007B730B /* EnlargedMortarViewController.swift */; };
 		E66FFE98202890E6007B730B /* EnlargedMortarGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66FFE97202890E6007B730B /* EnlargedMortarGridViewController.swift */; };
@@ -53,6 +54,7 @@
 		E61407D92032868000F6FB49 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		E61407DF2032881C00F6FB49 /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		E61407E1203347AE00F6FB49 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		E61407E32035275300F6FB49 /* PrimaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryViewController.swift; sourceTree = "<group>"; };
 		E66FFE912026692B007B730B /* MortarGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortarGridViewController.swift; sourceTree = "<group>"; };
 		E66FFE93202735A2007B730B /* EnlargedMortarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargedMortarViewController.swift; sourceTree = "<group>"; };
 		E66FFE97202890E6007B730B /* EnlargedMortarGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargedMortarGridViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				E61407DE2032879700F6FB49 /* More VCs */,
 				E61407DD203286FA00F6FB49 /* Calculator VCs */,
+				E61407E32035275300F6FB49 /* PrimaryViewController.swift */,
 				E6D4CFDE2022EA0900FF5658 /* AppDelegate.swift */,
 				E6D4CFE22022EA0900FF5658 /* Main.storyboard */,
 				E6D4CFE52022EA0900FF5658 /* Assets.xcassets */,
@@ -340,6 +343,7 @@
 				E61407E2203347AE00F6FB49 /* AboutViewController.swift in Sources */,
 				E6891B64202369DD0065492F /* MortarViewController.swift in Sources */,
 				E61407E02032881C00F6FB49 /* GuideViewController.swift in Sources */,
+				E61407E42035275300F6FB49 /* PrimaryViewController.swift in Sources */,
 				E66FFE94202735A2007B730B /* EnlargedMortarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

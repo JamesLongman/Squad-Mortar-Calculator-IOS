@@ -47,9 +47,10 @@ class MoreViewController: UITableViewController {
             let aboutView = storyboard!.instantiateViewController(withIdentifier: "AboutView") as! AboutViewController
             self.present(aboutView, animated: true, completion: nil)
         } else if (moreTable[indexPath.row] == "Leave A Review") {
-            print("REVIEW LINK")
+            // REPLACE: replace with id once registered on app store (must test with physical device not simulator)
+            UIApplication.shared.open(URL(string: "https://itunes.apple.com/app/id363590051?action=write-review")!, options: [:], completionHandler: nil)
         } else if (moreTable[indexPath.row] == "Project Github Repository") {
-            UIApplication.shared.open(URL(string : "https://github.com/JamesLongman/Squad-Mortar-Calculator-IOS")!, options: [:], completionHandler: { (status) in})
+            UIApplication.shared.open(URL(string : "https://github.com/JamesLongman/Squad-Mortar-Calculator-IOS")!, options: [:], completionHandler: nil)
         } else {
             return
         }

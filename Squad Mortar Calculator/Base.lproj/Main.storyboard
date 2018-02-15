@@ -383,10 +383,10 @@
             </objects>
             <point key="canvasLocation" x="94" y="1165"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Primary View Controller-->
         <scene sceneID="aVu-e5-cgG">
             <objects>
-                <tabBarController id="AxM-gS-IKs" sceneMemberID="viewController">
+                <tabBarController id="AxM-gS-IKs" customClass="PrimaryViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Cg-VG-aih">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
