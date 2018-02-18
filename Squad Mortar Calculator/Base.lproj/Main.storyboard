@@ -33,7 +33,7 @@
                                     <constraint firstAttribute="height" constant="100" id="Rgk-LQ-WuN"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="MPQ-Uw-oEX" kind="embed" id="Jof-MT-YWh"/>
+                                    <segue destination="MPQ-Uw-oEX" kind="embed" identifier="mortarSectionSegue" id="Jof-MT-YWh"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rU7-1B-Qb6" userLabel="Target Container">
@@ -42,7 +42,7 @@
                                     <constraint firstAttribute="height" constant="100" id="7ri-Tc-m3a"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="WdG-Na-hiJ" kind="embed" id="puN-Ej-Rmb"/>
+                                    <segue destination="WdG-Na-hiJ" kind="embed" identifier="targetSectionSegue" id="puN-Ej-Rmb"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aoy-3U-zx6">
@@ -141,7 +141,7 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="A1B"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="acceptableFirstCharacters" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="acceptableSecondCharacters" value="123456789"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="acceptableSecondCharacters" value="0123456789"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="leftMortarFieldEnded:" destination="MPQ-Uw-oEX" eventType="editingDidEnd" id="mzr-qt-AB1"/>
@@ -640,7 +640,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="A1B"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="acceptableFirstCharacters" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="acceptableSecondCharacters" value="123456789"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="acceptableSecondCharacters" value="0123456789"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="leftTargetFieldEnded:" destination="WdG-Na-hiJ" eventType="editingDidEnd" id="cYc-Ml-hbA"/>

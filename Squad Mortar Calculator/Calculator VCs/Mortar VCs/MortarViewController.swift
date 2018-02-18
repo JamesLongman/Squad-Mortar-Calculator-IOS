@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol PassMortarLoc4 {
+    func passMortar4(x: Double, y: Double)
+}
+
 class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc3 {
     
+    var delegate: PassMortarLoc4?
     var mortarSubgridXPos: Double = 100/6
     var mortarSubgridYPos: Double = 100/6
 
@@ -66,7 +71,53 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
     func updateMortar() {
         if !checkMortarFields() { return }
         
-        // Insert code to pass up input to main level for calculation here
+        var mortarXPos:Double = 0
+        var mortarYPos:Double = 0
+        
+        let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        for letter in alphabet {
+            if letter == leftMortarField.text!.uppercased()[0] {
+                break
+            }
+            mortarXPos += 300
+        }
+        
+        if (leftMortarField.text!.count == 2) {
+            mortarYPos = (Double(String(leftMortarField.text![1]))! - 1) * 300
+        } else {
+            mortarYPos = Double(String(leftMortarField.text![1]))! * 3000
+            mortarYPos = (Double(String(leftMortarField.text![2]))! - 1) * 300
+        }
+        
+        switch Int(middleMortarField.text!)! {
+        case 1: mortarYPos += 200
+        case 2: mortarYPos += 200; mortarXPos += 100
+        case 3: mortarYPos += 200; mortarXPos += 200
+        case 4: mortarYPos += 100
+        case 5: mortarYPos += 100; mortarXPos += 100
+        case 6: mortarYPos += 100; mortarXPos += 200
+        case 8: mortarXPos += 100
+        case 9: mortarXPos += 200
+        default: break
+        }
+        
+        let increment:Double = 100/3
+        switch Int(rightMortarField.text!)! {
+        case 1: mortarYPos += increment * 2
+        case 2: mortarYPos += increment * 2; mortarXPos += increment
+        case 3: mortarYPos += increment * 2; mortarXPos += increment
+        case 4: mortarYPos += increment
+        case 5: mortarYPos += increment; mortarXPos += increment
+        case 6: mortarYPos += increment; mortarXPos += increment * 2
+        case 8: mortarXPos += increment
+        case 9: mortarXPos += increment * 2
+        default: break
+        }
+        
+        mortarXPos += mortarSubgridXPos
+        mortarYPos += mortarSubgridYPos
+        
+        delegate!.passMortar4(x: mortarXPos, y: mortarYPos)
     }
     
     // Checks input in all text fields is of an acceptable format
@@ -80,6 +131,7 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
         if !(leftMortarField.text![1].containedIn(matchCharacters: leftMortarField.acceptableSecondCharacters)) { rejectLeftMortarField(); return false }
         if (leftMortarField.text!.count == 3) {
             if !(leftMortarField.text![2].containedIn(matchCharacters: leftMortarField.acceptableSecondCharacters)) { rejectLeftMortarField(); return false }
+            if (leftMortarField.text![1] == "0") { rejectLeftMortarField();return false }
         }
         if (leftMortarField.backgroundColor !== UIColor.white) { leftMortarField.backgroundColor = UIColor.white }
         
