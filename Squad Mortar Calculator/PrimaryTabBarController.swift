@@ -16,7 +16,7 @@ extension UserDefaults {
     }
 }
 
-class PrimaryViewController: UITabBarController {
+class PrimaryTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

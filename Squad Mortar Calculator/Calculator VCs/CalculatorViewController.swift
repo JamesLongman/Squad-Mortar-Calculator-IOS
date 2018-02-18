@@ -8,12 +8,9 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController, PassMortarLoc4, PassTargetLoc4 {
+class CalculatorViewController: UIViewController, MortarLocations, TargetLocations {
     
-    var mortarXPos:Double = 0
-    var mortarYPos:Double = 0
-    var targetXPos:Double = 0
-    var targetYPos:Double = 0
+    let calc = Calc.sharedInstance
     
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var midLabel: UILabel!
@@ -42,14 +39,12 @@ class CalculatorViewController: UIViewController, PassMortarLoc4, PassTargetLoc4
         }
     }
     
-    func passMortar4(x: Double, y: Double) {
-        mortarXPos = x
-        mortarYPos = y
+    func mortarLocations() {
+        print(calc.mortarXPos)
     }
     
-    func passTarget4(x: Double, y: Double) {
-        targetXPos = x
-        targetYPos = y
+    func targetLocations() {
+        
     }
 }
 

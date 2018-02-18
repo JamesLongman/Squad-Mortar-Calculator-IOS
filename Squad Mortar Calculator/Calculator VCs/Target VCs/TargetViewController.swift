@@ -8,13 +8,14 @@
 
 import UIKit
 
-protocol PassTargetLoc4 {
-    func passTarget4(x: Double, y: Double)
+protocol TargetLocations {
+    func targetLocations()
 }
 
 class TargetViewController: UIViewController, UITextFieldDelegate, PassTargetLoc3 {
     
-    var delegate: PassTargetLoc4?
+    var delegate: TargetLocations?
+    let calc = Calc.sharedInstance
     var targetSubgridXPos: Double = 100/6
     var targetSubgridYPos: Double = 100/6
     
@@ -118,7 +119,9 @@ class TargetViewController: UIViewController, UITextFieldDelegate, PassTargetLoc
         targetXPos += targetSubgridXPos
         targetYPos += targetSubgridYPos
         
-        delegate!.passTarget4(x: targetXPos, y: targetYPos)
+        calc.targetXPos = targetXPos
+        calc.targetYPos = targetYPos
+        delegate!.targetLocations()
     }
     
     // Checks input in all text fields is of an acceptable format

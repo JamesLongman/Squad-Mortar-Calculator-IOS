@@ -8,13 +8,14 @@
 
 import UIKit
 
-protocol PassMortarLoc4 {
-    func passMortar4(x: Double, y: Double)
+protocol MortarLocations {
+    func mortarLocations()
 }
 
 class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc3 {
     
-    var delegate: PassMortarLoc4?
+    var delegate: MortarLocations?
+    let calc = Calc.sharedInstance
     var mortarSubgridXPos: Double = 100/6
     var mortarSubgridYPos: Double = 100/6
 
@@ -117,7 +118,9 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
         mortarXPos += mortarSubgridXPos
         mortarYPos += mortarSubgridYPos
         
-        delegate!.passMortar4(x: mortarXPos, y: mortarYPos)
+        calc.mortarXPos = mortarXPos
+        calc.mortarYPos = mortarYPos
+        delegate!.mortarLocations()
     }
     
     // Checks input in all text fields is of an acceptable format
