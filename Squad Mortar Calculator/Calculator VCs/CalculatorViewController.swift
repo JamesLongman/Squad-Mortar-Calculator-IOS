@@ -40,11 +40,15 @@ class CalculatorViewController: UIViewController, MortarLocations, TargetLocatio
     }
     
     func mortarLocations() {
-        print(calc.mortarXPos)
+        calculate()
     }
     
     func targetLocations() {
-        
+        calculate()
+    }
+    
+    func calculate() {
+        if (!CalcFunctions().verify()) { return }
     }
 }
 
