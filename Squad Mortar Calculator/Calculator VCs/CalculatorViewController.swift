@@ -49,6 +49,7 @@ class CalculatorViewController: UIViewController, MortarLocations, TargetLocatio
     
     func calculate() {
         if (!CalcFunctions().verify()) { return }
+        calc.azimuth = CalcFunctions().azimuth()
     }
 }
 

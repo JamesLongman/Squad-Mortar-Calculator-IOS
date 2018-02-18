@@ -13,8 +13,10 @@ class Calc {
     func network() {}
     private init() {}
     
+    var input:Bool = false
     var mortarXPos:Double = 0
     var mortarYPos:Double = 0
     var targetXPos:Double = 0
     var targetYPos:Double = 0
+    var azimuth:Double = 0
 }
