@@ -19,4 +19,5 @@ class Calc {
     var targetXPos:Double = 0
     var targetYPos:Double = 0
     var azimuth:Double = 0
+    var rads: Double = 0
 }
