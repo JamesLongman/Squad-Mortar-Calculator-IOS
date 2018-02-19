@@ -16,8 +16,6 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
     
     var delegate: MortarLocations?
     let calc = Calc.sharedInstance
-    var mortarSubgridXPos: Double = 100/6
-    var mortarSubgridYPos: Double = 100/6
 
     // 3 fields and grid in Mortar view
     @IBOutlet weak var leftMortarField: CoordinatesTextField1!
@@ -62,10 +60,7 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
         updateMortar()
     }
     
-    func passMortar3(x: Double, y: Double) {
-        mortarSubgridXPos = x
-        mortarSubgridYPos = y
-        
+    func passMortar3() {
         updateMortar()
     }
     
@@ -115,8 +110,8 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
         default: break
         }
         
-        mortarXPos += mortarSubgridXPos
-        mortarYPos += mortarSubgridYPos
+        mortarXPos += calc.mortarSubgridXPos
+        mortarYPos += calc.mortarSubgridYPos
         
         calc.mortarXPos = mortarXPos
         calc.mortarYPos = mortarYPos

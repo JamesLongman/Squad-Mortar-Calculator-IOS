@@ -9,15 +9,12 @@
 import UIKit
 
 protocol PassMortarLoc2 {
-    func passMortar2(x: Double, y: Double)
+    func passMortar2()
 }
 
 class EnlargedMortarViewController: UIViewController, PassMortarLoc1 {
     var enlargedMortarGridViewController: EnlargedMortarGridViewController?
     var delegate: PassMortarLoc2?
-    
-    var mortarSubgridXPos: Double = 100/6
-    var mortarSubgridYPos: Double = 100/6
     
     @IBAction func doneButton(_ sender: Any) {
         presentingViewController?.dismiss(animated: true, completion: nil)
@@ -42,16 +39,12 @@ class EnlargedMortarViewController: UIViewController, PassMortarLoc1 {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "embeddedEnlargedMortarGridSegue") {
             enlargedMortarGridViewController = (segue.destination as! EnlargedMortarGridViewController)
-            enlargedMortarGridViewController!.mortarSubgridXPos = mortarSubgridXPos
-            enlargedMortarGridViewController!.mortarSubgridYPos = mortarSubgridYPos
             enlargedMortarGridViewController!.delegate = self
         }
     }
     
-    func passMortar1(x: Double, y: Double) {
-        mortarSubgridXPos = x
-        mortarSubgridYPos = y
-        delegate!.passMortar2(x: x, y: y)
+    func passMortar1() {
+        delegate!.passMortar2()
     }
     
 

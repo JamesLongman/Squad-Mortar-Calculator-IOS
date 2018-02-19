@@ -9,14 +9,13 @@
 import UIKit
 
 protocol PassCorrectionsTargetLoc3 {
-    func passCorrectionsTarget3(x: Double, y: Double)
+    func passCorrectionsTarget3()
 }
 
 class CorrectionsGridViewController: UIViewController, PassCorrectionsTargetLoc2 {
 
     var delegate: PassCorrectionsTargetLoc3?
-    var targetSubgridXPos: Double = 100/6
-    var targetSubgridYPos: Double = 100/6
+    let calc = Calc.sharedInstance
     
     @IBOutlet weak var targetPin: UIImageView!
     
@@ -34,24 +33,19 @@ class CorrectionsGridViewController: UIViewController, PassCorrectionsTargetLoc2
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let fullScreenGrid = storyboard!.instantiateViewController(withIdentifier: "CorrectionsEnlargedTargetView") as! CorrectionsEnlargedTargetViewController
-        fullScreenGrid.targetSubgridXPos = targetSubgridXPos
-        fullScreenGrid.targetSubgridYPos = targetSubgridYPos
         fullScreenGrid.delegate = self
         
         self.present(fullScreenGrid, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let xPoint = targetSubgridXPos * (3/2)
-        let yPoint = targetSubgridYPos * (3/2)
+        let xPoint = calc.targetSubgridXPos * (3/2)
+        let yPoint = calc.targetSubgridYPos * (3/2)
         targetPin.center = CGPoint(x: xPoint, y: yPoint)
     }
     
     
-    func passCorrectionsTarget2(x: Double, y: Double) {
-        targetSubgridXPos = x
-        targetSubgridYPos = y
-        
-        delegate!.passCorrectionsTarget3(x: x, y: y)
+    func passCorrectionsTarget2() {
+        delegate!.passCorrectionsTarget3()
     }
 }

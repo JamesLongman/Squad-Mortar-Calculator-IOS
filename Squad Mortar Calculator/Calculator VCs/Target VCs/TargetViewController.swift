@@ -16,8 +16,6 @@ class TargetViewController: UIViewController, UITextFieldDelegate, PassTargetLoc
     
     var delegate: TargetLocations?
     let calc = Calc.sharedInstance
-    var targetSubgridXPos: Double = 100/6
-    var targetSubgridYPos: Double = 100/6
     
     // 3 fields and grid in Target view
     @IBOutlet weak var leftTargetField: CoordinatesTextField1!
@@ -63,10 +61,7 @@ class TargetViewController: UIViewController, UITextFieldDelegate, PassTargetLoc
     }
     
     
-    func passTarget3(x: Double, y: Double) {
-        targetSubgridXPos = x
-        targetSubgridYPos = y
-        
+    func passTarget3() {
         updateTarget()
     }
     
@@ -116,8 +111,8 @@ class TargetViewController: UIViewController, UITextFieldDelegate, PassTargetLoc
         default: break
         }
         
-        targetXPos += targetSubgridXPos
-        targetYPos += targetSubgridYPos
+        targetXPos += calc.targetSubgridXPos
+        targetYPos += calc.targetSubgridYPos
         
         calc.targetXPos = targetXPos
         calc.targetYPos = targetYPos

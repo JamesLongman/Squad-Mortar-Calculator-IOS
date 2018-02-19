@@ -9,16 +9,13 @@
 import UIKit
 
 protocol PassCorrectionsTargetLoc2 {
-    func passCorrectionsTarget2(x: Double, y: Double)
+    func passCorrectionsTarget2()
 }
 
 class CorrectionsEnlargedTargetViewController: UIViewController, PassCorrectionsTargetLoc1 {
 
     var correctionsEnlargedTargetGridViewController: CorrectionsEnlargedTargetGridViewController?
     var delegate: PassCorrectionsTargetLoc2?
-    
-    var targetSubgridXPos: Double = 100/6
-    var targetSubgridYPos: Double = 100/6
     
     @IBAction func doneButton(_ sender: Any) {
         presentingViewController?.dismiss(animated: true, completion: nil)
@@ -41,16 +38,12 @@ class CorrectionsEnlargedTargetViewController: UIViewController, PassCorrections
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "embeddedEnlargedCorrectionsTargetGridSegue") {
             correctionsEnlargedTargetGridViewController = (segue.destination as! CorrectionsEnlargedTargetGridViewController)
-            correctionsEnlargedTargetGridViewController!.targetSubgridXPos = targetSubgridXPos
-            correctionsEnlargedTargetGridViewController!.targetSubgridYPos = targetSubgridYPos
             correctionsEnlargedTargetGridViewController!.delegate = self
         }
     }
     
-    func passCorrectionsTarget1(x: Double, y: Double) {
-        targetSubgridXPos = x
-        targetSubgridYPos = y
-        delegate!.passCorrectionsTarget2(x: x, y: y)
+    func passCorrectionsTarget1() {
+        delegate!.passCorrectionsTarget2()
     }
 
 }

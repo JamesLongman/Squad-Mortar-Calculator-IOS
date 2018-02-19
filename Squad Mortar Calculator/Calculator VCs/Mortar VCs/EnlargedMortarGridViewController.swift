@@ -9,13 +9,12 @@
 import UIKit
 
 protocol PassMortarLoc1 {
-    func passMortar1(x: Double, y: Double)
+    func passMortar1()
 }
 
 class EnlargedMortarGridViewController: UIViewController {
 
-    var mortarSubgridXPos: Double = 100/6
-    var mortarSubgridYPos: Double = 100/6
+    let calc = Calc.sharedInstance
     var delegate: PassMortarLoc1?
     
     @IBOutlet weak var mortarPin: UIImageView!
@@ -47,8 +46,8 @@ class EnlargedMortarGridViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let xPoint = ((mortarSubgridXPos * Double(self.view!.bounds.width)) / (100/3))
-        let yPoint = ((mortarSubgridYPos * Double(self.view!.bounds.height)) / (100/3))
+        let xPoint = ((calc.mortarSubgridXPos * Double(self.view!.bounds.width)) / (100/3))
+        let yPoint = ((calc.mortarSubgridYPos * Double(self.view!.bounds.height)) / (100/3))
         mortarPin.center = CGPoint(x: xPoint, y: yPoint)
     }
     
@@ -60,10 +59,11 @@ class EnlargedMortarGridViewController: UIViewController {
     func updatePosition(position: CGPoint) {
         mortarPin.center = position
         
-        mortarSubgridXPos = Double(position.x / self.view!.bounds.width) * (100/3)
-        mortarSubgridYPos = Double(position.y / self.view!.bounds.height) * (100/3)
+        calc.mortarSubgridXPos = Double(position.x / self.view!.bounds.width) * (100/3)
+        calc.mortarSubgridYPos = Double(position.y / self.view!.bounds.height) * (100/3)
         
-        delegate!.passMortar1(x: mortarSubgridXPos, y: mortarSubgridYPos)
+        
+        delegate!.passMortar1()
     }
     
     

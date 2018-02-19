@@ -9,13 +9,12 @@
 import UIKit
 
 protocol PassTargetLoc1 {
-    func passTarget1(x: Double, y: Double)
+    func passTarget1()
 }
 
 class EnlargedTargetGridViewController: UIViewController {
     
-    var targetSubgridXPos: Double = 100/6
-    var targetSubgridYPos: Double = 100/6
+    let calc = Calc.sharedInstance
     var delegate: PassTargetLoc1?
     
     @IBOutlet weak var targetPin: UIImageView!
@@ -47,8 +46,8 @@ class EnlargedTargetGridViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let xPoint = ((targetSubgridXPos * Double(self.view!.bounds.width)) / (100/3))
-        let yPoint = ((targetSubgridYPos * Double(self.view!.bounds.height)) / (100/3))
+        let xPoint = ((calc.targetSubgridXPos * Double(self.view!.bounds.width)) / (100/3))
+        let yPoint = ((calc.targetSubgridYPos * Double(self.view!.bounds.height)) / (100/3))
         targetPin.center = CGPoint(x: xPoint, y: yPoint)
     }
     
@@ -60,10 +59,10 @@ class EnlargedTargetGridViewController: UIViewController {
     func updatePosition(position: CGPoint) {
         targetPin.center = position
         
-        targetSubgridXPos = Double(position.x / self.view!.bounds.width) * (100/3)
-        targetSubgridYPos = Double(position.y / self.view!.bounds.height) * (100/3)
+        calc.targetSubgridXPos = Double(position.x / self.view!.bounds.width) * (100/3)
+        calc.targetSubgridYPos = Double(position.y / self.view!.bounds.height) * (100/3)
         
-        delegate!.passTarget1(x: targetSubgridXPos, y: targetSubgridYPos)
+        delegate!.passTarget1()
     }
     
     

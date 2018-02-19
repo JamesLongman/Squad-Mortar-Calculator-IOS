@@ -9,15 +9,12 @@
 import UIKit
 
 protocol PassTargetLoc2 {
-    func passTarget2(x: Double, y: Double)
+    func passTarget2()
 }
 
 class EnlargedTargetViewController: UIViewController, PassTargetLoc1 {
     var enlargedTargetGridViewController: EnlargedTargetGridViewController?
     var delegate: PassTargetLoc2?
-    
-    var targetSubgridXPos: Double = 100/6
-    var targetSubgridYPos: Double = 100/6
     
     @IBAction func doneButton(_ sender: Any) {
         presentingViewController?.dismiss(animated: true, completion: nil)
@@ -40,16 +37,12 @@ class EnlargedTargetViewController: UIViewController, PassTargetLoc1 {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "embeddedEnlargedTargetGridSegue") {
             enlargedTargetGridViewController = (segue.destination as! EnlargedTargetGridViewController)
-            enlargedTargetGridViewController!.targetSubgridXPos = targetSubgridXPos
-            enlargedTargetGridViewController!.targetSubgridYPos = targetSubgridYPos
             enlargedTargetGridViewController!.delegate = self
         }
     }
     
-    func passTarget1(x: Double, y: Double) {
-        targetSubgridXPos = x
-        targetSubgridYPos = y
-        delegate!.passTarget2(x: x, y: y)
+    func passTarget1() {
+        delegate!.passTarget2()
     }
     
     

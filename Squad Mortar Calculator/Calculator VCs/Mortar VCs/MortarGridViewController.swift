@@ -9,13 +9,12 @@
 import UIKit
 
 protocol PassMortarLoc3 {
-    func passMortar3(x: Double, y: Double)
+    func passMortar3()
 }
 
 class MortarGridViewController: UIViewController, PassMortarLoc2 {
     var delegate: PassMortarLoc3?
-    var mortarSubgridXPos: Double = 100/6
-    var mortarSubgridYPos: Double = 100/6
+    let calc = Calc.sharedInstance
     
     @IBOutlet weak var mortarPin: UIImageView!
     
@@ -33,25 +32,20 @@ class MortarGridViewController: UIViewController, PassMortarLoc2 {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let fullScreenGrid = storyboard!.instantiateViewController(withIdentifier: "EnlargedMortarView") as! EnlargedMortarViewController
-        fullScreenGrid.mortarSubgridXPos = mortarSubgridXPos
-        fullScreenGrid.mortarSubgridYPos = mortarSubgridYPos
         fullScreenGrid.delegate = self
         
         self.present(fullScreenGrid, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let xPoint = mortarSubgridXPos * (3/2)
-        let yPoint = mortarSubgridYPos * (3/2)
+        let xPoint = calc.mortarSubgridXPos * (3/2)
+        let yPoint = calc.mortarSubgridYPos * (3/2)
         mortarPin.center = CGPoint(x: xPoint, y: yPoint)
     }
     
     
-    func passMortar2(x: Double, y: Double) {
-        mortarSubgridXPos = x
-        mortarSubgridYPos = y
-        
-        delegate!.passMortar3(x: x, y: y)
+    func passMortar2() {
+        delegate!.passMortar3()
     }
 
 }
