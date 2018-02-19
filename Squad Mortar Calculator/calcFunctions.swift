@@ -23,9 +23,9 @@ class CalcFunctions {
     
     /* Returns azimuth to target as double from euclidian input, math may appear odd
     becuase y co-odinates are effectively upside down */
-    func azimuth() -> Double {
-        let deltaY = calc.mortarYPos - calc.targetYPos
-        let deltaX = calc.targetXPos - calc.mortarXPos
+    func azimuth(targetX: Double, targetY: Double) -> Double {
+        let deltaY = calc.mortarYPos - targetY
+        let deltaX = targetX - calc.mortarXPos
         let tanAngle = atan2(deltaY, deltaX) * 180 / Double.pi
         
         var angle:Double = 0
@@ -38,9 +38,9 @@ class CalcFunctions {
         return angle
     }
     
-    func distance() -> Double {
-        let deltaY = calc.mortarYPos - calc.targetYPos
-        let deltaX = calc.targetXPos - calc.mortarXPos
+    func distance(targetX: Double, targetY: Double) -> Double {
+        let deltaY = calc.mortarYPos - targetY
+        let deltaX = targetX - calc.mortarXPos
         
         // Distance in meters
         return sqrt((deltaX * deltaX) + (deltaY * deltaY))

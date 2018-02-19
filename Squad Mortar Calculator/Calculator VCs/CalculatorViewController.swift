@@ -49,9 +49,9 @@ class CalculatorViewController: UIViewController, MortarLocations, TargetLocatio
     
     func calculate() {
         if (!CalcFunctions().verify()) { return }
-        calc.azimuth = CalcFunctions().azimuth()
+        calc.azimuth = CalcFunctions().azimuth(targetX: calc.targetXPos, targetY: calc.targetYPos)
         
-        let distance = CalcFunctions().distance()
+        let distance = CalcFunctions().distance(targetX: calc.targetXPos, targetY: calc.targetYPos)
         topLabel.text = "Distance: \(Int(round(distance)))m"
         if (distance < 50) {
             midLabel.text = "Target too close"

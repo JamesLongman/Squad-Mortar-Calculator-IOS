@@ -48,6 +48,13 @@ class CorrectionsTargetViewController: UIViewController, UITextFieldDelegate, Pa
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        leftTargetField.text = calc.targetLeftField
+        middleTargetField.text = calc.targetMidField
+        rightTargetField.text = calc.targetRightField
+    }
+    
     @IBAction func leftTargetFieldEnded(_ sender: Any) {
         updateTarget()
     }
@@ -146,6 +153,9 @@ class CorrectionsTargetViewController: UIViewController, UITextFieldDelegate, Pa
         if (rightTargetField.backgroundColor !== UIColor.white) { rightTargetField.backgroundColor = UIColor.white }
         
         // All text fields good
+        calc.targetLeftField = leftTargetField.text!
+        calc.targetMidField = middleTargetField.text!
+        calc.targetRightField = rightTargetField.text!
         return true
     }
     

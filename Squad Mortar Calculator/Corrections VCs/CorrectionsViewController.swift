@@ -10,6 +10,18 @@ import UIKit
 
 class CorrectionsViewController: UIViewController, CorrectionsTargetLocations {
     
+    @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var midLabel: UILabel!
+    @IBOutlet weak var bottomLabel: UILabel!
+    
+    @IBOutlet weak var northField: CoordinatesTextField2!
+    @IBOutlet weak var eastField: CoordinatesTextField2!
+    @IBOutlet weak var southField: CoordinatesTextField2!
+    @IBOutlet weak var westField: CoordinatesTextField2!
+    
+    @IBOutlet weak var addField: CoordinatesTextField2!
+    @IBOutlet weak var subtractField: CoordinatesTextField2!
+    
     let calc = Calc.sharedInstance
 
     override func viewDidLoad() {
@@ -31,29 +43,97 @@ class CorrectionsViewController: UIViewController, CorrectionsTargetLocations {
         }
     }
     
-    func correctionsTargetLocations() {
-        calculate()
-    }
-    
-    func calculate() {
-        if (!CalcFunctions().verify()) { return }
-        calc.azimuth = CalcFunctions().azimuth()
-        
-        let distance = CalcFunctions().distance()
-        //topLabel.text = "Distance: \(Int(round(distance)))m"
-        if (distance < 50) {
-            //midLabel.text = "Target too close"
-            //bottomLabel.text = ""
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if (calc.mortarXPos == 0) {
+            midLabel.text = "Awaiting mortar position input"
             return
-        } else if (distance > 1250) {
-            //midLabel.text = "Target too far"
-            //bottomLabel.text = ""
+        } else if (calc.targetXPos == 0) {
+            midLabel.text = "Awaiting target position input"
             return
         }
         
-        calc.rads = CalcFunctions().rads(distance: distance)
-        //midLabel.text = "Azimuth: \(calc.azimuth.rounded(toPlaces: 1))°"
-        //bottomLabel.text = "Milliradians: \(Int(round(calc.rads)))"
+        calculateCorrect()
+    }
+    
+    func correctionsTargetLocations() {
+        calculateCorrect()
+    }
+    
+    func calculateCorrect() {
+        if (!CalcFunctions().verify()) { return }
+        
+        var correctedX: Double = calc.targetXPos
+        var correctedY: Double = calc.targetYPos
+        
+        // Remember y coodinates are reversed
+        if (northField.text!.count > 0) {
+            correctedY += -Double(northField.text!)!
+        }
+        if (eastField.text!.count > 0) {
+            correctedX += Double(eastField.text!)!
+        }
+        if (southField.text!.count > 0) {
+            correctedY += Double(southField.text!)!
+        }
+        if (westField.text!.count > 0) {
+            correctedX += -Double(westField.text!)!
+        }
+        
+        let correctedAzimuth = CalcFunctions().azimuth(targetX: correctedX, targetY: correctedY)
+        
+        var correctedDistance = CalcFunctions().distance(targetX: correctedX, targetY: correctedY)
+        if (addField.text!.count > 0) {
+            correctedDistance += Double(addField.text!)!
+        }
+        if (subtractField.text!.count > 0) {
+            correctedDistance += -Double(subtractField.text!)!
+        }
+        
+        topLabel.text = "Distance: \(Int(round(correctedDistance)))m"
+        if (correctedDistance < 50) {
+            midLabel.text = "Target too close"
+            bottomLabel.text = ""
+            return
+        } else if (correctedDistance > 1250) {
+            midLabel.text = "Target too far"
+            bottomLabel.text = ""
+            return
+        }
+        
+        let correctedRads = CalcFunctions().rads(distance: correctedDistance)
+        midLabel.text = "Azimuth: \(correctedAzimuth.rounded(toPlaces: 1))°"
+        bottomLabel.text = "Milliradians: \(Int(round(correctedRads)))"
         
     }
+    
+    @IBAction func northFieldEnded(_ sender: Any) {
+        calculateCorrect()
+    }
+    @IBAction func westFieldEnded(_ sender: Any) {
+        calculateCorrect()
+    }
+    @IBAction func eastFieldEnded(_ sender: Any) {
+        calculateCorrect()
+    }
+    @IBAction func southFieldEnded(_ sender: Any) {
+        calculateCorrect()
+    }
+    @IBAction func addFieldEnded(_ sender: Any) {
+        calculateCorrect()
+    }
+    @IBAction func subtractFieldEnded(_ sender: Any) {
+        calculateCorrect()
+    }
+    @IBAction func resetButton(_ sender: Any) {
+        northField.text = ""
+        eastField.text = ""
+        southField.text = ""
+        westField.text = ""
+        addField.text = ""
+        subtractField.text = ""
+        calculateCorrect()
+    }
+    
+    
 }

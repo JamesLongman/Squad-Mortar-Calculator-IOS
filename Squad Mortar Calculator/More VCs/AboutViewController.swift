@@ -20,7 +20,7 @@ class AboutViewController: UIViewController {
         body = body + "\nXcode 9.2"
         body = body + "\nSwift 4.1"
         body = body + "\n\nLicense: MIT"
-        body = body + "\n\nThe project's code and information on how to contribute (whether through reporting bugs or improving on the code) is available at the project's github repository, a link is under the \"More\" tab"
+        body = body + "\n\nThe project's code and information on how to contribute (whether through reporting bugs or improving on the code) is available at the project's github repository, a link is provided under the \"More\" tab"
         
         aboutText.text = body
     }

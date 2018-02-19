@@ -20,8 +20,13 @@ class Calc {
     var targetYPos:Double = 0
     var azimuth:Double = 0
     var rads: Double = 0
+    
     var mortarSubgridXPos: Double = 100/6
     var mortarSubgridYPos: Double = 100/6
     var targetSubgridXPos: Double = 100/6
     var targetSubgridYPos: Double = 100/6
+    
+    var targetLeftField: String = ""
+    var targetMidField: String = ""
+    var targetRightField: String = ""
 }

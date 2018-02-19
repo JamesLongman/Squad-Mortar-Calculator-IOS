@@ -362,7 +362,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mortar_green_dot" translatesAutoresizingMaskIntoConstraints="NO" id="hcq-ew-Zb5" userLabel="Mortar Pin">
-                                <rect key="frame" x="177" y="178" width="20" height="20"/>
+                                <rect key="frame" x="177" y="177" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -421,20 +421,336 @@
                                     <segue destination="iOX-fU-g45" kind="embed" identifier="targetCorrectionsSectionSegue" id="W8e-qH-Oxb"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adjustments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nP9-g2-Fjq">
+                                <rect key="frame" x="105" y="125" width="165.5" height="25"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="North" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pm-ng-YbN">
+                                <rect key="frame" x="162" y="155" width="51.5" height="17"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ium-OS-XhK">
+                                <rect key="frame" x="70" y="207" width="235" height="17"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="West" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8G0-CK-l8e">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="55" id="8Ld-Je-zuy"/>
+                                            <constraint firstAttribute="height" constant="17" id="hmD-cv-e0j"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ib-LB-eZm">
+                                        <rect key="frame" x="55" y="0.0" width="125" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="125" id="fkH-m0-haI"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="East" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uI-U1-fbR">
+                                        <rect key="frame" x="180" y="0.0" width="55" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="55" id="Mfj-Eo-q6O"/>
+                                            <constraint firstAttribute="height" constant="17" id="wxZ-m1-X1x"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0uI-U1-fbR" firstAttribute="leading" secondItem="0Ib-LB-eZm" secondAttribute="trailing" id="009-Lp-DHR"/>
+                                    <constraint firstItem="0Ib-LB-eZm" firstAttribute="leading" secondItem="8G0-CK-l8e" secondAttribute="trailing" id="u7M-dU-ClF"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EvW-IF-lxC">
+                                <rect key="frame" x="72.5" y="229" width="230" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YBD-kS-2az" userLabel="Left Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="W6q-9p-XTE"/>
+                                            <constraint firstAttribute="height" constant="50" id="aWL-e0-huv"/>
+                                        </constraints>
+                                        <attributedString key="attributedText"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="1234567890"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="acceptableFirstCharacters" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="acceptableSecondCharacters" value="0123456789"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="leftTargetFieldEnded:" destination="WdG-Na-hiJ" eventType="editingDidEnd" id="HwS-np-W00"/>
+                                            <action selector="westFieldEnded:" destination="Jvt-hC-Ga2" eventType="editingDidEnd" id="MDP-co-c0X"/>
+                                        </connections>
+                                    </textField>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aa7-XU-GEY">
+                                        <rect key="frame" x="50" y="0.0" width="130" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="PqJ-KY-0wh"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x1O-Bs-6e7" userLabel="Left Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="pSz-Rn-h5a"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="qlX-5I-jnm"/>
+                                        </constraints>
+                                        <attributedString key="attributedText"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="1234567890"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="acceptableFirstCharacters" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="acceptableSecondCharacters" value="0123456789"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="eastFieldEnded:" destination="Jvt-hC-Ga2" eventType="editingDidEnd" id="IPN-Pg-g1l"/>
+                                            <action selector="leftTargetFieldEnded:" destination="WdG-Na-hiJ" eventType="editingDidEnd" id="1Bl-nm-AvO"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="op7-Sj-LT0" userLabel="Left Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="162.5" y="177" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="24T-KC-mDB"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="ouH-zl-bb1"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="1234567890"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="acceptableFirstCharacters" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="acceptableSecondCharacters" value="0123456789"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="leftTargetFieldEnded:" destination="WdG-Na-hiJ" eventType="editingDidEnd" id="cau-HW-Hrn"/>
+                                    <action selector="northFieldEnded:" destination="Jvt-hC-Ga2" eventType="editingDidEnd" id="DKU-XW-HfT"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6e2-7B-tel" userLabel="Left Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="162.5" y="281" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="OH1-jg-bv1"/>
+                                    <constraint firstAttribute="height" constant="50" id="PnB-sB-vAM"/>
+                                </constraints>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="1234567890"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="acceptableFirstCharacters" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="acceptableSecondCharacters" value="0123456789"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="leftTargetFieldEnded:" destination="WdG-Na-hiJ" eventType="editingDidEnd" id="3zM-ST-p2L"/>
+                                    <action selector="southFieldEnded:" destination="Jvt-hC-Ga2" eventType="editingDidEnd" id="km3-Pb-vmn"/>
+                                </connections>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hvx-WL-FpQ">
+                                <rect key="frame" x="47.5" y="341" width="280" height="17"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egq-5Q-1tc">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="8Ep-jm-Y8t"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ls3-Gc-eQO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AbG-Pg-uBk">
+                                        <rect key="frame" x="100" y="0.0" width="80" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="FJH-Bq-dGw"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtract" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1M-hC-EBW">
+                                        <rect key="frame" x="180" y="0.0" width="100" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Qqk-E9-rCS"/>
+                                            <constraint firstAttribute="height" constant="17" id="Vob-3I-Bdq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="m1M-hC-EBW" firstAttribute="leading" secondItem="AbG-Pg-uBk" secondAttribute="trailing" id="8os-Gp-Otq"/>
+                                    <constraint firstItem="AbG-Pg-uBk" firstAttribute="leading" secondItem="Egq-5Q-1tc" secondAttribute="trailing" id="pZH-4R-I4M"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCi-vz-t9u">
+                                <rect key="frame" x="72.5" y="363" width="230" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hY-lB-rdh" userLabel="Left Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="7mp-2Q-5G3"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Og2-zO-pfS"/>
+                                        </constraints>
+                                        <attributedString key="attributedText"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="1234567890"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="acceptableFirstCharacters" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="acceptableSecondCharacters" value="0123456789"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addFieldEnded:" destination="Jvt-hC-Ga2" eventType="editingDidEnd" id="g1L-CN-Ukf"/>
+                                            <action selector="leftTargetFieldEnded:" destination="WdG-Na-hiJ" eventType="editingDidEnd" id="q0v-hH-HxM"/>
+                                        </connections>
+                                    </textField>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOU-Kq-nzp">
+                                        <rect key="frame" x="50" y="0.0" width="130" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="GZH-f9-QT3"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aYE-fq-YXb" userLabel="Left Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="180" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="MVP-Qg-myC"/>
+                                            <constraint firstAttribute="height" constant="50" id="cwm-Q1-4nf"/>
+                                        </constraints>
+                                        <attributedString key="attributedText"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="1234567890"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="acceptableFirstCharacters" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="acceptableSecondCharacters" value="0123456789"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="leftTargetFieldEnded:" destination="WdG-Na-hiJ" eventType="editingDidEnd" id="ZO5-uO-TTH"/>
+                                            <action selector="subtractFieldEnded:" destination="Jvt-hC-Ga2" eventType="editingDidEnd" id="7mO-ow-4dD"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBK-kW-jMJ">
+                                <rect key="frame" x="75" y="423" width="225" height="30"/>
+                                <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SmU-iZ-Xr1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButton:" destination="qyB-ob-piX" eventType="touchUpInside" id="Yh0-DG-53L"/>
+                                    <action selector="doneButton:" destination="uOB-Tw-l8b" eventType="touchUpInside" id="ilA-tx-pj0"/>
+                                    <action selector="doneButton:" destination="3qc-L5-hz9" eventType="touchUpInside" id="oic-3a-O7A"/>
+                                    <action selector="resetButton:" destination="Jvt-hC-Ga2" eventType="touchUpInside" id="iFa-wV-M6Z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="South" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfs-bI-3AI">
+                                <rect key="frame" x="161" y="259" width="51.5" height="17"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Yg-5j-WMQ">
+                                <rect key="frame" x="0.0" y="453" width="375" height="165"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5X7-dV-qQW">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHd-dJ-1A8">
+                                        <rect key="frame" x="0.0" y="55" width="375" height="55"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cr-u0-WNm">
+                                        <rect key="frame" x="0.0" y="110" width="375" height="55"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bHd-dJ-1A8" firstAttribute="height" secondItem="5X7-dV-qQW" secondAttribute="height" id="838-nU-O9z"/>
+                                    <constraint firstItem="5cr-u0-WNm" firstAttribute="height" secondItem="5X7-dV-qQW" secondAttribute="height" id="nk2-sq-rwy"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6pm-ng-YbN" firstAttribute="centerX" secondItem="PZy-WB-Azk" secondAttribute="centerX" id="9Wy-q4-HT2"/>
+                            <constraint firstItem="op7-Sj-LT0" firstAttribute="top" secondItem="6pm-ng-YbN" secondAttribute="bottom" constant="5" id="9ip-po-9NF"/>
+                            <constraint firstItem="Ium-OS-XhK" firstAttribute="centerX" secondItem="PZy-WB-Azk" secondAttribute="centerX" id="E3C-Bu-OkO"/>
+                            <constraint firstItem="hvx-WL-FpQ" firstAttribute="centerX" secondItem="PZy-WB-Azk" secondAttribute="centerX" id="GcW-Gc-3lW"/>
+                            <constraint firstItem="EvW-IF-lxC" firstAttribute="top" secondItem="Ium-OS-XhK" secondAttribute="bottom" constant="5" id="GeZ-OJ-d5x"/>
+                            <constraint firstItem="hvx-WL-FpQ" firstAttribute="top" secondItem="6e2-7B-tel" secondAttribute="bottom" constant="10" id="KnD-Du-6Xw"/>
+                            <constraint firstItem="6e2-7B-tel" firstAttribute="centerX" secondItem="PZy-WB-Azk" secondAttribute="centerX" id="KpR-Pv-byo"/>
                             <constraint firstItem="Ve8-lG-O0d" firstAttribute="top" secondItem="WPI-un-vdE" secondAttribute="top" id="PTN-hY-5N8"/>
+                            <constraint firstItem="op7-Sj-LT0" firstAttribute="centerX" secondItem="PZy-WB-Azk" secondAttribute="centerX" id="R8T-Zo-N8A"/>
                             <constraint firstItem="Ve8-lG-O0d" firstAttribute="trailing" secondItem="WPI-un-vdE" secondAttribute="trailing" id="RK1-kx-xdt"/>
+                            <constraint firstItem="WPI-un-vdE" firstAttribute="trailing" secondItem="1Yg-5j-WMQ" secondAttribute="trailing" id="Rg0-Q9-nZQ"/>
+                            <constraint firstItem="1Yg-5j-WMQ" firstAttribute="leading" secondItem="WPI-un-vdE" secondAttribute="leading" id="SQJ-mB-IRC"/>
+                            <constraint firstItem="WPI-un-vdE" firstAttribute="bottom" secondItem="1Yg-5j-WMQ" secondAttribute="bottom" id="T5R-pe-tTi"/>
+                            <constraint firstItem="nP9-g2-Fjq" firstAttribute="centerX" secondItem="PZy-WB-Azk" secondAttribute="centerX" id="TE7-3p-Ibb"/>
+                            <constraint firstItem="6pm-ng-YbN" firstAttribute="top" secondItem="nP9-g2-Fjq" secondAttribute="bottom" constant="5" id="ZUs-3k-OfR"/>
+                            <constraint firstItem="tfs-bI-3AI" firstAttribute="top" secondItem="EvW-IF-lxC" secondAttribute="bottom" constant="-20" id="dua-ur-Mkt"/>
+                            <constraint firstItem="6e2-7B-tel" firstAttribute="top" secondItem="tfs-bI-3AI" secondAttribute="bottom" constant="5" id="e0c-iA-PnM"/>
+                            <constraint firstItem="uBK-kW-jMJ" firstAttribute="top" secondItem="XCi-vz-t9u" secondAttribute="bottom" constant="10" id="eUQ-9H-Hsj"/>
+                            <constraint firstItem="XCi-vz-t9u" firstAttribute="centerX" secondItem="PZy-WB-Azk" secondAttribute="centerX" id="fdI-Bx-TPC"/>
+                            <constraint firstItem="EvW-IF-lxC" firstAttribute="centerX" secondItem="PZy-WB-Azk" secondAttribute="centerX" id="hQN-LI-jtV"/>
+                            <constraint firstItem="tfs-bI-3AI" firstAttribute="centerX" secondItem="PZy-WB-Azk" secondAttribute="centerX" id="lJh-2g-tVw"/>
+                            <constraint firstItem="1Yg-5j-WMQ" firstAttribute="top" secondItem="uBK-kW-jMJ" secondAttribute="bottom" id="sM6-qj-Hku"/>
+                            <constraint firstItem="nP9-g2-Fjq" firstAttribute="top" secondItem="Ve8-lG-O0d" secondAttribute="bottom" constant="5" id="uO5-FK-1y7"/>
+                            <constraint firstItem="uBK-kW-jMJ" firstAttribute="leading" secondItem="PZy-WB-Azk" secondAttribute="leading" constant="75" id="vQN-y9-7a0"/>
+                            <constraint firstItem="XCi-vz-t9u" firstAttribute="top" secondItem="hvx-WL-FpQ" secondAttribute="bottom" constant="5" id="w3f-fN-kZg"/>
                             <constraint firstItem="Ve8-lG-O0d" firstAttribute="leading" secondItem="WPI-un-vdE" secondAttribute="leading" id="xXv-dC-Eau"/>
+                            <constraint firstItem="WPI-un-vdE" firstAttribute="trailing" secondItem="uBK-kW-jMJ" secondAttribute="trailing" constant="75" id="y3A-1K-L2N"/>
+                            <constraint firstItem="Ium-OS-XhK" firstAttribute="top" secondItem="op7-Sj-LT0" secondAttribute="bottom" constant="-20" id="zPM-oD-Ed5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WPI-un-vdE"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Corrections" id="y2i-oA-SUC"/>
+                    <connections>
+                        <outlet property="addField" destination="2hY-lB-rdh" id="HEv-cR-lgW"/>
+                        <outlet property="bottomLabel" destination="5cr-u0-WNm" id="e1B-vG-Sna"/>
+                        <outlet property="eastField" destination="x1O-Bs-6e7" id="sRO-rs-l7T"/>
+                        <outlet property="midLabel" destination="bHd-dJ-1A8" id="Aa9-Eg-Dj5"/>
+                        <outlet property="northField" destination="op7-Sj-LT0" id="cbr-XY-RdG"/>
+                        <outlet property="southField" destination="6e2-7B-tel" id="lz9-RW-vWx"/>
+                        <outlet property="subtractField" destination="aYE-fq-YXb" id="RRL-6H-gWq"/>
+                        <outlet property="topLabel" destination="5X7-dV-qQW" id="6En-R3-wda"/>
+                        <outlet property="westField" destination="YBD-kS-2az" id="NDS-df-0ag"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mzf-6x-3go" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3359" y="63"/>
+            <point key="canvasLocation" x="3357.5999999999999" y="62.518740629685162"/>
         </scene>
         <!--Barrage-->
         <scene sceneID="mO6-wZ-K1V">
