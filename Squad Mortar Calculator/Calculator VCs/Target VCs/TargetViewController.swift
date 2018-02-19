@@ -107,7 +107,7 @@ class TargetViewController: UIViewController, UITextFieldDelegate, PassTargetLoc
         switch Int(rightTargetField.text!)! {
         case 1: targetYPos += increment * 2
         case 2: targetYPos += increment * 2; targetXPos += increment
-        case 3: targetYPos += increment * 2; targetXPos += increment
+        case 3: targetYPos += increment * 2; targetXPos += increment * 2
         case 4: targetYPos += increment
         case 5: targetYPos += increment; targetXPos += increment
         case 6: targetYPos += increment; targetXPos += increment * 2

@@ -106,7 +106,7 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
         switch Int(rightMortarField.text!)! {
         case 1: mortarYPos += increment * 2
         case 2: mortarYPos += increment * 2; mortarXPos += increment
-        case 3: mortarYPos += increment * 2; mortarXPos += increment
+        case 3: mortarYPos += increment * 2; mortarXPos += increment * 2
         case 4: mortarYPos += increment
         case 5: mortarYPos += increment; mortarXPos += increment
         case 6: mortarYPos += increment; mortarXPos += increment * 2

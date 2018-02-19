@@ -50,7 +50,7 @@ class CalcFunctions {
         var rads:Double = 1603.9273942850821 // const from polynomial
         
         /* 12th order polynomial regression formula to approximate rads -> milliradians
-        Interpolation arachnoid.com/polysolve
+        Interpolation provided by arachnoid.com/polysolve
         Higher orders than 12 offer extremely diminished returns
         Correlation coefficiant = 0.9999994 */
         rads += -5.8438295306148713 * pow(10, -1) * distance
@@ -65,11 +65,6 @@ class CalcFunctions {
         rads += -2.8038885580479877 * pow(10, -25) * pow(distance, 10)
         rads += 1.2940370170642232 * pow(10, -28) * pow(distance, 11)
         rads += -2.3669421263783761 * pow(10, -32) * pow(distance, 12)
-        
-        
-        print("====================")
-        print("Distance: \(distance)")
-        print("Rads: \(rads)")
 
         return rads
     }
