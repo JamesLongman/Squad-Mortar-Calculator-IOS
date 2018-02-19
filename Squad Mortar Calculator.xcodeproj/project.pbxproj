@@ -18,6 +18,12 @@
 		E61407E62039CD1500F6FB49 /* calcValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61407E52039CD1500F6FB49 /* calcValues.swift */; };
 		E61407E82039D8FA00F6FB49 /* calcFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61407E72039D8FA00F6FB49 /* calcFunctions.swift */; };
 		E61407EA203A431200F6FB49 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61407E9203A431200F6FB49 /* extensions.swift */; };
+		E61407ED203A950100F6FB49 /* CorrectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61407EC203A950100F6FB49 /* CorrectionsViewController.swift */; };
+		E61407F0203A965E00F6FB49 /* BarrageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61407EF203A965E00F6FB49 /* BarrageViewController.swift */; };
+		E61407F2203A9B9B00F6FB49 /* CorrectionsTargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61407F1203A9B9B00F6FB49 /* CorrectionsTargetViewController.swift */; };
+		E61407F4203A9D8B00F6FB49 /* CorrectionsGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61407F3203A9D8B00F6FB49 /* CorrectionsGridViewController.swift */; };
+		E61407F6203B15ED00F6FB49 /* CorrectionsEnlargedTargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61407F5203B15ED00F6FB49 /* CorrectionsEnlargedTargetViewController.swift */; };
+		E61407F8203B162A00F6FB49 /* CorrectionsEnlargedTargetGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61407F7203B162A00F6FB49 /* CorrectionsEnlargedTargetGridViewController.swift */; };
 		E66FFE922026692B007B730B /* MortarGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66FFE912026692B007B730B /* MortarGridViewController.swift */; };
 		E66FFE94202735A2007B730B /* EnlargedMortarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66FFE93202735A2007B730B /* EnlargedMortarViewController.swift */; };
 		E66FFE98202890E6007B730B /* EnlargedMortarGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66FFE97202890E6007B730B /* EnlargedMortarGridViewController.swift */; };
@@ -61,6 +67,12 @@
 		E61407E52039CD1500F6FB49 /* calcValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calcValues.swift; sourceTree = "<group>"; };
 		E61407E72039D8FA00F6FB49 /* calcFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calcFunctions.swift; sourceTree = "<group>"; };
 		E61407E9203A431200F6FB49 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		E61407EC203A950100F6FB49 /* CorrectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectionsViewController.swift; sourceTree = "<group>"; };
+		E61407EF203A965E00F6FB49 /* BarrageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrageViewController.swift; sourceTree = "<group>"; };
+		E61407F1203A9B9B00F6FB49 /* CorrectionsTargetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectionsTargetViewController.swift; sourceTree = "<group>"; };
+		E61407F3203A9D8B00F6FB49 /* CorrectionsGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectionsGridViewController.swift; sourceTree = "<group>"; };
+		E61407F5203B15ED00F6FB49 /* CorrectionsEnlargedTargetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectionsEnlargedTargetViewController.swift; sourceTree = "<group>"; };
+		E61407F7203B162A00F6FB49 /* CorrectionsEnlargedTargetGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectionsEnlargedTargetGridViewController.swift; sourceTree = "<group>"; };
 		E66FFE912026692B007B730B /* MortarGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortarGridViewController.swift; sourceTree = "<group>"; };
 		E66FFE93202735A2007B730B /* EnlargedMortarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargedMortarViewController.swift; sourceTree = "<group>"; };
 		E66FFE97202890E6007B730B /* EnlargedMortarGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargedMortarGridViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +161,26 @@
 			path = "More VCs";
 			sourceTree = "<group>";
 		};
+		E61407EB203A94A800F6FB49 /* Corrections VCs */ = {
+			isa = PBXGroup;
+			children = (
+				E61407EC203A950100F6FB49 /* CorrectionsViewController.swift */,
+				E61407F1203A9B9B00F6FB49 /* CorrectionsTargetViewController.swift */,
+				E61407F3203A9D8B00F6FB49 /* CorrectionsGridViewController.swift */,
+				E61407F5203B15ED00F6FB49 /* CorrectionsEnlargedTargetViewController.swift */,
+				E61407F7203B162A00F6FB49 /* CorrectionsEnlargedTargetGridViewController.swift */,
+			);
+			path = "Corrections VCs";
+			sourceTree = "<group>";
+		};
+		E61407EE203A959B00F6FB49 /* Barrage VCs */ = {
+			isa = PBXGroup;
+			children = (
+				E61407EF203A965E00F6FB49 /* BarrageViewController.swift */,
+			);
+			path = "Barrage VCs";
+			sourceTree = "<group>";
+		};
 		E6D4CFD22022EA0900FF5658 = {
 			isa = PBXGroup;
 			children = (
@@ -172,8 +204,10 @@
 		E6D4CFDD2022EA0900FF5658 /* Squad Mortar Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				E61407DE2032879700F6FB49 /* More VCs */,
 				E61407DD203286FA00F6FB49 /* Calculator VCs */,
+				E61407EB203A94A800F6FB49 /* Corrections VCs */,
+				E61407EE203A959B00F6FB49 /* Barrage VCs */,
+				E61407DE2032879700F6FB49 /* More VCs */,
 				E61407E32035275300F6FB49 /* PrimaryTabBarController.swift */,
 				E6D4CFDE2022EA0900FF5658 /* AppDelegate.swift */,
 				E6D4CFE22022EA0900FF5658 /* Main.storyboard */,
@@ -343,18 +377,24 @@
 				E6A11E872023AEE400A0643A /* CoordinateTextFields.swift in Sources */,
 				E61407E82039D8FA00F6FB49 /* calcFunctions.swift in Sources */,
 				E6D4CFE12022EA0900FF5658 /* CalculatorViewController.swift in Sources */,
+				E61407F4203A9D8B00F6FB49 /* CorrectionsGridViewController.swift in Sources */,
 				E613BEC42030F31300F787A4 /* TargetViewController.swift in Sources */,
 				E61407EA203A431200F6FB49 /* extensions.swift in Sources */,
 				E613BEC62030F76200F787A4 /* TargetGridViewController.swift in Sources */,
 				E613BEC82030FFA400F787A4 /* EnlargedTargetViewController.swift in Sources */,
+				E61407F6203B15ED00F6FB49 /* CorrectionsEnlargedTargetViewController.swift in Sources */,
+				E61407F0203A965E00F6FB49 /* BarrageViewController.swift in Sources */,
 				E6D4CFDF2022EA0900FF5658 /* AppDelegate.swift in Sources */,
 				E613BECA20310B1000F787A4 /* EnlargedTargetGridViewController.swift in Sources */,
+				E61407F2203A9B9B00F6FB49 /* CorrectionsTargetViewController.swift in Sources */,
 				E66FFE98202890E6007B730B /* EnlargedMortarGridViewController.swift in Sources */,
 				E61407DA2032868000F6FB49 /* MoreViewController.swift in Sources */,
 				E61407E2203347AE00F6FB49 /* AboutViewController.swift in Sources */,
 				E6891B64202369DD0065492F /* MortarViewController.swift in Sources */,
 				E61407E02032881C00F6FB49 /* GuideViewController.swift in Sources */,
 				E61407E42035275300F6FB49 /* PrimaryTabBarController.swift in Sources */,
+				E61407ED203A950100F6FB49 /* CorrectionsViewController.swift in Sources */,
+				E61407F8203B162A00F6FB49 /* CorrectionsEnlargedTargetGridViewController.swift in Sources */,
 				E61407E62039CD1500F6FB49 /* calcValues.swift in Sources */,
 				E66FFE94202735A2007B730B /* EnlargedMortarViewController.swift in Sources */,
 			);
