@@ -1,29 +1,30 @@
 //
-//  EnlargedMortarGridViewController.swift
+//  BarrageEnlargedTargetGridViewController.swift
 //  Squad Mortar Calculator
 //
-//  Created by James Longman on 05/02/2018.
+//  Created by James Longman on 20/02/2018.
 //  Copyright © 2018 James Longman. All rights reserved.
 //
 
 import UIKit
 
-protocol PassMortarLoc1 {
-    func passMortar1()
+protocol PassBarrageTargetLoc1 {
+    func passBarrageTarget1()
 }
 
-class EnlargedMortarGridViewController: UIViewController {
+class BarrageEnlargedTargetGridViewController: UIViewController {
 
     let calc = Calc.sharedInstance
-    var delegate: PassMortarLoc1?
+    var delegate: PassBarrageTargetLoc1?
     
-    @IBOutlet weak var mortarPin: UIImageView!
+    @IBOutlet weak var targetPin: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -34,6 +35,7 @@ class EnlargedMortarGridViewController: UIViewController {
         let touch : UITouch! = touches.first! as UITouch
         updatePosition(position: touch.location(in: self.view))
     }
+    
     
     // Allow the user to drag the pin as long as they don't drag it out of the view container
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -46,26 +48,23 @@ class EnlargedMortarGridViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let xPoint = ((calc.mortarSubgridXPos * Double(self.view!.bounds.width)) / (100/3))
-        let yPoint = ((calc.mortarSubgridYPos * Double(self.view!.bounds.height)) / (100/3))
-        mortarPin.center = CGPoint(x: xPoint, y: yPoint)
+        let xPoint = ((calc.targetSubgridXPos * Double(self.view!.bounds.width)) / (100/3))
+        let yPoint = ((calc.targetSubgridYPos * Double(self.view!.bounds.height)) / (100/3))
+        targetPin.center = CGPoint(x: xPoint, y: yPoint)
     }
     
-    // Called from center button in EnlargedMortarViewController.swift, centers pin
+    // Called from center button in EnlargedTargetViewController.swift, centers pin
     func center() {
         updatePosition(position: CGPoint(x: self.view!.bounds.width/2, y: self.view!.bounds.height/2))
     }
     
     func updatePosition(position: CGPoint) {
-        mortarPin.center = position
+        targetPin.center = position
         
-        calc.mortarSubgridXPos = Double(position.x / self.view!.bounds.width) * (100/3)
-        calc.mortarSubgridYPos = Double(position.y / self.view!.bounds.height) * (100/3)
+        calc.targetSubgridXPos = Double(position.x / self.view!.bounds.width) * (100/3)
+        calc.targetSubgridYPos = Double(position.y / self.view!.bounds.height) * (100/3)
         
-        
-        delegate!.passMortar1()
+        delegate!.passBarrageTarget1()
     }
     
-    
-
 }

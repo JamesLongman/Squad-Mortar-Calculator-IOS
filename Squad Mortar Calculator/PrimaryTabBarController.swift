@@ -20,7 +20,12 @@ class PrimaryTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        /* Disable idle time. Users are likely to regularly spend periods of time
+         using the app without any input while still referring to content the app provides,
+         the app is intended to be used whilst a user is playing a computer game
+         so battery life is not a big concern compared to the annoyance of regular idles
+         as they will most likely be at home */
+        UIApplication.shared.isIdleTimerDisabled = false
     }
 
     override func didReceiveMemoryWarning() {

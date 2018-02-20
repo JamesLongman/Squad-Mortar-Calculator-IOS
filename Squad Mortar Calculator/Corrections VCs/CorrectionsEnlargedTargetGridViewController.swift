@@ -38,7 +38,7 @@ class CorrectionsEnlargedTargetGridViewController: UIViewController {
     }
     
 
-    // Allow the user to drag the pin as long as they don't drag it out of the view contaner
+    // Allow the user to drag the pin as long as they don't drag it out of the view container
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
         let touch : UITouch! = touches.first! as UITouch
