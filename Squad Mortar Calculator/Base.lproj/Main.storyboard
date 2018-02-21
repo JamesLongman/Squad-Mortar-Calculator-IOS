@@ -448,7 +448,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ium-OS-XhK">
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ium-OS-XhK" userLabel="West/East Labels Stack View">
                                 <rect key="frame" x="70" y="207" width="235" height="17"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="West" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8G0-CK-l8e">
@@ -461,7 +461,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ib-LB-eZm">
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ib-LB-eZm" userLabel="Buffer View">
                                         <rect key="frame" x="55" y="0.0" width="125" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="125" id="fkH-m0-haI"/>
@@ -483,10 +483,10 @@
                                     <constraint firstItem="0Ib-LB-eZm" firstAttribute="leading" secondItem="8G0-CK-l8e" secondAttribute="trailing" id="u7M-dU-ClF"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EvW-IF-lxC">
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EvW-IF-lxC" userLabel="West/East Fields Stack View">
                                 <rect key="frame" x="72.5" y="229" width="230" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YBD-kS-2az" userLabel="Left Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YBD-kS-2az" userLabel="West Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="W6q-9p-XTE"/>
@@ -505,13 +505,13 @@
                                             <action selector="westFieldEnded:" destination="Jvt-hC-Ga2" eventType="editingDidEnd" id="MDP-co-c0X"/>
                                         </connections>
                                     </textField>
-                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aa7-XU-GEY">
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aa7-XU-GEY" userLabel="Buffer View">
                                         <rect key="frame" x="50" y="0.0" width="130" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="130" id="PqJ-KY-0wh"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x1O-Bs-6e7" userLabel="Left Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x1O-Bs-6e7" userLabel="East Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
                                         <rect key="frame" x="180" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="pSz-Rn-h5a"/>
@@ -532,7 +532,7 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="op7-Sj-LT0" userLabel="Left Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="op7-Sj-LT0" userLabel="North Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
                                 <rect key="frame" x="162.5" y="177" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="24T-KC-mDB"/>
@@ -551,8 +551,8 @@
                                     <action selector="northFieldEnded:" destination="Jvt-hC-Ga2" eventType="editingDidEnd" id="DKU-XW-HfT"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6e2-7B-tel" userLabel="Left Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
-                                <rect key="frame" x="162.5" y="281" width="50" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6e2-7B-tel" userLabel="South Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="162" y="281" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="OH1-jg-bv1"/>
                                     <constraint firstAttribute="height" constant="50" id="PnB-sB-vAM"/>
@@ -570,7 +570,7 @@
                                     <action selector="southFieldEnded:" destination="Jvt-hC-Ga2" eventType="editingDidEnd" id="km3-Pb-vmn"/>
                                 </connections>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hvx-WL-FpQ">
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hvx-WL-FpQ" userLabel="Add/Subtract Labels Stack View">
                                 <rect key="frame" x="47.5" y="341" width="280" height="17"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egq-5Q-1tc">
@@ -583,7 +583,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AbG-Pg-uBk">
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AbG-Pg-uBk" userLabel="Buffer View">
                                         <rect key="frame" x="100" y="0.0" width="80" height="17"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="FJH-Bq-dGw"/>
@@ -605,10 +605,10 @@
                                     <constraint firstItem="AbG-Pg-uBk" firstAttribute="leading" secondItem="Egq-5Q-1tc" secondAttribute="trailing" id="pZH-4R-I4M"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCi-vz-t9u">
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCi-vz-t9u" userLabel="Add/Subtract Labels Stack">
                                 <rect key="frame" x="72.5" y="363" width="230" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hY-lB-rdh" userLabel="Left Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hY-lB-rdh" userLabel="Add Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="7mp-2Q-5G3"/>
@@ -627,13 +627,13 @@
                                             <action selector="leftTargetFieldEnded:" destination="WdG-Na-hiJ" eventType="editingDidEnd" id="q0v-hH-HxM"/>
                                         </connections>
                                     </textField>
-                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOU-Kq-nzp">
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOU-Kq-nzp" userLabel="Buffer View">
                                         <rect key="frame" x="50" y="0.0" width="130" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="130" id="GZH-f9-QT3"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aYE-fq-YXb" userLabel="Left Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aYE-fq-YXb" userLabel="Subtract Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
                                         <rect key="frame" x="180" y="0.0" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="MVP-Qg-myC"/>
@@ -792,10 +792,10 @@
                                     <segue destination="oc0-35-kW9" kind="embed" identifier="targetBarrageSectionSegue" id="Dex-0a-a2C"/>
                                 </connections>
                             </containerView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="KPO-GP-DMI">
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="KPO-GP-DMI" userLabel="Barrage/Interval Stack">
                                 <rect key="frame" x="0.0" y="125" width="375" height="25"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xN8-5b-vFb">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xN8-5b-vFb" userLabel="Barrage Title View">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="25"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barrage radius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRG-P9-1Kb">
@@ -810,7 +810,7 @@
                                             <constraint firstItem="WRG-P9-1Kb" firstAttribute="centerX" secondItem="xN8-5b-vFb" secondAttribute="centerX" id="eQG-FD-BlW"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlk-rZ-KE9">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlk-rZ-KE9" userLabel="Interval Title View">
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="25"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interval" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNr-oj-5AI">
@@ -838,10 +838,50 @@
                                     <constraint firstAttribute="trailing" secondItem="rlk-rZ-KE9" secondAttribute="trailing" id="yva-Yr-irB"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNS-7h-f5q">
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="L4A-yK-e3h" userLabel="Slider Feedback Stack">
+                                <rect key="frame" x="0.0" y="165" width="375" height="15"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l64-IJ-Qhm" userLabel="Left Feedback View">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="15"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuL-2y-a0Z">
+                                                <rect key="frame" x="79" y="-1" width="31" height="17"/>
+                                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="zuL-2y-a0Z" firstAttribute="centerX" secondItem="l64-IJ-Qhm" secondAttribute="centerX" id="9V5-YS-PX1"/>
+                                            <constraint firstItem="zuL-2y-a0Z" firstAttribute="centerY" secondItem="l64-IJ-Qhm" secondAttribute="centerY" id="Lgi-6u-aDD"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAr-jL-u0X" userLabel="Right Feedback View">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="15"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRc-kE-8DG">
+                                                <rect key="frame" x="79" y="-1" width="31" height="17"/>
+                                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="sRc-kE-8DG" firstAttribute="centerY" secondItem="PAr-jL-u0X" secondAttribute="centerY" id="OKA-Ie-UVk"/>
+                                            <constraint firstItem="sRc-kE-8DG" firstAttribute="centerX" secondItem="PAr-jL-u0X" secondAttribute="centerX" id="mil-4D-NoI"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="5UZ-cq-wb1"/>
+                                    <constraint firstItem="PAr-jL-u0X" firstAttribute="leading" secondItem="l64-IJ-Qhm" secondAttribute="trailing" id="gAD-TO-mZP"/>
+                                    <constraint firstItem="PAr-jL-u0X" firstAttribute="width" secondItem="l64-IJ-Qhm" secondAttribute="width" id="gKF-AI-Mc7"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNS-7h-f5q" userLabel="Slider Stack">
                                 <rect key="frame" x="0.0" y="180" width="375" height="50"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jht-Et-1yx">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jht-Et-1yx" userLabel="Left Field">
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="5" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="s4Z-j9-RAG">
@@ -860,7 +900,7 @@
                                             <constraint firstAttribute="trailing" secondItem="s4Z-j9-RAG" secondAttribute="trailing" constant="10" id="kfh-fc-RTu"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XH3-S1-YLx">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XH3-S1-YLx" userLabel="Right Field">
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="50"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="5" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="Y99-X0-ydG">
@@ -887,47 +927,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="is5-NI-zXy"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="L4A-yK-e3h">
-                                <rect key="frame" x="0.0" y="165" width="375" height="15"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l64-IJ-Qhm">
-                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="15"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuL-2y-a0Z">
-                                                <rect key="frame" x="79" y="-1" width="31" height="17"/>
-                                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="zuL-2y-a0Z" firstAttribute="centerX" secondItem="l64-IJ-Qhm" secondAttribute="centerX" id="9V5-YS-PX1"/>
-                                            <constraint firstItem="zuL-2y-a0Z" firstAttribute="centerY" secondItem="l64-IJ-Qhm" secondAttribute="centerY" id="Lgi-6u-aDD"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAr-jL-u0X">
-                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="15"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRc-kE-8DG">
-                                                <rect key="frame" x="79" y="-1" width="31" height="17"/>
-                                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="sRc-kE-8DG" firstAttribute="centerY" secondItem="PAr-jL-u0X" secondAttribute="centerY" id="OKA-Ie-UVk"/>
-                                            <constraint firstItem="sRc-kE-8DG" firstAttribute="centerX" secondItem="PAr-jL-u0X" secondAttribute="centerX" id="mil-4D-NoI"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="5UZ-cq-wb1"/>
-                                    <constraint firstItem="PAr-jL-u0X" firstAttribute="leading" secondItem="l64-IJ-Qhm" secondAttribute="trailing" id="gAD-TO-mZP"/>
-                                    <constraint firstItem="PAr-jL-u0X" firstAttribute="width" secondItem="l64-IJ-Qhm" secondAttribute="width" id="gKF-AI-Mc7"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUB-bk-oVi">
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUB-bk-oVi" userLabel="Timer Stack">
                                 <rect key="frame" x="0.0" y="230" width="375" height="100"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5LQ-bT-2Z0">
@@ -942,13 +942,13 @@
                                             </label>
                                         </subviews>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agi-Vg-3al">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agi-Vg-3al" userLabel="Right Timing View">
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="100"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LTa-UA-aDN">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LTa-UA-aDN" userLabel="Right Timing Stack">
                                                 <rect key="frame" x="0.0" y="0.0" width="187.5" height="100"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bp6-J4-pIj">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bp6-J4-pIj" userLabel="Right Timing Top View">
                                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSn-l7-TWD">
@@ -971,7 +971,7 @@
                                                             <constraint firstAttribute="bottom" secondItem="FSn-l7-TWD" secondAttribute="bottom" constant="10" id="qcW-u7-y0H"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LT4-un-txp">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LT4-un-txp" userLabel="Right Timing Bottom View">
                                                         <rect key="frame" x="0.0" y="50" width="187.5" height="50"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seF-Ik-t7V">
@@ -1285,7 +1285,7 @@
                                     <constraint firstItem="RGf-37-9Vh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aEY-jk-gPP" secondAttribute="trailing" id="ybP-sP-xKs"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VjP-gF-HuB">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VjP-gF-HuB" userLabel="Content View">
                                 <rect key="frame" x="0.0" y="50" width="375" height="617"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="replace" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYa-zi-kFZ" userLabel="App Description">
@@ -1341,7 +1341,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6J5-HP-iW0">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6J5-HP-iW0" userLabel="Sub View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Position" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9A-QV-8xU">
@@ -1568,7 +1568,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajS-Sj-pLl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajS-Sj-pLl" userLabel="Sub View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iaR-jc-x1w" userLabel="Target Grid">
@@ -1677,7 +1677,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lz5-8s-C19">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lz5-8s-C19" userLabel="Sub View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Position" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXf-Pp-G6d">
@@ -1870,7 +1870,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6l3-a6-qe0">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6l3-a6-qe0" userLabel="Sub View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nW-Gv-Na6">
@@ -1947,7 +1947,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oiE-eg-zML">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oiE-eg-zML" userLabel="Sub View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Position" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meL-D4-vxB">
@@ -2109,7 +2109,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nXF-l9-GdG">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nXF-l9-GdG" userLabel="Sub View">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-hz-TWn" userLabel="Target Grid">
@@ -2155,7 +2155,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w78-pC-b7r">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w78-pC-b7r" userLabel="Sub View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rel-m4-Dyr">
@@ -2232,7 +2232,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBL-r2-tBA">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBL-r2-tBA" userLabel="Sub View">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XjT-Nf-aJ5" userLabel="Target Grid">
