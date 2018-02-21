@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension Double {
     /// Rounds the double to decimal places value
@@ -35,5 +36,30 @@ extension Character {
     func containedIn(matchCharacters: String) -> Bool {
         let disallowedCharacterSet = NSCharacterSet(charactersIn: matchCharacters).inverted
         return String(self).rangeOfCharacter(from: disallowedCharacterSet) == nil
+    }
+}
+
+extension UILabel {
+    func animateTo(text: String, duration: Double) {
+        if !(text == self.text!) {
+            UIView.animate(
+                withDuration: (duration / 2),
+                animations: {
+                    self.alpha = 0
+            },
+                completion:{ finished in
+                    if(finished){
+                        self.text = text
+                        UIView.animate(
+                            withDuration: (duration / 2),
+                            animations: {
+                                self.alpha = 1
+                        },
+                            completion: nil
+                        )
+                    }
+            }
+            )
+        }
     }
 }

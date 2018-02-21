@@ -33,6 +33,7 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
     let calc = Calc.sharedInstance
     
     let shapeLayer = CAShapeLayer()
+    let animationDuration = 0.4
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,7 +130,7 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
         let barrageY = randomDouble(min: (calc.targetYPos - yTollerance), max: (calc.targetYPos + yTollerance))
         
         distance = CalcFunctions().distance(targetX: barrageX, targetY: barrageY)
-        topLabel.text = "Distance to target point: \(Int(round(distance)))m"
+        topLabel.text = "Distance to barrage point: \(Int(round(distance)))m"
         midLabel.text = "Azimuth: \(CalcFunctions().azimuth(targetX: barrageX, targetY: barrageY).rounded(toPlaces: 1))°"
         bottomLabel.text = "Milliradians: \(Int(round(CalcFunctions().rads(distance: distance))))"
         
@@ -146,7 +147,7 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
     @IBAction func startStopButtonPressed(_ sender: Any) {
         if (timerIsOn == false) {
             timeRemaining = Int(round(intervalSlider.value))
-            timerLabel.text = "\(timeRemaining)"
+            timerLabel.animateTo(text: "\(timeRemaining)", duration: animationDuration)
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
             timerIsOn = true
             shapeLayer.isHidden = false
@@ -159,7 +160,7 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
             shapeLayer.isHidden = true
             startStopButton.setTitle("Start", for: .normal)
             timeRemaining = Int(round(intervalSlider.value))
-            timerLabel.text = "\(timeRemaining)"
+            timerLabel.animateTo(text: "\(timeRemaining)", duration: animationDuration)
             
         }
     }
@@ -170,18 +171,22 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
         }
         timeRemaining = Int(round(intervalSlider.value))
-        timerLabel.text = "\(timeRemaining)"
-        timerAnimation()
+        if (timerIsOn) {
+            timerAnimation()
+        } else {
+            shapeLayer.isHidden = true
+        }
+        timerLabel.animateTo(text: "\(timeRemaining)", duration: animationDuration)
         calculate()
     }
     
     @objc func timerRunning() {
         if (timeRemaining > 1) {
             timeRemaining -= 1
-            timerLabel.text = "\(timeRemaining)"
+            timerLabel.animateTo(text: "\(timeRemaining)", duration: animationDuration)
         } else {
             timeRemaining = Int(round(intervalSlider.value))
-            timerLabel.text = "\(timeRemaining)"
+            timerLabel.animateTo(text: "\(timeRemaining)", duration: animationDuration)
             timerAnimation()
             calculate()
         }
