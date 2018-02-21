@@ -21,7 +21,7 @@
         <!--Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="Squad_Mortar_Calculator" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,26 +45,41 @@
                                     <segue destination="WdG-Na-hiJ" kind="embed" identifier="targetSectionSegue" id="puN-Ej-Rmb"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aoy-3U-zx6">
-                                <rect key="frame" x="0.0" y="220" width="375" height="398"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aoy-3U-zx6" userLabel="Results View">
+                                <rect key="frame" x="5" y="220" width="365" height="398"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="iCW-ae-m8p" userLabel="Top Label">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="132.5"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="400"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="iCW-ae-m8p" userLabel="Top Label" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="132.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="morphingDuration">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="PDY-1j-CDO" userLabel="Mid Label">
-                                        <rect key="frame" x="0.0" y="265.5" width="375" height="132.5"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="400"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="PDY-1j-CDO" userLabel="Mid Label" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                        <rect key="frame" x="0.0" y="265.5" width="365" height="132.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="morphingDuration">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="9iU-PV-22a" userLabel="Bottom Label">
-                                        <rect key="frame" x="0.0" y="132.5" width="375" height="133"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="400"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="9iU-PV-22a" userLabel="Bottom Label" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                        <rect key="frame" x="0.0" y="132.5" width="365" height="133"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="morphingDuration">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -89,9 +104,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rU7-1B-Qb6" secondAttribute="trailing" id="C18-Dx-LMZ"/>
                             <constraint firstItem="rU7-1B-Qb6" firstAttribute="top" secondItem="kdb-gX-v7B" secondAttribute="bottom" id="OIi-Ve-wmP"/>
                             <constraint firstItem="kdb-gX-v7B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XWP-sL-zbg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aoy-3U-zx6" secondAttribute="trailing" id="cRw-0p-bYq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aoy-3U-zx6" secondAttribute="trailing" constant="5" id="cRw-0p-bYq"/>
                             <constraint firstItem="kdb-gX-v7B" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="dMn-0D-Vsy"/>
-                            <constraint firstItem="Aoy-3U-zx6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j6b-Me-uHf"/>
+                            <constraint firstItem="Aoy-3U-zx6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="j6b-Me-uHf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Aoy-3U-zx6" secondAttribute="bottom" id="jcX-Vw-8jg"/>
                             <constraint firstItem="Aoy-3U-zx6" firstAttribute="top" secondItem="rU7-1B-Qb6" secondAttribute="bottom" id="mYV-VS-tjx"/>
                             <constraint firstItem="kdb-gX-v7B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="p6L-S9-ZED"/>
@@ -103,7 +118,7 @@
                     <connections>
                         <outlet property="bottomLabel" destination="PDY-1j-CDO" id="2MK-0o-u6a"/>
                         <outlet property="midLabel" destination="9iU-PV-22a" id="OAd-eE-EhB"/>
-                        <outlet property="topLabel" destination="iCW-ae-m8p" id="ujV-dH-zvb"/>
+                        <outlet property="topLabel" destination="iCW-ae-m8p" id="d9a-fv-mMh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -657,31 +672,46 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="South" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfs-bI-3AI">
-                                <rect key="frame" x="161" y="259" width="51.5" height="17"/>
+                                <rect key="frame" x="162" y="259" width="51.5" height="17"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Yg-5j-WMQ">
-                                <rect key="frame" x="0.0" y="453" width="375" height="165"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Yg-5j-WMQ" userLabel="Results View">
+                                <rect key="frame" x="5" y="453" width="365" height="165"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5X7-dV-qQW">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5X7-dV-qQW" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="morphingDuration">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHd-dJ-1A8">
-                                        <rect key="frame" x="0.0" y="55" width="375" height="55"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHd-dJ-1A8" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                        <rect key="frame" x="0.0" y="55" width="365" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="morphingDuration">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cr-u0-WNm">
-                                        <rect key="frame" x="0.0" y="110" width="375" height="55"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cr-u0-WNm" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                        <rect key="frame" x="0.0" y="110" width="365" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="morphingDuration">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <constraints>
@@ -702,8 +732,8 @@
                             <constraint firstItem="Ve8-lG-O0d" firstAttribute="top" secondItem="WPI-un-vdE" secondAttribute="top" id="PTN-hY-5N8"/>
                             <constraint firstItem="op7-Sj-LT0" firstAttribute="centerX" secondItem="PZy-WB-Azk" secondAttribute="centerX" id="R8T-Zo-N8A"/>
                             <constraint firstItem="Ve8-lG-O0d" firstAttribute="trailing" secondItem="WPI-un-vdE" secondAttribute="trailing" id="RK1-kx-xdt"/>
-                            <constraint firstItem="WPI-un-vdE" firstAttribute="trailing" secondItem="1Yg-5j-WMQ" secondAttribute="trailing" id="Rg0-Q9-nZQ"/>
-                            <constraint firstItem="1Yg-5j-WMQ" firstAttribute="leading" secondItem="WPI-un-vdE" secondAttribute="leading" id="SQJ-mB-IRC"/>
+                            <constraint firstItem="WPI-un-vdE" firstAttribute="trailing" secondItem="1Yg-5j-WMQ" secondAttribute="trailing" constant="5" id="Rg0-Q9-nZQ"/>
+                            <constraint firstItem="1Yg-5j-WMQ" firstAttribute="leading" secondItem="WPI-un-vdE" secondAttribute="leading" constant="5" id="SQJ-mB-IRC"/>
                             <constraint firstItem="WPI-un-vdE" firstAttribute="bottom" secondItem="1Yg-5j-WMQ" secondAttribute="bottom" id="T5R-pe-tTi"/>
                             <constraint firstItem="nP9-g2-Fjq" firstAttribute="centerX" secondItem="PZy-WB-Azk" secondAttribute="centerX" id="TE7-3p-Ibb"/>
                             <constraint firstItem="6pm-ng-YbN" firstAttribute="top" secondItem="nP9-g2-Fjq" secondAttribute="bottom" constant="5" id="ZUs-3k-OfR"/>
@@ -769,7 +799,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="25"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barrage radius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRG-P9-1Kb">
-                                                <rect key="frame" x="22.5" y="4" width="143" height="17"/>
+                                                <rect key="frame" x="23" y="4" width="143" height="17"/>
                                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -784,7 +814,7 @@
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="25"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interval" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNr-oj-5AI">
-                                                <rect key="frame" x="53" y="4" width="82" height="17"/>
+                                                <rect key="frame" x="53.5" y="4" width="82" height="17"/>
                                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -864,7 +894,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="15"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuL-2y-a0Z">
-                                                <rect key="frame" x="78.5" y="-1" width="31" height="17"/>
+                                                <rect key="frame" x="79" y="-1" width="31" height="17"/>
                                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -879,7 +909,7 @@
                                         <rect key="frame" x="187.5" y="0.0" width="187.5" height="15"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRc-kE-8DG">
-                                                <rect key="frame" x="78.5" y="-1" width="31" height="17"/>
+                                                <rect key="frame" x="79" y="-1" width="31" height="17"/>
                                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -997,26 +1027,41 @@
                                     <constraint firstAttribute="bottom" secondItem="5LQ-bT-2Z0" secondAttribute="bottom" id="zro-lC-aJu"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uy5-3M-84X">
-                                <rect key="frame" x="0.0" y="330" width="375" height="288"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uy5-3M-84X" userLabel="Results Stack View">
+                                <rect key="frame" x="5" y="330" width="365" height="288"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBh-tl-8ty">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBh-tl-8ty" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="96"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="morphingDuration">
+                                                <real key="value" value="0.050000000000000003"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoA-MV-A5E">
-                                        <rect key="frame" x="0.0" y="96" width="375" height="96"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoA-MV-A5E" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                        <rect key="frame" x="0.0" y="96" width="365" height="96"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="morphingDuration">
+                                                <real key="value" value="0.050000000000000003"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOS-nF-xeF">
-                                        <rect key="frame" x="0.0" y="192" width="375" height="96"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOS-nF-xeF" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                        <rect key="frame" x="0.0" y="192" width="365" height="96"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="morphingDuration">
+                                                <real key="value" value="0.050000000000000003"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <constraints>
@@ -1040,8 +1085,8 @@
                             <constraint firstItem="KPO-GP-DMI" firstAttribute="top" secondItem="zO8-Ms-QN6" secondAttribute="bottom" constant="5" id="3yl-KS-7Vw"/>
                             <constraint firstItem="LYa-yP-7Vo" firstAttribute="leading" secondItem="MiL-4V-z2K" secondAttribute="leading" id="4Ee-RM-hcy"/>
                             <constraint firstItem="MiL-4V-z2K" firstAttribute="bottom" secondItem="Uy5-3M-84X" secondAttribute="bottom" id="8aD-g7-zK0"/>
-                            <constraint firstItem="Uy5-3M-84X" firstAttribute="leading" secondItem="MiL-4V-z2K" secondAttribute="leading" id="9QQ-zn-aDW"/>
-                            <constraint firstItem="MiL-4V-z2K" firstAttribute="trailing" secondItem="Uy5-3M-84X" secondAttribute="trailing" id="Boc-ev-GAz"/>
+                            <constraint firstItem="Uy5-3M-84X" firstAttribute="leading" secondItem="MiL-4V-z2K" secondAttribute="leading" constant="5" id="9QQ-zn-aDW"/>
+                            <constraint firstItem="MiL-4V-z2K" firstAttribute="trailing" secondItem="Uy5-3M-84X" secondAttribute="trailing" constant="5" id="Boc-ev-GAz"/>
                             <constraint firstItem="hNS-7h-f5q" firstAttribute="top" secondItem="L4A-yK-e3h" secondAttribute="bottom" id="BuO-vi-nLf"/>
                             <constraint firstItem="hNS-7h-f5q" firstAttribute="leading" secondItem="MiL-4V-z2K" secondAttribute="leading" id="NlV-WZ-k3z"/>
                             <constraint firstItem="Uy5-3M-84X" firstAttribute="top" secondItem="sUB-bk-oVi" secondAttribute="bottom" id="PTY-NK-SJE"/>

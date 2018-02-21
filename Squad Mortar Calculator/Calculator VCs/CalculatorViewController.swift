@@ -18,14 +18,8 @@ class CalculatorViewController: UIViewController, MortarLocations, TargetLocatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        midLabel.text = "Awaiting input"
-    }
-    
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        midLabel.updateText(updatedText: " Awaiting input ")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -52,20 +46,21 @@ class CalculatorViewController: UIViewController, MortarLocations, TargetLocatio
         calc.azimuth = CalcFunctions().azimuth(targetX: calc.targetXPos, targetY: calc.targetYPos)
         
         let distance = CalcFunctions().distance(targetX: calc.targetXPos, targetY: calc.targetYPos)
-        topLabel.text = "Distance: \(Int(round(distance)))m"
+        
+        topLabel.updateText(updatedText: " Distance: \(Int(round(distance)))m ")
         if (distance < 50) {
-            midLabel.text = "Target too close"
+            midLabel.updateText(updatedText: " Target too close ")
             bottomLabel.text = ""
             return
         } else if (distance > 1250) {
-            midLabel.text = "Target too far"
+            midLabel.updateText(updatedText: " Target too far ")
             bottomLabel.text = ""
             return
         }
         
         calc.rads = CalcFunctions().rads(distance: distance)
-        midLabel.text = "Azimuth: \(calc.azimuth.rounded(toPlaces: 1))°"
-        bottomLabel.text = "Milliradians: \(Int(round(calc.rads)))"
+        midLabel.updateText(updatedText: " Azimuth: \(calc.azimuth.rounded(toPlaces: 1))° ")
+        bottomLabel.updateText(updatedText: " Milliradians: \(Int(round(calc.rads))) ")
         
     }
 }

@@ -46,10 +46,10 @@ class CorrectionsViewController: UIViewController, CorrectionsTargetLocations {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if (calc.mortarXPos == 0) {
-            midLabel.text = "Awaiting mortar position input"
+            midLabel.updateText(updatedText: " Awaiting mortar position input ")
             return
         } else if (calc.targetXPos == 0) {
-            midLabel.text = "Awaiting target position input"
+            midLabel.updateText(updatedText: " Awaiting target position input ")
             return
         }
         
@@ -90,20 +90,20 @@ class CorrectionsViewController: UIViewController, CorrectionsTargetLocations {
             correctedDistance += -Double(subtractField.text!)!
         }
         
-        topLabel.text = "Distance: \(Int(round(correctedDistance)))m"
+        topLabel.updateText(updatedText: " Distance: \(Int(round(correctedDistance)))m ")
         if (correctedDistance < 50) {
-            midLabel.text = "Target too close"
+            midLabel.updateText(updatedText: " Target too close ")
             bottomLabel.text = ""
             return
         } else if (correctedDistance > 1250) {
-            midLabel.text = "Target too far"
+            midLabel.updateText(updatedText: " Target too far ")
             bottomLabel.text = ""
             return
         }
         
         let correctedRads = CalcFunctions().rads(distance: correctedDistance)
-        midLabel.text = "Azimuth: \(correctedAzimuth.rounded(toPlaces: 1))°"
-        bottomLabel.text = "Milliradians: \(Int(round(correctedRads)))"
+        midLabel.updateText(updatedText: " Azimuth: \(correctedAzimuth.rounded(toPlaces: 1))° ")
+        bottomLabel.updateText(updatedText: " Milliradians: \(Int(round(correctedRads))) ")
         
     }
     

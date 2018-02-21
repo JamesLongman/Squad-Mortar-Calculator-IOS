@@ -62,4 +62,36 @@ extension UILabel {
             )
         }
     }
+    
+    func updateText(updatedText: String) {
+        self.text = updatedText
+        if !(self.text!.count > 0) { return }
+        var size: CGSize = self.text!.boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: self.bounds.height), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: self.font], context: nil).size
+        
+        if (size.width > self.bounds.width) {
+            while size.width > self.bounds.width {
+                self.font = self.font.withSize(self.font.pointSize - 1)
+                size = (self.text?.boundingRect(
+                    with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: self.bounds.height),
+                    options: NSStringDrawingOptions.usesLineFragmentOrigin,
+                    attributes: [NSAttributedStringKey.font: self.font],
+                    context: nil).size)!
+                
+                self.setNeedsLayout()
+            }
+        }
+        else {
+            while size.width < self.bounds.width {
+                self.font = self.font.withSize(self.font.pointSize + 1)
+                size = (self.text?.boundingRect(
+                    with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: self.bounds.height),
+                    options: NSStringDrawingOptions.usesLineFragmentOrigin,
+                    attributes: [NSAttributedStringKey.font: self.font],
+                    context: nil).size)!
+                
+                self.setNeedsLayout()
+            }
+        }
+    }
 }
+

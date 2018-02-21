@@ -81,14 +81,14 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if (calc.mortarXPos == 0) {
-            midLabel.text = "Awaiting mortar position input"
+            midLabel.updateText(updatedText: " Awaiting mortar position input ")
             return
         } else if (calc.targetXPos == 0) {
-            midLabel.text = "Awaiting target position input"
+            midLabel.updateText(updatedText: " Awaiting target position input ")
             return
         }
         
-        if (midLabel.text == "Awaiting target position input") {
+        if (midLabel.text == " Awaiting target position input ") {
             midLabel.text = ""
         }
         
@@ -110,13 +110,13 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
         
         var distance = CalcFunctions().distance(targetX: calc.targetXPos, targetY: calc.targetYPos)
         if (distance < 50) {
-            topLabel.text = "Distance to barrage center: \(Int(round(distance)))m"
-            midLabel.text = "Target too close"
+            topLabel.updateText(updatedText: " Distance to barrage center: \(Int(round(distance)))m ")
+            midLabel.updateText(updatedText: " Target too close ")
             bottomLabel.text = ""
             return
         } else if (distance > 1250) {
-            topLabel.text = "Distance to barrage center: \(Int(round(distance)))m"
-            midLabel.text = "Target too far"
+            topLabel.updateText(updatedText: " Distance to barrage center: \(Int(round(distance)))m ")
+            midLabel.updateText(updatedText: " Target too far ")
             bottomLabel.text = ""
             return
         }
@@ -130,9 +130,9 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
         let barrageY = randomDouble(min: (calc.targetYPos - yTollerance), max: (calc.targetYPos + yTollerance))
         
         distance = CalcFunctions().distance(targetX: barrageX, targetY: barrageY)
-        topLabel.text = "Distance to barrage point: \(Int(round(distance)))m"
-        midLabel.text = "Azimuth: \(CalcFunctions().azimuth(targetX: barrageX, targetY: barrageY).rounded(toPlaces: 1))°"
-        bottomLabel.text = "Milliradians: \(Int(round(CalcFunctions().rads(distance: distance))))"
+        topLabel.updateText(updatedText: " Distance to barrage point: \(Int(round(distance)))m ")
+        midLabel.updateText(updatedText: " Azimuth: \(CalcFunctions().azimuth(targetX: barrageX, targetY: barrageY).rounded(toPlaces: 1))° ")
+        bottomLabel.updateText(updatedText: " Milliradians: \(Int(round(CalcFunctions().rads(distance: distance)))) ")
         
     }
     
