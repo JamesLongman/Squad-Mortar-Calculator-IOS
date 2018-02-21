@@ -900,7 +900,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="100"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k36-AI-goR">
-                                                <rect key="frame" x="79" y="47" width="30" height="21"/>
+                                                <rect key="frame" x="80" y="40" width="27" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -1066,6 +1066,7 @@
                         <outlet property="bottomLabel" destination="SOS-nF-xeF" id="gwe-qn-pUG"/>
                         <outlet property="intervalLabel" destination="sRc-kE-8DG" id="jNk-fO-SGk"/>
                         <outlet property="intervalSlider" destination="Y99-X0-ydG" id="ME2-ny-Nlf"/>
+                        <outlet property="leftTimingView" destination="5LQ-bT-2Z0" id="RQh-ru-OkU"/>
                         <outlet property="midLabel" destination="MoA-MV-A5E" id="uGp-X8-zdQ"/>
                         <outlet property="radiusLabel" destination="zuL-2y-a0Z" id="14v-9Z-3dc"/>
                         <outlet property="radiusSlider" destination="s4Z-j9-RAG" id="Pz4-uP-ehf"/>

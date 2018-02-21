@@ -10,13 +10,18 @@ import UIKit
 
 class BarrageViewController: UIViewController, BarrageTargetLocations {
     
+    // Radius and Interval input sections
     @IBOutlet weak var radiusLabel: UILabel!
     @IBOutlet weak var radiusSlider: UISlider!
     @IBOutlet weak var intervalLabel: UILabel!
     @IBOutlet weak var intervalSlider: UISlider!
+    
+    // Timing section
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var startStopButton: UIButton!
+    @IBOutlet weak var leftTimingView: UIView!
     
+    // Results section
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var midLabel: UILabel!
     @IBOutlet weak var bottomLabel: UILabel!
@@ -27,10 +32,36 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
     
     let calc = Calc.sharedInstance
     
+    let shapeLayer = CAShapeLayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        var timerRadius:CGFloat = 0
+        if (leftTimingView.frame.size.width > leftTimingView.frame.size.height) {
+            timerRadius = (leftTimingView.frame.size.height/2) - 20
+        } else {
+            timerRadius = (leftTimingView.frame.size.width/2) - 20
+        }
+        
+        let circularPath = UIBezierPath(arcCenter: leftTimingView.center, radius: timerRadius, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
+        
+        let trackLayer = CAShapeLayer()
+        trackLayer.path = circularPath.cgPath
+        trackLayer.strokeColor = UIColor.gray.cgColor
+        trackLayer.lineWidth = timerRadius / 10
+        trackLayer.fillColor = UIColor.clear.cgColor
+        
+        shapeLayer.path = circularPath.cgPath
+        shapeLayer.strokeColor = UIColor.orange.cgColor
+        shapeLayer.lineWidth = timerRadius / 10
+        shapeLayer.strokeEnd = 0
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        
+        leftTimingView.layer.addSublayer(trackLayer)
+        leftTimingView.layer.addSublayer(shapeLayer)
+        
+        timerLabel.center = leftTimingView.center
     }
     
     override func didReceiveMemoryWarning() {
@@ -114,13 +145,22 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
     
     @IBAction func startStopButtonPressed(_ sender: Any) {
         if (timerIsOn == false) {
+            timeRemaining = Int(round(intervalSlider.value))
+            timerLabel.text = "\(timeRemaining)"
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
             timerIsOn = true
+            shapeLayer.isHidden = false
             startStopButton.setTitle("Stop", for: .normal)
+            calculate()
+            timerAnimation()
         } else {
             timer.invalidate()
             timerIsOn = false
+            shapeLayer.isHidden = true
             startStopButton.setTitle("Start", for: .normal)
+            timeRemaining = Int(round(intervalSlider.value))
+            timerLabel.text = "\(timeRemaining)"
+            
         }
     }
     
@@ -131,6 +171,7 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
         }
         timeRemaining = Int(round(intervalSlider.value))
         timerLabel.text = "\(timeRemaining)"
+        timerAnimation()
         calculate()
     }
     
@@ -141,11 +182,20 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
         } else {
             timeRemaining = Int(round(intervalSlider.value))
             timerLabel.text = "\(timeRemaining)"
+            timerAnimation()
             calculate()
         }
     }
     
     func randomDouble(min: Double, max: Double) -> Double {
         return (Double(arc4random()) / 0xFFFFFFFF) * (max - min) + min
+    }
+    
+    func timerAnimation() {
+        let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        basicAnimation.fromValue = 0
+        basicAnimation.toValue = 1
+        basicAnimation.duration = Double(round(intervalSlider.value)) + 2
+        shapeLayer.add(basicAnimation, forKey: "timeCircle")
     }
 }
