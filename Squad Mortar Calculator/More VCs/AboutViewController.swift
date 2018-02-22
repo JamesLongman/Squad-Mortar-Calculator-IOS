@@ -15,6 +15,7 @@ class AboutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Main body of text in about view
         var body = "Squad Mortar Calculator is a non-official community made application to calculate accurate calibrations for players to correctly align their mortars to certain points on the map"
         body = body + "\n\nBuilt using:"
         body = body + "\nXcode 9.2"
@@ -25,12 +26,6 @@ class AboutViewController: UIViewController {
         aboutText.text = body
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
     @IBAction func backButton(_ sender: Any) {
         presentingViewController?.dismiss(animated: true, completion: nil)
     }

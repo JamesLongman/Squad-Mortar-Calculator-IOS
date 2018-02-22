@@ -6,6 +6,8 @@
 //  Copyright © 2018 James Longman. All rights reserved.
 //
 
+/* For comments please see mortar VCs counterpart */
+
 import UIKit
 
 protocol PassCorrectionsTargetLoc3 {
@@ -18,19 +20,7 @@ class CorrectionsGridViewController: UIViewController, PassCorrectionsTargetLoc2
     let calc = Calc.sharedInstance
     
     @IBOutlet weak var targetPin: UIImageView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let fullScreenGrid = storyboard!.instantiateViewController(withIdentifier: "CorrectionsEnlargedTargetView") as! CorrectionsEnlargedTargetViewController
         fullScreenGrid.delegate = self

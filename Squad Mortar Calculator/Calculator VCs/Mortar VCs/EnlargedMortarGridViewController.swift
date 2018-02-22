@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Protocol to pass subgrid input to parent
 protocol PassMortarLoc1 {
     func passMortar1()
 }
@@ -17,17 +18,8 @@ class EnlargedMortarGridViewController: UIViewController {
     let calc = Calc.sharedInstance
     var delegate: PassMortarLoc1?
     
+    // This is the mortar pin to be used for input
     @IBOutlet weak var mortarPin: UIImageView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     // Set pin position to the position of any touch within the view
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -45,6 +37,7 @@ class EnlargedMortarGridViewController: UIViewController {
         }
     }
     
+    // Upon apperance of view set pin to currently stored subgrid position
     override func viewWillAppear(_ animated: Bool) {
         let xPoint = ((calc.mortarSubgridXPos * Double(self.view!.bounds.width)) / (100/3))
         let yPoint = ((calc.mortarSubgridYPos * Double(self.view!.bounds.height)) / (100/3))
@@ -56,16 +49,14 @@ class EnlargedMortarGridViewController: UIViewController {
         updatePosition(position: CGPoint(x: self.view!.bounds.width/2, y: self.view!.bounds.height/2))
     }
     
+    // Called whenever the pin is moved, converts position to meters in ingame coordinate system and stores in singleton
     func updatePosition(position: CGPoint) {
         mortarPin.center = position
         
         calc.mortarSubgridXPos = Double(position.x / self.view!.bounds.width) * (100/3)
         calc.mortarSubgridYPos = Double(position.y / self.view!.bounds.height) * (100/3)
         
-        
+        // Begining of notification chain
         delegate!.passMortar1()
     }
-    
-    
-
 }

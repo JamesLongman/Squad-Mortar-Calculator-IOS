@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Protocal to pass up to CalculatorViewController
 protocol MortarLocations {
     func mortarLocations()
 }
@@ -23,17 +24,6 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
     @IBOutlet weak var rightMortarField: CoordinatesTextField2!
     @IBOutlet weak var mortarGrid: UIView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     //Allow keyboard to be dismissed via touching elsewhere on the view
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         leftMortarField.resignFirstResponder()
@@ -41,6 +31,7 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
         rightMortarField.resignFirstResponder()
     }
     
+    // Declare self as a delegate of sub view so can be notified upon input
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "embeddedMortarGridSegue") {
             let mortarGridViewController = (segue.destination as! MortarGridViewController)
@@ -48,28 +39,34 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
         }
     }
     
+    // When edditting ends in any input field, check to see if input is of a complete format
     @IBAction func leftMortarFieldEnded(_ sender: Any) {
         updateMortar()
     }
-    
     @IBAction func middleMortarFieldEnded(_ sender: Any) {
         updateMortar()
     }
-    
     @IBAction func rightMortarFieldEnded(_ sender: Any) {
         updateMortar()
     }
     
+    // Called from subview upon input, check input to see if it is of a complete format
     func passMortar3() {
         updateMortar()
     }
     
+    /* Called upon input, checks if input is complete, if so save to the calc singleton and notify
+     parent view */
     func updateMortar() {
+        // Checks input, if input is not complete return to wait for complete input
         if !checkMortarFields() { return }
         
+        /* Variables to store the mortar position throughout the calculation
+         these values are in meters and y axis is inverted */
         var mortarXPos:Double = 0
         var mortarYPos:Double = 0
         
+        // Convert letter component in first field to numerical value
         let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         for letter in alphabet {
             if letter == leftMortarField.text!.uppercased()[0] {
@@ -78,6 +75,7 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
             mortarXPos += 300
         }
         
+        // Convert number component of first field to meters
         if (leftMortarField.text!.count == 2) {
             mortarYPos = (Double(String(leftMortarField.text![1]))! - 1) * 300
         } else {
@@ -85,6 +83,7 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
             mortarYPos = (Double(String(leftMortarField.text![2]))! - 1) * 300
         }
         
+        // Convert second field to meters and add to sum
         switch Int(middleMortarField.text!)! {
         case 1: mortarYPos += 200
         case 2: mortarYPos += 200; mortarXPos += 100
@@ -94,9 +93,10 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
         case 6: mortarYPos += 100; mortarXPos += 200
         case 8: mortarXPos += 100
         case 9: mortarXPos += 200
-        default: break
+        default: break // Should never hit default due to field input restrictions from custom class
         }
         
+        // Convert third field to meters and add to sum
         let increment:Double = 100/3
         switch Int(rightMortarField.text!)! {
         case 1: mortarYPos += increment * 2
@@ -110,19 +110,20 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
         default: break
         }
         
+        /* Add subgrid position to sum (this value is not changed in this view but from
+         EnlargedMortarGridViewController.swift) */
         mortarXPos += calc.mortarSubgridXPos
         mortarYPos += calc.mortarSubgridYPos
         
+        // Update calculator singleton with the accepted input value and notify parent
         calc.mortarXPos = mortarXPos
         calc.mortarYPos = mortarYPos
         delegate!.mortarLocations()
     }
     
     // Checks input in all text fields is of an acceptable format
-    // Note: It should be impossible to input incorrect formats into the middle and right fields so may remove checks if performance
-    // becomes a concern
     func checkMortarFields() -> Bool {
-        // Check left field input
+        // Check left field input (should be the only field that can possibly have bad input)
         if (leftMortarField.text == "") { return false }
         if !(leftMortarField.text!.count == 2 || leftMortarField.text!.count == 3) { rejectLeftMortarField(); return false }
         if !(leftMortarField.text![0].containedIn(matchCharacters: leftMortarField.acceptableFirstCharacters)) { rejectLeftMortarField(); return false }
@@ -149,14 +150,13 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
         return true
     }
     
+    // If a field rejects, hint user that input is invalid by highlighting the field with red
     func rejectLeftMortarField() {
         leftMortarField.backgroundColor = UIColor.red
     }
-    
     func rejectMiddleMortarField() {
         middleMortarField.backgroundColor = UIColor.red
     }
-    
     func rejectRightMortarField() {
         rightMortarField.backgroundColor = UIColor.red
     }

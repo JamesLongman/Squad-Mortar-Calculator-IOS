@@ -11,6 +11,7 @@ import Foundation
 class CalcFunctions {
     let calc = Calc.sharedInstance
     
+    // Returns true if valid values have been inputted
     func verify() -> Bool {
         if (calc.input) { return true }
         if (calc.mortarXPos == 0) { return false }
@@ -38,6 +39,7 @@ class CalcFunctions {
         return angle
     }
     
+    // Simple trig to calculate distance to target
     func distance(targetX: Double, targetY: Double) -> Double {
         let deltaY = calc.mortarYPos - targetY
         let deltaX = targetX - calc.mortarXPos
@@ -46,6 +48,7 @@ class CalcFunctions {
         return sqrt((deltaX * deltaX) + (deltaY * deltaY))
     }
     
+    // Returns milli-rads calibration to reach a certain distance
     func rads(distance: Double) -> Double {
         var rads:Double = 1603.9273942850821 // const from polynomial
         

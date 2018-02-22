@@ -9,13 +9,6 @@
 import UIKit
 import StoreKit
 
-extension UserDefaults {
-    
-    func hasValue(forKey key: String) -> Bool {
-        return nil != object(forKey: key)
-    }
-}
-
 class PrimaryTabBarController: UITabBarController {
 
     override func viewDidLoad() {
@@ -37,6 +30,7 @@ class PrimaryTabBarController: UITabBarController {
         review()
     }
     
+    // Function to determine if a request for a review should be made upon app start
     func review() {
         let userDefaults = UserDefaults.standard
         let now = Int(NSDate().timeIntervalSince1970)

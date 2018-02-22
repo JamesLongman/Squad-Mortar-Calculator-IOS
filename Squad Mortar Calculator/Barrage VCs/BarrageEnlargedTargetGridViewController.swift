@@ -6,6 +6,8 @@
 //  Copyright © 2018 James Longman. All rights reserved.
 //
 
+/* For comments please see mortar VCs counterpart */
+
 import UIKit
 
 protocol PassBarrageTargetLoc1 {
@@ -19,25 +21,12 @@ class BarrageEnlargedTargetGridViewController: UIViewController {
     
     @IBOutlet weak var targetPin: UIImageView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    // Set pin position to the position of any touch within the view
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch : UITouch! = touches.first! as UITouch
         updatePosition(position: touch.location(in: self.view))
     }
     
     
-    // Allow the user to drag the pin as long as they don't drag it out of the view container
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
         let touch : UITouch! = touches.first! as UITouch
@@ -53,7 +42,6 @@ class BarrageEnlargedTargetGridViewController: UIViewController {
         targetPin.center = CGPoint(x: xPoint, y: yPoint)
     }
     
-    // Called from center button in EnlargedTargetViewController.swift, centers pin
     func center() {
         updatePosition(position: CGPoint(x: self.view!.bounds.width/2, y: self.view!.bounds.height/2))
     }

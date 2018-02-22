@@ -9,6 +9,7 @@
 import UIKit
 
 class MoreViewController: UITableViewController {
+    // Table items stored in order
     let moreTable = ["User Guide", "About", "Leave A Review", "Project Github Repository"]
 
     override func viewDidLoad() {
@@ -17,14 +18,9 @@ class MoreViewController: UITableViewController {
         self.tableView.backgroundColor = UIColor(red:0.89, green:0.89, blue:0.89, alpha:1.0)
         self.tableView.tableFooterView = UIView()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
+    // Set sections to 1
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
@@ -39,6 +35,7 @@ class MoreViewController: UITableViewController {
         
     }
 
+    // Actions to be taken upon a touch of a particular table item
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (moreTable[indexPath.row] == "User Guide") {
             let guideView = storyboard!.instantiateViewController(withIdentifier: "GuideView") as! GuideViewController

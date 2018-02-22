@@ -8,6 +8,8 @@
 
 import UIKit
 
+/* Very simmilar to CalculatorViewController.swift, more detailed comments there */
+
 class CorrectionsViewController: UIViewController, CorrectionsTargetLocations {
     
     @IBOutlet weak var topLabel: UILabel!
@@ -23,18 +25,6 @@ class CorrectionsViewController: UIViewController, CorrectionsTargetLocations {
     @IBOutlet weak var subtractField: CoordinatesTextField2!
     
     let calc = Calc.sharedInstance
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "targetCorrectionsSectionSegue") {
@@ -56,17 +46,20 @@ class CorrectionsViewController: UIViewController, CorrectionsTargetLocations {
         calculateCorrect()
     }
     
+    // Notification from child view that target has been updated
     func correctionsTargetLocations() {
         calculateCorrect()
     }
     
+    /* Very simmilar to calc function in CalculatorViewController.swift, only difference here is the distance/target position is updated
+     prior to calculation */
     func calculateCorrect() {
         if (!CalcFunctions().verify()) { return }
         
         var correctedX: Double = calc.targetXPos
         var correctedY: Double = calc.targetYPos
         
-        // Remember y coodinates are reversed
+        // Updates absolute position
         if (northField.text!.count > 0) {
             correctedY += -Double(northField.text!)!
         }
@@ -81,8 +74,9 @@ class CorrectionsViewController: UIViewController, CorrectionsTargetLocations {
         }
         
         let correctedAzimuth = CalcFunctions().azimuth(targetX: correctedX, targetY: correctedY)
-        
         var correctedDistance = CalcFunctions().distance(targetX: correctedX, targetY: correctedY)
+        
+        // Adds or subtracts to the distance
         if (addField.text!.count > 0) {
             correctedDistance += Double(addField.text!)!
         }
@@ -91,6 +85,7 @@ class CorrectionsViewController: UIViewController, CorrectionsTargetLocations {
         }
         
         topLabel.updateText(updatedText: " Distance: \(Int(round(correctedDistance)))m ")
+        
         if (correctedDistance < 50) {
             midLabel.updateText(updatedText: " Target too close ")
             bottomLabel.text = ""
@@ -107,24 +102,15 @@ class CorrectionsViewController: UIViewController, CorrectionsTargetLocations {
         
     }
     
-    @IBAction func northFieldEnded(_ sender: Any) {
-        calculateCorrect()
-    }
-    @IBAction func westFieldEnded(_ sender: Any) {
-        calculateCorrect()
-    }
-    @IBAction func eastFieldEnded(_ sender: Any) {
-        calculateCorrect()
-    }
-    @IBAction func southFieldEnded(_ sender: Any) {
-        calculateCorrect()
-    }
-    @IBAction func addFieldEnded(_ sender: Any) {
-        calculateCorrect()
-    }
-    @IBAction func subtractFieldEnded(_ sender: Any) {
-        calculateCorrect()
-    }
+    // Recalculate whe adjustments are entered
+    @IBAction func northFieldEnded(_ sender: Any) { calculateCorrect() }
+    @IBAction func westFieldEnded(_ sender: Any) { calculateCorrect() }
+    @IBAction func eastFieldEnded(_ sender: Any) { calculateCorrect() }
+    @IBAction func southFieldEnded(_ sender: Any) { calculateCorrect() }
+    @IBAction func addFieldEnded(_ sender: Any) { calculateCorrect() }
+    @IBAction func subtractFieldEnded(_ sender: Any) { calculateCorrect() }
+    
+    // Clears all adjustment fields
     @IBAction func resetButton(_ sender: Any) {
         northField.text = ""
         eastField.text = ""

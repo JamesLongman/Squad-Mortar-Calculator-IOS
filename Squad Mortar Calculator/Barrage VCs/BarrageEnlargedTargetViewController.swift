@@ -6,6 +6,8 @@
 //  Copyright © 2018 James Longman. All rights reserved.
 //
 
+/* For comments please see mortar VCs counterpart */
+
 import UIKit
 
 protocol PassBarrageTargetLoc2 {
@@ -23,16 +25,6 @@ class BarrageEnlargedTargetViewController: UIViewController, PassBarrageTargetLo
     
     @IBAction func centerButton(_ sender: Any) {
         barrageEnlargedTargetGridViewController!.center()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

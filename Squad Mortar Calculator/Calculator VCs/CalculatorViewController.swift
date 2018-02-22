@@ -22,6 +22,7 @@ class CalculatorViewController: UIViewController, MortarLocations, TargetLocatio
         midLabel.updateText(updatedText: " Awaiting input ")
     }
     
+    // Declare self as a subview delegate so the view can be notified upon input
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "mortarSectionSegue") {
             let mortarSection = (segue.destination as! MortarViewController)
@@ -33,14 +34,15 @@ class CalculatorViewController: UIViewController, MortarLocations, TargetLocatio
         }
     }
     
+    // Functions from protocol called from subviews upon input
     func mortarLocations() {
         calculate()
     }
-    
     func targetLocations() {
         calculate()
     }
     
+    // Calculate calibration and update results labels accordingly
     func calculate() {
         if (!CalcFunctions().verify()) { return }
         calc.azimuth = CalcFunctions().azimuth(targetX: calc.targetXPos, targetY: calc.targetYPos)

@@ -6,6 +6,8 @@
 //  Copyright © 2018 James Longman. All rights reserved.
 //
 
+/* For comments please see mortar VCs counterpart */
+
 import UIKit
 
 protocol PassTargetLoc3 {
@@ -18,18 +20,6 @@ class TargetGridViewController: UIViewController, PassTargetLoc2 {
     let calc = Calc.sharedInstance
     
     @IBOutlet weak var targetPin: UIImageView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let fullScreenGrid = storyboard!.instantiateViewController(withIdentifier: "EnlargedTargetView") as! EnlargedTargetViewController

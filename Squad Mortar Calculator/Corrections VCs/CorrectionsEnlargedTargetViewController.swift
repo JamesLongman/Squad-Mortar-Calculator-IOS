@@ -6,6 +6,8 @@
 //  Copyright © 2018 James Longman. All rights reserved.
 //
 
+/* For comments please see mortar VCs counterpart */
+
 import UIKit
 
 protocol PassCorrectionsTargetLoc2 {
@@ -23,16 +25,6 @@ class CorrectionsEnlargedTargetViewController: UIViewController, PassCorrections
     
     @IBAction func centerButton(_ sender: Any) {
         correctionsEnlargedTargetGridViewController!.center()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

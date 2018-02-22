@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Protocol to pass notification of subgrid input up
 protocol PassMortarLoc2 {
     func passMortar2()
 }
@@ -16,26 +17,17 @@ class EnlargedMortarViewController: UIViewController, PassMortarLoc1 {
     var enlargedMortarGridViewController: EnlargedMortarGridViewController?
     var delegate: PassMortarLoc2?
     
+    // When the user presses the done button dismiss the view
     @IBAction func doneButton(_ sender: Any) {
         presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
-    
+    // When the user presses the center button center the pin in the subgrid view
     @IBAction func centerButton(_ sender: Any) {
         enlargedMortarGridViewController!.center()
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    // Set self as a delegate of child view so view can be notified upon subgrid input
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "embeddedEnlargedMortarGridSegue") {
             enlargedMortarGridViewController = (segue.destination as! EnlargedMortarGridViewController)
@@ -43,19 +35,8 @@ class EnlargedMortarViewController: UIViewController, PassMortarLoc1 {
         }
     }
     
+    // Notification of subgrid input from child passed to parent
     func passMortar1() {
         delegate!.passMortar2()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

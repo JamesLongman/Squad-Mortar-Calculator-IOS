@@ -18,7 +18,6 @@ extension Double {
 }
 
 extension String {
-    
     // Returns true if the string contains only characters found in matchCharacters.
     func containsOnlyCharactersIn(matchCharacters: String) -> Bool {
         let disallowedCharacterSet = NSCharacterSet(charactersIn: matchCharacters).inverted
@@ -40,6 +39,7 @@ extension Character {
 }
 
 extension UILabel {
+    // Simple chained animation to fade a label out, then back in to a new text
     func animateTo(text: String, duration: Double) {
         if !(text == self.text!) {
             UIView.animate(
@@ -63,6 +63,9 @@ extension UILabel {
         }
     }
     
+    /* Manually auto shrinks labels for labels operating under the LTMorphingLabel class
+     Unfortunatley neccesary to counter a bug in LTMorphingLabel where autoshrinking fails for some reason,
+     more info here: https://github.com/lexrus/LTMorphingLabel/issues/14 */
     func updateText(updatedText: String) {
         self.text = updatedText
         if !(self.text!.count > 0) { return }
@@ -95,3 +98,9 @@ extension UILabel {
     }
 }
 
+// Simple test to determine if UserDefaults has a key
+extension UserDefaults {
+    func hasValue(forKey key: String) -> Bool {
+        return nil != object(forKey: key)
+    }
+}
