@@ -114,7 +114,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calculator" id="sgO-Ke-iLh"/>
+                    <tabBarItem key="tabBarItem" title="Calculator" image="Tab_Icon_Calc" selectedImage="Tab_Icon_Calc_Selected" id="sgO-Ke-iLh"/>
                     <connections>
                         <outlet property="bottomLabel" destination="PDY-1j-CDO" id="2MK-0o-u6a"/>
                         <outlet property="midLabel" destination="9iU-PV-22a" id="OAd-eE-EhB"/>
@@ -753,7 +753,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WPI-un-vdE"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Corrections" id="y2i-oA-SUC"/>
+                    <tabBarItem key="tabBarItem" title="Corrections" image="Tab_Icon_Correct" selectedImage="Tab_Icon_Correct_Selected" id="y2i-oA-SUC"/>
                     <connections>
                         <outlet property="addField" destination="2hY-lB-rdh" id="HEv-cR-lgW"/>
                         <outlet property="bottomLabel" destination="5cr-u0-WNm" id="e1B-vG-Sna"/>
@@ -1110,7 +1110,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MiL-4V-z2K"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Barrage" id="OmO-9b-WWv"/>
+                    <tabBarItem key="tabBarItem" title="Barrage" image="Tab_Icon_Barrage" selectedImage="Tab_Icon_Barrage_Selected" id="OmO-9b-WWv"/>
                     <connections>
                         <outlet property="bottomLabel" destination="SOS-nF-xeF" id="gwe-qn-pUG"/>
                         <outlet property="intervalLabel" destination="sRc-kE-8DG" id="jNk-fO-SGk"/>
@@ -1128,11 +1128,11 @@
             </objects>
             <point key="canvasLocation" x="4709.6000000000004" y="62.518740629685162"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--More-->
         <scene sceneID="Td0-8g-RRx">
             <objects>
                 <navigationController id="hDC-Do-YdS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="ulw-DV-Mri"/>
+                    <tabBarItem key="tabBarItem" title="More" image="Tab_Icon_More" selectedImage="Tab_Icon_More_Selected" id="ulw-DV-Mri"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="bga-E3-Yh2">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -2190,6 +2190,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Tab_Icon_Barrage" width="24" height="24"/>
+        <image name="Tab_Icon_Barrage_Selected" width="24" height="24"/>
+        <image name="Tab_Icon_Calc" width="24" height="24"/>
+        <image name="Tab_Icon_Calc_Selected" width="24" height="24"/>
+        <image name="Tab_Icon_Correct" width="24" height="24"/>
+        <image name="Tab_Icon_Correct_Selected" width="24" height="24"/>
+        <image name="Tab_Icon_More" width="24" height="24"/>
+        <image name="Tab_Icon_More_Selected" width="24" height="24"/>
         <image name="mortar_green_dot" width="300" height="300"/>
     </resources>
 </document>
