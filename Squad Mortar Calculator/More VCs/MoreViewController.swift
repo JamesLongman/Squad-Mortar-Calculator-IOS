@@ -38,11 +38,9 @@ class MoreViewController: UITableViewController {
     // Actions to be taken upon a touch of a particular table item
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (moreTable[indexPath.row] == "User Guide") {
-            let guideView = storyboard!.instantiateViewController(withIdentifier: "GuideView") as! GuideViewController
-            self.present(guideView, animated: true, completion: nil)
+            self.performSegue(withIdentifier: "guideViewControllerSegue", sender: self)
         } else if (moreTable[indexPath.row] == "About") {
-            let aboutView = storyboard!.instantiateViewController(withIdentifier: "AboutView") as! AboutViewController
-            self.present(aboutView, animated: true, completion: nil)
+            self.performSegue(withIdentifier: "aboutViewControllerSegue", sender: self)
         } else if (moreTable[indexPath.row] == "Leave A Review") {
             // REPLACE: replace with id once registered on app store (must test with physical device not simulator)
             UIApplication.shared.open(URL(string: "https://itunes.apple.com/app/id363590051?action=write-review")!, options: [:], completionHandler: nil)
