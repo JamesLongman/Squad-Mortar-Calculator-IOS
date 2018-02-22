@@ -163,12 +163,12 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
         if (timerIsOn == false) {
             timeRemaining = Int(round(intervalSlider.value))
             timerLabel.animateTo(text: "\(timeRemaining)", duration: animationDuration)
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
             timerIsOn = true
             shapeLayer.isHidden = false
             startStopButton.setTitle("Stop", for: .normal)
             calculate()
             timerAnimation()
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
         } else {
             timer.invalidate()
             timerIsOn = false
@@ -219,7 +219,7 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
         let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
         basicAnimation.fromValue = 0
         basicAnimation.toValue = 1
-        basicAnimation.duration = Double(round(intervalSlider.value)) + 2
+        basicAnimation.duration = Double(round(intervalSlider.value)) * 1.25
         shapeLayer.add(basicAnimation, forKey: "timeCircle")
     }
 }
