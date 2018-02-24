@@ -34,11 +34,12 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
     let calc = Calc.sharedInstance
     
     let shapeLayer = CAShapeLayer()
+    let trackLayer = CAShapeLayer()
     let animationDuration = 0.4
     
     // Upon view loading, configure track for timing animation
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         
         var timerRadius:CGFloat = 0
         if (leftTimingView.frame.size.width > leftTimingView.frame.size.height) {
@@ -49,7 +50,6 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
         
         let circularPath = UIBezierPath(arcCenter: leftTimingView.center, radius: timerRadius, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
         
-        let trackLayer = CAShapeLayer()
         trackLayer.path = circularPath.cgPath
         trackLayer.strokeColor = UIColor.gray.cgColor
         trackLayer.lineWidth = timerRadius / 10
@@ -88,7 +88,8 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
         }
         
         // If there is input data, but the middle label has not been updated since there wasn't, clear it
-        if (midLabel.text == " Awaiting target position input ") {
+        if (midLabel.text == " Awaiting target position input " ||
+            midLabel.text == " Awaiting mortar position input ") {
             midLabel.text = ""
         }
         

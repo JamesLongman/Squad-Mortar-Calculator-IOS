@@ -29,11 +29,18 @@ class CorrectionsGridViewController: UIViewController, PassCorrectionsTargetLoc2
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let xPoint = calc.targetSubgridXPos * (3/2)
-        let yPoint = calc.targetSubgridYPos * (3/2)
+        super.viewWillAppear(animated)
+        let xPoint = ((calc.targetSubgridXPos * Double(self.view!.bounds.width)) / (100/3))
+        let yPoint = ((calc.targetSubgridYPos * Double(self.view!.bounds.height)) / (100/3))
         targetPin.center = CGPoint(x: xPoint, y: yPoint)
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        let xPoint = ((calc.targetSubgridYPos * Double(self.view!.bounds.width)) / (100/3))
+        let yPoint = ((calc.targetSubgridYPos * Double(self.view!.bounds.height)) / (100/3))
+        targetPin.center = CGPoint(x: xPoint, y: yPoint)
+    }
     
     func passCorrectionsTarget2() {
         delegate!.passCorrectionsTarget3()

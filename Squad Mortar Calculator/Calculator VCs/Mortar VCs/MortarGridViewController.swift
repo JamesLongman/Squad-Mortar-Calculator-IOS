@@ -30,8 +30,18 @@ class MortarGridViewController: UIViewController, PassMortarLoc2 {
     
     // When the view will appear, set the pin to the most recent position stored in the calc singleton
     override func viewWillAppear(_ animated: Bool) {
-        let xPoint = calc.mortarSubgridXPos * (3/2)
-        let yPoint = calc.mortarSubgridYPos * (3/2)
+        super.viewWillAppear(animated)
+        let xPoint = ((calc.mortarSubgridXPos * Double(self.view!.bounds.width)) / (100/3))
+        let yPoint = ((calc.mortarSubgridYPos * Double(self.view!.bounds.height)) / (100/3))
+        mortarPin.center = CGPoint(x: xPoint, y: yPoint)
+    }
+    
+    /* When Subviews are being laid out, center pin correctly (neccesary if constraints change
+     size of subview) */
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        let xPoint = ((calc.mortarSubgridXPos * Double(self.view!.bounds.width)) / (100/3))
+        let yPoint = ((calc.mortarSubgridYPos * Double(self.view!.bounds.height)) / (100/3))
         mortarPin.center = CGPoint(x: xPoint, y: yPoint)
     }
     

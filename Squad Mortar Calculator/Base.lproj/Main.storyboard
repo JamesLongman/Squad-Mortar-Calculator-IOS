@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AxM-gS-IKs">
-    <device id="ipad12_9" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,27 +24,27 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="Squad_Mortar_Calculator" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdb-gX-v7B" userLabel="Mortar Container">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="205"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="72"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="MPQ-Uw-oEX" kind="embed" identifier="mortarSectionSegue" id="Jof-MT-YWh"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rU7-1B-Qb6" userLabel="Target Container">
-                                <rect key="frame" x="0.0" y="225" width="1024" height="205"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="72"/>
                                 <connections>
                                     <segue destination="WdG-Na-hiJ" kind="embed" identifier="targetSectionSegue" id="puN-Ej-Rmb"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aoy-3U-zx6" userLabel="Results View">
-                                <rect key="frame" x="5" y="430" width="1014" height="887"/>
+                                <rect key="frame" x="5" y="164" width="310" height="267"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="PDY-1j-CDO" userLabel="Mid Label" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                                        <rect key="frame" x="0.0" y="591.5" width="1014" height="295.5"/>
+                                        <rect key="frame" x="0.0" y="178.5" width="310" height="88.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -55,7 +55,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="9iU-PV-22a" userLabel="Bottom Label" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                                        <rect key="frame" x="0.0" y="296" width="1014" height="295.5"/>
+                                        <rect key="frame" x="0.0" y="89" width="310" height="89.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="iCW-ae-m8p" userLabel="Top Label" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="1014" height="296"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="89"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -127,17 +127,17 @@
             <objects>
                 <viewController id="MPQ-Uw-oEX" customClass="MortarViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="64A-en-bBx">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="205"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cGf-bO-TR7">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="185"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vVI-8R-uFd" userLabel="Top View">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="37.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="15"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mortar Position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMS-nZ-Id3">
-                                                <rect key="frame" x="0.0" y="2" width="1024" height="35.5"/>
+                                                <rect key="frame" x="0.0" y="2" width="320" height="13"/>
                                                 <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -151,13 +151,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x63-L9-vs1" userLabel="Bottom View">
-                                        <rect key="frame" x="0.0" y="37.5" width="1024" height="147.5"/>
+                                        <rect key="frame" x="0.0" y="15" width="320" height="57"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UZD-5i-a0R" userLabel="Bottom Constrained View">
-                                                <rect key="frame" x="199.5" y="3" width="625" height="141.5"/>
+                                                <rect key="frame" x="28" y="3" width="264" height="51"/>
                                                 <subviews>
                                                     <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4c-ly-Bw9">
-                                                        <rect key="frame" x="483.5" y="0.0" width="141.5" height="141.5"/>
+                                                        <rect key="frame" x="213" y="0.0" width="51" height="51"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="D4c-ly-Bw9" secondAttribute="height" id="Uxo-II-jsN"/>
                                                         </constraints>
@@ -166,13 +166,12 @@
                                                         </connections>
                                                     </containerView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8m-xK-ynM" userLabel="Mortar Fields View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="483.5" height="141.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="213" height="51"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="A1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EQe-zm-yqw" userLabel="Left Field" customClass="CoordinatesTextField1" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="141.5" height="141.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="51" height="51"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="EQe-zm-yqw" secondAttribute="height" id="9aX-gP-x4H"/>
-                                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="Uk9-Nm-aJi"/>
+                                                                    <constraint firstAttribute="width" secondItem="EQe-zm-yqw" secondAttribute="height" multiplier="1:1" id="9aX-gP-x4H"/>
                                                                 </constraints>
                                                                 <attributedString key="attributedText"/>
                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
@@ -188,7 +187,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BuB-46-koH">
-                                                                <rect key="frame" x="141.5" y="0.0" width="20" height="141.5"/>
+                                                                <rect key="frame" x="51" y="0.0" width="20" height="51"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="20" id="OmD-wr-DSB"/>
                                                                 </constraints>
@@ -197,7 +196,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lKI-RC-ydu" userLabel="Middle Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
-                                                                <rect key="frame" x="161.5" y="0.0" width="141" height="141.5"/>
+                                                                <rect key="frame" x="71" y="0.0" width="51" height="51"/>
                                                                 <attributedString key="attributedText"/>
                                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -211,7 +210,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2B6-JV-Tcd">
-                                                                <rect key="frame" x="302.5" y="0.0" width="20" height="141.5"/>
+                                                                <rect key="frame" x="122" y="0.0" width="20" height="51"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="20" id="Brk-o8-d9G"/>
                                                                 </constraints>
@@ -220,7 +219,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VEL-T7-8AM" userLabel="Right Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
-                                                                <rect key="frame" x="322.5" y="0.0" width="141" height="141.5"/>
+                                                                <rect key="frame" x="142" y="0.0" width="51" height="51"/>
                                                                 <attributedString key="attributedText"/>
                                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                 <userDefinedRuntimeAttributes>
@@ -234,9 +233,9 @@
                                                                 </connections>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I19-jA-0Od">
-                                                                <rect key="frame" x="463.5" y="0.0" width="20" height="141.5"/>
+                                                                <rect key="frame" x="193" y="0.0" width="20" height="51"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="20" id="bbM-Wg-6y2"/>
+                                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="20" id="bbM-Wg-6y2"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
@@ -249,6 +248,7 @@
                                                 <constraints>
                                                     <constraint firstItem="D4c-ly-Bw9" firstAttribute="leading" secondItem="G8m-xK-ynM" secondAttribute="trailing" id="Euy-Ef-f4i"/>
                                                     <constraint firstItem="G8m-xK-ynM" firstAttribute="top" secondItem="UZD-5i-a0R" secondAttribute="top" id="RN2-i0-1mE"/>
+                                                    <constraint firstItem="D4c-ly-Bw9" firstAttribute="leading" secondItem="G8m-xK-ynM" secondAttribute="trailing" id="RRH-Pb-Mzg"/>
                                                     <constraint firstItem="D4c-ly-Bw9" firstAttribute="top" secondItem="UZD-5i-a0R" secondAttribute="top" id="ZNa-Mz-t7D"/>
                                                     <constraint firstAttribute="trailing" secondItem="D4c-ly-Bw9" secondAttribute="trailing" id="Zjs-8e-Fry"/>
                                                     <constraint firstAttribute="width" priority="750" constant="400" id="mYJ-kn-53U"/>
@@ -272,7 +272,7 @@
                                     <constraint firstItem="vVI-8R-uFd" firstAttribute="top" secondItem="cGf-bO-TR7" secondAttribute="top" id="Hug-rb-zet"/>
                                     <constraint firstItem="vVI-8R-uFd" firstAttribute="height" secondItem="cGf-bO-TR7" secondAttribute="height" multiplier="0.2" id="RAC-v3-ndy"/>
                                     <constraint firstItem="vVI-8R-uFd" firstAttribute="leading" secondItem="cGf-bO-TR7" secondAttribute="leading" id="Y1X-FC-la3"/>
-                                    <constraint firstAttribute="bottom" secondItem="x63-L9-vs1" secondAttribute="bottom" id="guc-Ka-95J"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="x63-L9-vs1" secondAttribute="bottom" id="guc-Ka-95J"/>
                                     <constraint firstAttribute="trailing" secondItem="x63-L9-vs1" secondAttribute="trailing" id="h3G-0d-Ieb"/>
                                     <constraint firstItem="x63-L9-vs1" firstAttribute="top" secondItem="vVI-8R-uFd" secondAttribute="bottom" id="pUt-la-MAK"/>
                                 </constraints>
@@ -307,11 +307,11 @@
             <objects>
                 <viewController storyboardIdentifier="EnlargedMortarView" id="uOB-Tw-l8b" customClass="EnlargedMortarViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7VQ-Ak-AFw">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEm-Tx-j6D">
-                                <rect key="frame" x="0.0" y="171" width="1024" height="1024"/>
+                                <rect key="frame" x="0.0" y="80" width="320" height="320"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SEm-Tx-j6D" secondAttribute="height" multiplier="1:1" id="6sk-3h-kmj"/>
                                 </constraints>
@@ -320,10 +320,10 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vN5-uI-8Ph" userLabel="Top View">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="171"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddK-Gf-8z2">
-                                        <rect key="frame" x="0.0" y="60.5" width="1024" height="50"/>
+                                        <rect key="frame" x="0.0" y="20" width="320" height="40"/>
                                         <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="750" constant="50" id="CV3-Dd-LP8"/>
@@ -345,10 +345,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pxc-eW-2BV" userLabel="Bottom View">
-                                <rect key="frame" x="0.0" y="1195" width="1024" height="171"/>
+                                <rect key="frame" x="0.0" y="400" width="320" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWj-tW-TTP">
-                                        <rect key="frame" x="0.0" y="60.5" width="1024" height="50"/>
+                                        <rect key="frame" x="0.0" y="20" width="320" height="40"/>
                                         <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="750" constant="50" id="7mL-Td-Ds9"/>
@@ -396,11 +396,11 @@
             <objects>
                 <viewController id="29J-Vt-eAO" customClass="MortarGridViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qTa-c0-Qmq">
-                        <rect key="frame" x="0.0" y="0.0" width="141.5" height="141.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="51" height="51"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xYt-9a-zZD" userLabel="Mortar Grid">
-                                <rect key="frame" x="0.0" y="0.0" width="141.5" height="141.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="51" height="51"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mortar_green_dot" translatesAutoresizingMaskIntoConstraints="NO" id="QpQ-En-7Fh" userLabel="Mortar Pin">
                                 <rect key="frame" x="22.5" y="22.5" width="5" height="5"/>
@@ -429,15 +429,15 @@
             <objects>
                 <viewController id="aMc-I2-uxg" customClass="EnlargedMortarGridViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mko-Xn-OkB">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e7A-iG-vWK" userLabel="Mortar Grid">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1024"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mortar_green_dot" translatesAutoresizingMaskIntoConstraints="NO" id="hcq-ew-Zb5" userLabel="Mortar Pin">
-                                <rect key="frame" x="483" y="483" width="55" height="55"/>
+                                <rect key="frame" x="151" y="151" width="17" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -484,30 +484,30 @@
             <objects>
                 <viewController id="Jvt-hC-Ga2" customClass="CorrectionsViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PZy-WB-Azk">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ve8-lG-O0d" userLabel="Target Container">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="205"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="72"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="iOX-fU-g45" kind="embed" identifier="targetCorrectionsSectionSegue" id="W8e-qH-Oxb"/>
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYA-yS-blV" userLabel="Input View">
-                                <rect key="frame" x="0.0" y="225" width="1024" height="751"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="264"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68y-J6-I3N" userLabel="Top Input View">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="676.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="238.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jxl-ju-Bfo" userLabel="Top Input Data">
-                                                <rect key="frame" x="0.0" y="67.5" width="1024" height="609"/>
+                                                <rect key="frame" x="0.0" y="24" width="320" height="214.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dbe-04-YPP" userLabel="North View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="152.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="op7-Sj-LT0" userLabel="North Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
-                                                                <rect key="frame" x="459" y="46" width="106.5" height="106.5"/>
+                                                                <rect key="frame" x="141.5" y="16" width="38" height="38"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="op7-Sj-LT0" secondAttribute="height" id="Wwm-lG-WSV"/>
                                                                 </constraints>
@@ -525,7 +525,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="North" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pm-ng-YbN">
-                                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="46"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="16"/>
                                                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -542,16 +542,16 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fc4-3w-Zoy" userLabel="West East View">
-                                                        <rect key="frame" x="0.0" y="152.5" width="1024" height="152.5"/>
+                                                        <rect key="frame" x="0.0" y="54" width="320" height="53.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EvW-IF-lxC" userLabel="West/East Fields Stack View">
-                                                                <rect key="frame" x="0.0" y="45.5" width="1024" height="107"/>
+                                                                <rect key="frame" x="0.0" y="16" width="320" height="37.5"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4A-4L-ppY">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="202.5" height="107"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="37.5"/>
                                                                     </view>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YBD-kS-2az" userLabel="West Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
-                                                                        <rect key="frame" x="202.5" y="0.0" width="107" height="107"/>
+                                                                        <rect key="frame" x="61.5" y="0.0" width="37.5" height="37.5"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="YBD-kS-2az" secondAttribute="height" id="i7w-7t-tqh"/>
                                                                         </constraints>
@@ -569,10 +569,10 @@
                                                                         </connections>
                                                                     </textField>
                                                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aa7-XU-GEY" userLabel="Buffer View">
-                                                                        <rect key="frame" x="309.5" y="0.0" width="405" height="107"/>
+                                                                        <rect key="frame" x="99" y="0.0" width="122.5" height="37.5"/>
                                                                     </view>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x1O-Bs-6e7" userLabel="East Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
-                                                                        <rect key="frame" x="714.5" y="0.0" width="107" height="107"/>
+                                                                        <rect key="frame" x="221.5" y="0.0" width="37.5" height="37.5"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="x1O-Bs-6e7" secondAttribute="height" id="edQ-hD-Se6"/>
                                                                         </constraints>
@@ -590,7 +590,7 @@
                                                                         </connections>
                                                                     </textField>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="08z-Wc-yiW">
-                                                                        <rect key="frame" x="821.5" y="0.0" width="202.5" height="107"/>
+                                                                        <rect key="frame" x="259" y="0.0" width="61" height="37.5"/>
                                                                     </view>
                                                                 </subviews>
                                                                 <constraints>
@@ -601,28 +601,28 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ium-OS-XhK" userLabel="West/East Labels Stack View">
-                                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="46"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="16"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGZ-Oe-4aS">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="46"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="16"/>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="West" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8G0-CK-l8e">
-                                                                        <rect key="frame" x="128" y="0.0" width="256" height="46"/>
+                                                                        <rect key="frame" x="40" y="0.0" width="80" height="16"/>
                                                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ib-LB-eZm" userLabel="Buffer View">
-                                                                        <rect key="frame" x="384" y="0.0" width="256" height="46"/>
+                                                                        <rect key="frame" x="120" y="0.0" width="80" height="16"/>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="East" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uI-U1-fbR">
-                                                                        <rect key="frame" x="640" y="0.0" width="256" height="46"/>
+                                                                        <rect key="frame" x="200" y="0.0" width="80" height="16"/>
                                                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LCz-Rd-dZo">
-                                                                        <rect key="frame" x="896" y="0.0" width="128" height="46"/>
+                                                                        <rect key="frame" x="280" y="0.0" width="40" height="16"/>
                                                                     </view>
                                                                 </subviews>
                                                                 <constraints>
@@ -645,16 +645,16 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WL8-sT-l73" userLabel="South View">
-                                                        <rect key="frame" x="0.0" y="305" width="1024" height="152"/>
+                                                        <rect key="frame" x="0.0" y="107.5" width="320" height="53"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="South" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfs-bI-3AI">
-                                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="45.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="16"/>
                                                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6e2-7B-tel" userLabel="South Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
-                                                                <rect key="frame" x="459.5" y="45.5" width="106" height="106.5"/>
+                                                                <rect key="frame" x="142" y="16" width="37" height="37"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="6e2-7B-tel" secondAttribute="height" multiplier="1:1" id="pIl-8J-KPl"/>
                                                                 </constraints>
@@ -683,31 +683,31 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1p-5c-3FZ" userLabel="Top Input Add/Sub">
-                                                        <rect key="frame" x="0.0" y="457" width="1024" height="152"/>
+                                                        <rect key="frame" x="0.0" y="160.5" width="320" height="54"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hvx-WL-FpQ" userLabel="Add/Subtract Labels Stack View">
-                                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="46"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="320" height="16.5"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5H-RT-H3T">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="46"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="40" height="16.5"/>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egq-5Q-1tc">
-                                                                        <rect key="frame" x="128" y="0.0" width="256" height="46"/>
+                                                                        <rect key="frame" x="40" y="0.0" width="80" height="16.5"/>
                                                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AbG-Pg-uBk" userLabel="Buffer View">
-                                                                        <rect key="frame" x="384" y="0.0" width="256" height="46"/>
+                                                                        <rect key="frame" x="120" y="0.0" width="80" height="16.5"/>
                                                                     </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtract" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1M-hC-EBW">
-                                                                        <rect key="frame" x="640" y="0.0" width="256" height="46"/>
+                                                                        <rect key="frame" x="200" y="0.0" width="80" height="16.5"/>
                                                                         <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6A-lr-Dj5">
-                                                                        <rect key="frame" x="896" y="0.0" width="128" height="46"/>
+                                                                        <rect key="frame" x="280" y="0.0" width="40" height="16.5"/>
                                                                     </view>
                                                                 </subviews>
                                                                 <constraints>
@@ -718,13 +718,13 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCi-vz-t9u" userLabel="Add/Subtract Fields Stack">
-                                                                <rect key="frame" x="0.0" y="46" width="1024" height="106"/>
+                                                                <rect key="frame" x="0.0" y="16.5" width="320" height="37.5"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNC-d8-5s3">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="203" height="106"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="37.5"/>
                                                                     </view>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hY-lB-rdh" userLabel="Add Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
-                                                                        <rect key="frame" x="203" y="0.0" width="106.5" height="106"/>
+                                                                        <rect key="frame" x="61.5" y="0.0" width="37.5" height="37.5"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="2hY-lB-rdh" secondAttribute="height" id="pj6-QE-8oa"/>
                                                                         </constraints>
@@ -742,10 +742,10 @@
                                                                         </connections>
                                                                     </textField>
                                                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOU-Kq-nzp" userLabel="Buffer View">
-                                                                        <rect key="frame" x="309.5" y="0.0" width="405.5" height="106"/>
+                                                                        <rect key="frame" x="99" y="0.0" width="122.5" height="37.5"/>
                                                                     </view>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aYE-fq-YXb" userLabel="Subtract Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
-                                                                        <rect key="frame" x="715" y="0.0" width="106.5" height="106"/>
+                                                                        <rect key="frame" x="221.5" y="0.0" width="37" height="37.5"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="aYE-fq-YXb" secondAttribute="height" id="I7r-w2-8bf"/>
                                                                         </constraints>
@@ -763,7 +763,7 @@
                                                                         </connections>
                                                                     </textField>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnW-k1-Rb2">
-                                                                        <rect key="frame" x="821.5" y="0.0" width="202.5" height="106"/>
+                                                                        <rect key="frame" x="258.5" y="0.0" width="61.5" height="37.5"/>
                                                                     </view>
                                                                 </subviews>
                                                                 <constraints>
@@ -804,7 +804,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adjustments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nP9-g2-Fjq">
-                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="67.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="24"/>
                                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -822,10 +822,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOH-qt-67l" userLabel="Bottom Input View">
-                                        <rect key="frame" x="0.0" y="676.5" width="1024" height="74.5"/>
+                                        <rect key="frame" x="0.0" y="238.5" width="320" height="25.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBK-kW-jMJ">
-                                                <rect key="frame" x="256" y="6" width="512" height="63.5"/>
+                                                <rect key="frame" x="80.5" y="2" width="159.5" height="22"/>
                                                 <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="Reset">
@@ -860,10 +860,10 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1Yg-5j-WMQ" userLabel="Results View">
-                                <rect key="frame" x="0.0" y="976" width="1024" height="341"/>
+                                <rect key="frame" x="0.0" y="356" width="320" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5X7-dV-qQW" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="114"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -874,7 +874,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHd-dJ-1A8" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                                        <rect key="frame" x="0.0" y="114" width="1024" height="113.5"/>
+                                        <rect key="frame" x="0.0" y="25" width="320" height="25.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -885,7 +885,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cr-u0-WNm" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                                        <rect key="frame" x="0.0" y="227.5" width="1024" height="113.5"/>
+                                        <rect key="frame" x="0.0" y="50.5" width="320" height="24.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -941,28 +941,28 @@
             <objects>
                 <viewController id="qVG-jB-rgn" customClass="BarrageViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2UY-c2-cBV">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LYa-yP-7Vo" userLabel="Barrage Input Background">
-                                <rect key="frame" x="0.0" y="225" width="1024" height="210"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="188"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zO8-Ms-QN6" userLabel="Mortar Container">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="205"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="72"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="oc0-35-kW9" kind="embed" identifier="targetBarrageSectionSegue" id="Dex-0a-a2C"/>
                                 </connections>
                             </containerView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="KPO-GP-DMI" userLabel="Barrage/Interval Stack">
-                                <rect key="frame" x="0.0" y="230" width="1024" height="25"/>
+                                <rect key="frame" x="0.0" y="97" width="320" height="24"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xN8-5b-vFb" userLabel="Barrage Title View">
-                                        <rect key="frame" x="0.0" y="0.0" width="512" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barrage radius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRG-P9-1Kb">
-                                                <rect key="frame" x="184.5" y="4" width="143" height="17"/>
+                                                <rect key="frame" x="8.5" y="4" width="143" height="17"/>
                                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -974,10 +974,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlk-rZ-KE9" userLabel="Interval Title View">
-                                        <rect key="frame" x="512" y="0.0" width="512" height="25"/>
+                                        <rect key="frame" x="160" y="0.0" width="160" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interval" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNr-oj-5AI">
-                                                <rect key="frame" x="215" y="4" width="82" height="17"/>
+                                                <rect key="frame" x="39" y="4" width="82" height="17"/>
                                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -993,7 +993,6 @@
                                     <constraint firstItem="rlk-rZ-KE9" firstAttribute="width" secondItem="xN8-5b-vFb" secondAttribute="width" id="6Qn-Dz-5lO"/>
                                     <constraint firstItem="xN8-5b-vFb" firstAttribute="top" secondItem="KPO-GP-DMI" secondAttribute="top" id="6ec-ga-pLj"/>
                                     <constraint firstItem="xN8-5b-vFb" firstAttribute="leading" secondItem="KPO-GP-DMI" secondAttribute="leading" id="9Ui-Cv-wSr"/>
-                                    <constraint firstAttribute="height" constant="25" id="Aiz-NH-nBN"/>
                                     <constraint firstAttribute="bottom" secondItem="xN8-5b-vFb" secondAttribute="bottom" id="Ao3-J0-7I8"/>
                                     <constraint firstItem="rlk-rZ-KE9" firstAttribute="leading" secondItem="xN8-5b-vFb" secondAttribute="trailing" id="C8i-Ta-obj"/>
                                     <constraint firstAttribute="bottom" secondItem="rlk-rZ-KE9" secondAttribute="bottom" id="EPw-fl-gLL"/>
@@ -1002,13 +1001,13 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="L4A-yK-e3h" userLabel="Slider Feedback Stack">
-                                <rect key="frame" x="0.0" y="270" width="1024" height="15"/>
+                                <rect key="frame" x="0.0" y="136" width="320" height="14.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l64-IJ-Qhm" userLabel="Left Feedback View">
-                                        <rect key="frame" x="0.0" y="0.0" width="512" height="15"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="14.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuL-2y-a0Z">
-                                                <rect key="frame" x="240.5" y="-1" width="31" height="17"/>
+                                                <rect key="frame" x="65" y="-1.5" width="31" height="17"/>
                                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1020,10 +1019,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAr-jL-u0X" userLabel="Right Feedback View">
-                                        <rect key="frame" x="512" y="0.0" width="512" height="15"/>
+                                        <rect key="frame" x="160" y="0.0" width="160" height="14.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRc-kE-8DG">
-                                                <rect key="frame" x="240.5" y="-1" width="31" height="17"/>
+                                                <rect key="frame" x="64.5" y="-1.5" width="31" height="17"/>
                                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1036,19 +1035,18 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="5UZ-cq-wb1"/>
                                     <constraint firstItem="PAr-jL-u0X" firstAttribute="leading" secondItem="l64-IJ-Qhm" secondAttribute="trailing" id="gAD-TO-mZP"/>
                                     <constraint firstItem="PAr-jL-u0X" firstAttribute="width" secondItem="l64-IJ-Qhm" secondAttribute="width" id="gKF-AI-Mc7"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNS-7h-f5q" userLabel="Slider Stack">
-                                <rect key="frame" x="0.0" y="285" width="1024" height="50"/>
+                                <rect key="frame" x="0.0" y="150.5" width="320" height="33.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jht-Et-1yx" userLabel="Left Field">
-                                        <rect key="frame" x="0.0" y="0.0" width="512" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="33.5"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="5" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="s4Z-j9-RAG">
-                                                <rect key="frame" x="8" y="0.0" width="496" height="51"/>
+                                                <rect key="frame" x="8" y="0.0" width="144" height="34.5"/>
                                                 <color key="minimumTrackTintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="thumbTintColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
@@ -1064,10 +1062,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XH3-S1-YLx" userLabel="Right Field">
-                                        <rect key="frame" x="512" y="0.0" width="512" height="50"/>
+                                        <rect key="frame" x="160" y="0.0" width="160" height="33.5"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="5" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="Y99-X0-ydG">
-                                                <rect key="frame" x="8" y="0.0" width="496" height="51"/>
+                                                <rect key="frame" x="8" y="0.0" width="144" height="34.5"/>
                                                 <color key="minimumTrackTintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="thumbTintColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
@@ -1085,19 +1083,17 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="XH3-S1-YLx" firstAttribute="leading" secondItem="Jht-Et-1yx" secondAttribute="trailing" id="8iT-6l-L5g"/>
-                                    <constraint firstAttribute="height" constant="50" id="Wcy-HC-jqn"/>
                                     <constraint firstItem="XH3-S1-YLx" firstAttribute="width" secondItem="Jht-Et-1yx" secondAttribute="width" id="bHh-e2-MoC"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="is5-NI-zXy"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUB-bk-oVi" userLabel="Timer Stack">
-                                <rect key="frame" x="0.0" y="335" width="1024" height="100"/>
+                                <rect key="frame" x="0.0" y="184" width="320" height="96"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5LQ-bT-2Z0">
-                                        <rect key="frame" x="0.0" y="0.0" width="512" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="96"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k36-AI-goR">
-                                                <rect key="frame" x="80" y="40" width="27" height="21"/>
+                                                <rect key="frame" x="90" y="63" width="27" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -1106,16 +1102,16 @@
                                         </subviews>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agi-Vg-3al" userLabel="Right Timing View">
-                                        <rect key="frame" x="512" y="0.0" width="512" height="100"/>
+                                        <rect key="frame" x="160" y="0.0" width="160" height="96"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LTa-UA-aDN" userLabel="Right Timing Stack">
-                                                <rect key="frame" x="0.0" y="0.0" width="512" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="160" height="96"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bp6-J4-pIj" userLabel="Right Timing Top View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="512" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="160" height="48"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSn-l7-TWD">
-                                                                <rect key="frame" x="20" y="10" width="472" height="30"/>
+                                                                <rect key="frame" x="20" y="10" width="120" height="28"/>
                                                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" title="Start">
                                                                     <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1135,10 +1131,10 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LT4-un-txp" userLabel="Right Timing Bottom View">
-                                                        <rect key="frame" x="0.0" y="50" width="512" height="50"/>
+                                                        <rect key="frame" x="0.0" y="48" width="160" height="48"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seF-Ik-t7V">
-                                                                <rect key="frame" x="20" y="10" width="472" height="30"/>
+                                                                <rect key="frame" x="20" y="10" width="120" height="28"/>
                                                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" title="Next Target">
                                                                     <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1179,7 +1175,6 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="2Ki-TY-ovD"/>
                                     <constraint firstItem="agi-Vg-3al" firstAttribute="leading" secondItem="5LQ-bT-2Z0" secondAttribute="trailing" id="HWh-j8-pPm"/>
                                     <constraint firstItem="agi-Vg-3al" firstAttribute="width" secondItem="5LQ-bT-2Z0" secondAttribute="width" id="QUy-L4-jAo"/>
                                     <constraint firstAttribute="trailing" secondItem="agi-Vg-3al" secondAttribute="trailing" id="TGX-df-AXu"/>
@@ -1191,10 +1186,10 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uy5-3M-84X" userLabel="Results Stack View">
-                                <rect key="frame" x="5" y="435" width="1014" height="882"/>
+                                <rect key="frame" x="5" y="280" width="310" height="151"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBh-tl-8ty" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="1014" height="294"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="50.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1205,7 +1200,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoA-MV-A5E" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                                        <rect key="frame" x="0.0" y="294" width="1014" height="294"/>
+                                        <rect key="frame" x="0.0" y="50.5" width="310" height="50.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1216,7 +1211,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOS-nF-xeF" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                                        <rect key="frame" x="0.0" y="588" width="1014" height="294"/>
+                                        <rect key="frame" x="0.0" y="101" width="310" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1247,14 +1242,17 @@
                         <constraints>
                             <constraint firstItem="KPO-GP-DMI" firstAttribute="top" secondItem="zO8-Ms-QN6" secondAttribute="bottom" constant="5" id="3yl-KS-7Vw"/>
                             <constraint firstItem="LYa-yP-7Vo" firstAttribute="leading" secondItem="MiL-4V-z2K" secondAttribute="leading" id="4Ee-RM-hcy"/>
+                            <constraint firstItem="KPO-GP-DMI" firstAttribute="height" secondItem="2UY-c2-cBV" secondAttribute="height" multiplier="0.05" id="7fP-Kh-SJj"/>
                             <constraint firstItem="MiL-4V-z2K" firstAttribute="bottom" secondItem="Uy5-3M-84X" secondAttribute="bottom" id="8aD-g7-zK0"/>
                             <constraint firstItem="Uy5-3M-84X" firstAttribute="leading" secondItem="MiL-4V-z2K" secondAttribute="leading" constant="5" id="9QQ-zn-aDW"/>
                             <constraint firstItem="MiL-4V-z2K" firstAttribute="trailing" secondItem="Uy5-3M-84X" secondAttribute="trailing" constant="5" id="Boc-ev-GAz"/>
                             <constraint firstItem="hNS-7h-f5q" firstAttribute="top" secondItem="L4A-yK-e3h" secondAttribute="bottom" id="BuO-vi-nLf"/>
+                            <constraint firstItem="L4A-yK-e3h" firstAttribute="height" secondItem="2UY-c2-cBV" secondAttribute="height" multiplier="0.03" id="JhG-fz-SWX"/>
                             <constraint firstItem="hNS-7h-f5q" firstAttribute="leading" secondItem="MiL-4V-z2K" secondAttribute="leading" id="NlV-WZ-k3z"/>
                             <constraint firstItem="Uy5-3M-84X" firstAttribute="top" secondItem="sUB-bk-oVi" secondAttribute="bottom" id="PTY-NK-SJE"/>
                             <constraint firstItem="MiL-4V-z2K" firstAttribute="trailing" secondItem="LYa-yP-7Vo" secondAttribute="trailing" id="Pgn-8J-44O"/>
                             <constraint firstItem="sUB-bk-oVi" firstAttribute="leading" secondItem="MiL-4V-z2K" secondAttribute="leading" id="Rap-Pn-cPn"/>
+                            <constraint firstItem="sUB-bk-oVi" firstAttribute="height" secondItem="2UY-c2-cBV" secondAttribute="height" multiplier="0.2" id="Sv0-g4-tlz"/>
                             <constraint firstItem="hNS-7h-f5q" firstAttribute="trailing" secondItem="MiL-4V-z2K" secondAttribute="trailing" id="awB-59-tsl"/>
                             <constraint firstItem="Uy5-3M-84X" firstAttribute="top" secondItem="LYa-yP-7Vo" secondAttribute="bottom" id="bKq-4u-N1a"/>
                             <constraint firstItem="hNS-7h-f5q" firstAttribute="leading" secondItem="MiL-4V-z2K" secondAttribute="leading" id="egC-jG-biD"/>
@@ -1264,6 +1262,7 @@
                             <constraint firstItem="L4A-yK-e3h" firstAttribute="leading" secondItem="MiL-4V-z2K" secondAttribute="leading" id="lGw-gX-YTA"/>
                             <constraint firstItem="L4A-yK-e3h" firstAttribute="top" secondItem="KPO-GP-DMI" secondAttribute="bottom" constant="15" id="mc3-L6-Rpo"/>
                             <constraint firstItem="zO8-Ms-QN6" firstAttribute="trailing" secondItem="MiL-4V-z2K" secondAttribute="trailing" id="no4-Hh-Qja"/>
+                            <constraint firstItem="hNS-7h-f5q" firstAttribute="height" secondItem="2UY-c2-cBV" secondAttribute="height" multiplier="0.07" id="oud-yB-bXy"/>
                             <constraint firstItem="MiL-4V-z2K" firstAttribute="trailing" secondItem="sUB-bk-oVi" secondAttribute="trailing" id="pyi-oD-jW4"/>
                             <constraint firstItem="zO8-Ms-QN6" firstAttribute="top" secondItem="MiL-4V-z2K" secondAttribute="top" id="rXP-fK-Tki"/>
                             <constraint firstItem="L4A-yK-e3h" firstAttribute="trailing" secondItem="MiL-4V-z2K" secondAttribute="trailing" id="rnT-AK-ydZ"/>
@@ -1299,7 +1298,7 @@
                     <tabBarItem key="tabBarItem" title="More" image="Tab_Icon_More" selectedImage="Tab_Icon_More_Selected" id="ulw-DV-Mri"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="bga-E3-Yh2">
-                        <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -1315,15 +1314,15 @@
             <objects>
                 <tableViewController id="olE-QN-JcR" customClass="MoreViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UcL-Sm-p6z">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1302"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="moreCell" id="gO2-Ox-GX4">
-                                <rect key="frame" x="0.0" y="28" width="1024" height="52"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gO2-Ox-GX4" id="Ypb-A2-zo3">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="51.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
@@ -1350,11 +1349,11 @@
             <objects>
                 <viewController storyboardIdentifier="GuideView" title="User Guide" id="fVv-ki-dB0" customClass="GuideViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wdd-kJ-533">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1302"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hg6-09-oN3">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1253"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1376,16 +1375,16 @@
             <objects>
                 <viewController storyboardIdentifier="AboutView" title="About" id="XPc-Dx-9od" customClass="AboutViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ryk-hh-rJs">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1302"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="replace" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYa-zi-kFZ" userLabel="App Description">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1233"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="347"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Copyright (c) 2018 James Longman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd1-zw-2rY">
-                                <rect key="frame" x="0.0" y="1233" width="1024" height="20"/>
+                                <rect key="frame" x="0.0" y="347" width="320" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Vuz-Hg-qbN"/>
                                 </constraints>
@@ -1419,20 +1418,20 @@
             <objects>
                 <viewController id="WdG-Na-hiJ" userLabel="Target View Controller" customClass="TargetViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bE9-35-wea">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="205"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6J5-HP-iW0" userLabel="Sub View">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="185"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bAA-Dn-c6v">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="185"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPb-dM-e6D" userLabel="Top View">
-                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="37"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="14.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9A-QV-8xU">
-                                                        <rect key="frame" x="0.0" y="2" width="1024" height="35"/>
+                                                        <rect key="frame" x="0.0" y="2" width="320" height="12.5"/>
                                                         <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="19"/>
                                                         <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1446,19 +1445,18 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PPW-Jn-CPh" userLabel="Bottom View">
-                                                <rect key="frame" x="0.0" y="37" width="1024" height="148"/>
+                                                <rect key="frame" x="0.0" y="14.5" width="320" height="57.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngo-VY-GmB" userLabel="Bottom Constrained 'View">
-                                                        <rect key="frame" x="198" y="3" width="628" height="142"/>
+                                                        <rect key="frame" x="27" y="3" width="266" height="51.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIs-NX-iGf" userLabel="Target Fields View">
-                                                                <rect key="frame" x="0.0" y="0.0" width="486" height="142"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="214.5" height="51.5"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="A1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3hl-Mr-cjZ" userLabel="Left Field" customClass="CoordinatesTextField1" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="142" height="142"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="51.5" height="51.5"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="CnA-sl-Q6Y"/>
-                                                                            <constraint firstAttribute="width" secondItem="3hl-Mr-cjZ" secondAttribute="height" id="lTA-1Q-Sqg"/>
+                                                                            <constraint firstAttribute="width" secondItem="3hl-Mr-cjZ" secondAttribute="height" multiplier="1:1" id="lTA-1Q-Sqg"/>
                                                                         </constraints>
                                                                         <attributedString key="attributedText"/>
                                                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
@@ -1474,7 +1472,7 @@
                                                                         </connections>
                                                                     </textField>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9S1-q5-paG">
-                                                                        <rect key="frame" x="142" y="0.0" width="20" height="142"/>
+                                                                        <rect key="frame" x="51.5" y="0.0" width="20" height="51.5"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="aak-6m-9Zv"/>
                                                                         </constraints>
@@ -1483,7 +1481,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4aK-kE-zHA" userLabel="Middle Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
-                                                                        <rect key="frame" x="162" y="0.0" width="142" height="142"/>
+                                                                        <rect key="frame" x="71.5" y="0.0" width="51.5" height="51.5"/>
                                                                         <attributedString key="attributedText"/>
                                                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -1497,7 +1495,7 @@
                                                                         </connections>
                                                                     </textField>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kke-8C-WJb">
-                                                                        <rect key="frame" x="304" y="0.0" width="20" height="142"/>
+                                                                        <rect key="frame" x="123" y="0.0" width="20" height="51.5"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="Jsm-CN-CpT"/>
                                                                         </constraints>
@@ -1506,7 +1504,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Qh-c3-MeH" userLabel="Right Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
-                                                                        <rect key="frame" x="324" y="0.0" width="142" height="142"/>
+                                                                        <rect key="frame" x="143" y="0.0" width="51.5" height="51.5"/>
                                                                         <attributedString key="attributedText"/>
                                                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -1520,7 +1518,7 @@
                                                                         </connections>
                                                                     </textField>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bi-wU-so3">
-                                                                        <rect key="frame" x="466" y="0.0" width="20" height="142"/>
+                                                                        <rect key="frame" x="194.5" y="0.0" width="20" height="51.5"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="YI5-Wf-kJe"/>
                                                                         </constraints>
@@ -1532,7 +1530,7 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TsD-9G-lba">
-                                                                <rect key="frame" x="486" y="0.0" width="142" height="142"/>
+                                                                <rect key="frame" x="214.5" y="0.0" width="51.5" height="51.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="TsD-9G-lba" secondAttribute="height" multiplier="1:1" id="xLv-uj-S3z"/>
                                                                 </constraints>
@@ -1573,7 +1571,6 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="bAA-Dn-c6v" firstAttribute="top" secondItem="RgB-AZ-z5b" secondAttribute="top" id="GGJ-jA-qBF"/>
                                     <constraint firstItem="RgB-AZ-z5b" firstAttribute="bottom" secondItem="bAA-Dn-c6v" secondAttribute="bottom" id="njb-vZ-xLN"/>
@@ -1583,10 +1580,10 @@
                                 <viewLayoutGuide key="safeArea" id="RgB-AZ-z5b"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6J5-HP-iW0" firstAttribute="top" secondItem="yjy-vl-yEu" secondAttribute="top" id="4xs-3L-zcX"/>
-                            <constraint firstItem="6J5-HP-iW0" firstAttribute="bottom" secondItem="yjy-vl-yEu" secondAttribute="bottom" id="HbV-YF-N0n"/>
+                            <constraint firstItem="6J5-HP-iW0" firstAttribute="bottom" secondItem="bE9-35-wea" secondAttribute="bottom" id="HbV-YF-N0n"/>
                             <constraint firstItem="6J5-HP-iW0" firstAttribute="trailing" secondItem="yjy-vl-yEu" secondAttribute="trailing" id="Xl8-sq-rvm"/>
                             <constraint firstItem="6J5-HP-iW0" firstAttribute="leading" secondItem="yjy-vl-yEu" secondAttribute="leading" id="lfo-Et-vVe"/>
                         </constraints>
@@ -1608,7 +1605,7 @@
             <objects>
                 <viewController id="9Kh-e5-eeO" customClass="TargetGridViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="knc-J2-WwO">
-                        <rect key="frame" x="0.0" y="0.0" width="142" height="142"/>
+                        <rect key="frame" x="0.0" y="0.0" width="51.5" height="51.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mortar_green_dot" translatesAutoresizingMaskIntoConstraints="NO" id="gGN-7F-hFu" userLabel="Mortar Pin">
@@ -1616,7 +1613,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HGh-F1-iWn" userLabel="Target Grid">
-                                <rect key="frame" x="0.0" y="0.0" width="142" height="142"/>
+                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="51.5"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1641,15 +1638,15 @@
             <objects>
                 <viewController id="R5O-bV-097" customClass="EnlargedTargetGridViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bDJ-Hk-4ck">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yyz-9U-Mv3" userLabel="Target Grid">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="1004"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mortar_green_dot" translatesAutoresizingMaskIntoConstraints="NO" id="oR1-Se-9Q2" userLabel="Target Pin">
-                                <rect key="frame" x="483" y="483" width="55" height="55"/>
+                                <rect key="frame" x="151" y="151" width="17" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -1675,18 +1672,18 @@
             <objects>
                 <viewController id="WrU-Yq-ods" customClass="CorrectionsEnlargedTargetGridViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v3t-mU-LVt">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajS-Sj-pLl" userLabel="Sub View">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="1004"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iaR-jc-x1w" userLabel="Target Grid">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1004"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mortar_green_dot" translatesAutoresizingMaskIntoConstraints="NO" id="fyh-qS-DoY" userLabel="Target Pin">
-                                        <rect key="frame" x="483" y="474" width="55" height="53"/>
+                                        <rect key="frame" x="151" y="151" width="17" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -1722,11 +1719,11 @@
             <objects>
                 <viewController storyboardIdentifier="EnlargedTargetView" id="qyB-ob-piX" customClass="EnlargedTargetViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L3b-fr-g35">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l1Y-N4-i2G">
-                                <rect key="frame" x="0.0" y="171" width="1024" height="1024"/>
+                                <rect key="frame" x="0.0" y="80" width="320" height="320"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="l1Y-N4-i2G" secondAttribute="height" multiplier="1:1" id="woS-6w-h6z"/>
                                 </constraints>
@@ -1735,10 +1732,10 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kOA-LV-ds2">
-                                <rect key="frame" x="0.0" y="1195" width="1024" height="171"/>
+                                <rect key="frame" x="0.0" y="400" width="320" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="it1-Fu-Mn6">
-                                        <rect key="frame" x="0.0" y="61" width="1024" height="50"/>
+                                        <rect key="frame" x="0.0" y="20.5" width="320" height="40"/>
                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="750" constant="50" id="pIC-NM-gu1"/>
@@ -1761,10 +1758,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="op2-oM-aV9">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="151"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnB-8E-Bcr">
-                                        <rect key="frame" x="0.0" y="50.5" width="1024" height="50"/>
+                                        <rect key="frame" x="0.0" y="15" width="320" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="750" constant="50" id="qiX-dm-4he"/>
@@ -1813,20 +1810,20 @@
             <objects>
                 <viewController id="iOX-fU-g45" customClass="CorrectionsTargetViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EcB-NA-QfM">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="205"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lz5-8s-C19" userLabel="Sub View">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="185"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Amg-ME-lJa">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="185"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Tq-PW-uzE" userLabel="Top View">
-                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="37"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="14.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXf-Pp-G6d">
-                                                        <rect key="frame" x="0.0" y="2" width="1024" height="35"/>
+                                                        <rect key="frame" x="0.0" y="2" width="320" height="12.5"/>
                                                         <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
                                                         <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -1840,19 +1837,18 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lx1-Qt-ZEO" userLabel="Bottom View">
-                                                <rect key="frame" x="0.0" y="37" width="1024" height="148"/>
+                                                <rect key="frame" x="0.0" y="14.5" width="320" height="57.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l1m-QQ-Wa9" userLabel="Constrained Bottom View">
-                                                        <rect key="frame" x="198" y="3" width="628" height="142"/>
+                                                        <rect key="frame" x="28" y="3" width="264" height="51.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mt5-pO-OpT" userLabel="Target Fields View">
-                                                                <rect key="frame" x="0.0" y="0.5" width="486" height="141.5"/>
+                                                                <rect key="frame" x="0.0" y="0.5" width="212.5" height="51"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="A1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5bH-x5-Y1a" userLabel="Left Field" customClass="CoordinatesTextField1" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="142" height="141.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="51"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="s6m-Mj-Nv1"/>
-                                                                            <constraint firstAttribute="width" secondItem="5bH-x5-Y1a" secondAttribute="height" id="vQb-uE-nNI"/>
+                                                                            <constraint firstAttribute="width" secondItem="5bH-x5-Y1a" secondAttribute="height" multiplier="1:1" id="vQb-uE-nNI"/>
                                                                         </constraints>
                                                                         <attributedString key="attributedText"/>
                                                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
@@ -1868,7 +1864,7 @@
                                                                         </connections>
                                                                     </textField>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Op-jc-PeG">
-                                                                        <rect key="frame" x="142" y="0.0" width="20" height="141.5"/>
+                                                                        <rect key="frame" x="51" y="0.0" width="20" height="51"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="waQ-Gr-8vz"/>
                                                                         </constraints>
@@ -1877,7 +1873,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mC7-Uq-QCR" userLabel="Middle Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
-                                                                        <rect key="frame" x="162" y="0.0" width="142" height="141.5"/>
+                                                                        <rect key="frame" x="71" y="0.0" width="51" height="51"/>
                                                                         <attributedString key="attributedText"/>
                                                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -1891,7 +1887,7 @@
                                                                         </connections>
                                                                     </textField>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb3-Av-Z5C">
-                                                                        <rect key="frame" x="304" y="0.0" width="20" height="141.5"/>
+                                                                        <rect key="frame" x="122" y="0.0" width="20" height="51"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="JgG-aq-ns7"/>
                                                                         </constraints>
@@ -1900,7 +1896,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hbj-Ka-Kn5" userLabel="Right Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
-                                                                        <rect key="frame" x="324" y="0.0" width="142" height="141.5"/>
+                                                                        <rect key="frame" x="142" y="0.0" width="50.5" height="51"/>
                                                                         <attributedString key="attributedText"/>
                                                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -1914,7 +1910,7 @@
                                                                         </connections>
                                                                     </textField>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9H-rX-CSW">
-                                                                        <rect key="frame" x="466" y="0.0" width="20" height="141.5"/>
+                                                                        <rect key="frame" x="192.5" y="0.0" width="20" height="51"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="sTb-ZI-HQP"/>
                                                                         </constraints>
@@ -1926,7 +1922,7 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFQ-b0-GhZ">
-                                                                <rect key="frame" x="486" y="0.0" width="142" height="142"/>
+                                                                <rect key="frame" x="212.5" y="0.0" width="51.5" height="51.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="WFQ-b0-GhZ" secondAttribute="height" id="px5-DQ-jIL"/>
                                                                 </constraints>
@@ -1968,7 +1964,6 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Amg-ME-lJa" firstAttribute="top" secondItem="HPG-7T-uSN" secondAttribute="top" id="ABT-PH-CC7"/>
                                     <constraint firstItem="Amg-ME-lJa" firstAttribute="leading" secondItem="HPG-7T-uSN" secondAttribute="leading" id="Acc-0d-RCj"/>
@@ -1978,7 +1973,7 @@
                                 <viewLayoutGuide key="safeArea" id="HPG-7T-uSN"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lz5-8s-C19" firstAttribute="trailing" secondItem="JgW-Fe-joe" secondAttribute="trailing" id="6sT-vx-K8H"/>
                             <constraint firstItem="lz5-8s-C19" firstAttribute="top" secondItem="JgW-Fe-joe" secondAttribute="top" id="EZJ-Ue-tMP"/>
@@ -2003,11 +1998,11 @@
             <objects>
                 <viewController id="zJX-Qx-iAU" customClass="CorrectionsGridViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3SG-zT-jGc">
-                        <rect key="frame" x="0.0" y="0.0" width="142" height="142"/>
+                        <rect key="frame" x="0.0" y="0.0" width="51.5" height="51.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zqn-hN-24B" userLabel="Target Grid">
-                                <rect key="frame" x="0.0" y="0.0" width="142" height="142"/>
+                                <rect key="frame" x="0.0" y="0.0" width="51.5" height="51.5"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mortar_green_dot" translatesAutoresizingMaskIntoConstraints="NO" id="4cM-95-JTR" userLabel="Mortar Pin">
                                 <rect key="frame" x="22" y="22" width="5" height="5"/>
@@ -2036,11 +2031,11 @@
             <objects>
                 <viewController storyboardIdentifier="CorrectionsEnlargedTargetView" id="3qc-L5-hz9" customClass="CorrectionsEnlargedTargetViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dVP-X9-IkO">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6u-uC-5Z1">
-                                <rect key="frame" x="0.0" y="171" width="1024" height="1024"/>
+                                <rect key="frame" x="0.0" y="80" width="320" height="320"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="H6u-uC-5Z1" secondAttribute="height" multiplier="1:1" id="bJi-nP-S05"/>
                                 </constraints>
@@ -2049,10 +2044,10 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8JT-NO-u4L" userLabel="Bottom View">
-                                <rect key="frame" x="0.0" y="1195" width="1024" height="171"/>
+                                <rect key="frame" x="0.0" y="400" width="320" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTT-8I-Iow">
-                                        <rect key="frame" x="0.0" y="60" width="1024" height="50"/>
+                                        <rect key="frame" x="0.0" y="19.5" width="320" height="40"/>
                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="750" constant="50" id="tzd-A3-GXc"/>
@@ -2076,10 +2071,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfX-vc-Dm4" userLabel="Top View">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="151"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nW-Gv-Na6">
-                                        <rect key="frame" x="0.0" y="50" width="1024" height="50"/>
+                                        <rect key="frame" x="0.0" y="14.5" width="320" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="750" constant="50" id="9Nb-fl-uut"/>
@@ -2129,20 +2124,20 @@
             <objects>
                 <viewController id="oc0-35-kW9" customClass="BarrageTargetViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jf3-W5-B1L">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="205"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oiE-eg-zML" userLabel="Sub View">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="185"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mA1-aX-91D">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="185"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1x-JV-R1b" userLabel="Top View">
-                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="37"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="14.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meL-D4-vxB">
-                                                        <rect key="frame" x="0.0" y="2" width="1024" height="35"/>
+                                                        <rect key="frame" x="0.0" y="2" width="320" height="12.5"/>
                                                         <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
                                                         <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -2156,19 +2151,18 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OxG-vW-UW5" userLabel="Bottom View">
-                                                <rect key="frame" x="0.0" y="37" width="1024" height="148"/>
+                                                <rect key="frame" x="0.0" y="14.5" width="320" height="57.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWC-c2-3h2" userLabel="Bottom Constrained View">
-                                                        <rect key="frame" x="199" y="3" width="626" height="142"/>
+                                                        <rect key="frame" x="28" y="3" width="264" height="51.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0T-BZ-3EF" userLabel="Target Fields View">
-                                                                <rect key="frame" x="0.0" y="0.5" width="483.5" height="141.5"/>
+                                                                <rect key="frame" x="0.0" y="0.5" width="212" height="51"/>
                                                                 <subviews>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="A1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ybb-bR-Toz" userLabel="Left Field" customClass="CoordinatesTextField1" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="141.5" height="141.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="51"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="ybb-bR-Toz" secondAttribute="height" id="rsJ-dL-RSs"/>
-                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="xEx-cA-sXT"/>
+                                                                            <constraint firstAttribute="width" secondItem="ybb-bR-Toz" secondAttribute="height" multiplier="1:1" id="rsJ-dL-RSs"/>
                                                                         </constraints>
                                                                         <attributedString key="attributedText"/>
                                                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" returnKeyType="done"/>
@@ -2183,8 +2177,8 @@
                                                                             <action selector="leftTargetFieldEnded:" destination="oc0-35-kW9" eventType="editingDidEnd" id="jal-RJ-4aM"/>
                                                                         </connections>
                                                                     </textField>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6n-Du-NaQ">
-                                                                        <rect key="frame" x="141.5" y="0.0" width="20" height="141.5"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6n-Du-NaQ">
+                                                                        <rect key="frame" x="51" y="0.0" width="20" height="51"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="dYw-8p-DFJ"/>
                                                                         </constraints>
@@ -2193,7 +2187,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yq7-RX-FtW" userLabel="Middle Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
-                                                                        <rect key="frame" x="161.5" y="0.0" width="141" height="141.5"/>
+                                                                        <rect key="frame" x="71" y="0.0" width="50.5" height="51"/>
                                                                         <attributedString key="attributedText"/>
                                                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -2206,8 +2200,8 @@
                                                                             <action selector="middleTargetFieldEnded:" destination="oc0-35-kW9" eventType="editingDidEnd" id="Qwo-t4-Tew"/>
                                                                         </connections>
                                                                     </textField>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbU-90-luT">
-                                                                        <rect key="frame" x="302.5" y="0.0" width="20" height="141.5"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbU-90-luT">
+                                                                        <rect key="frame" x="121.5" y="0.0" width="20" height="51"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="AVd-Md-F68"/>
                                                                         </constraints>
@@ -2216,7 +2210,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="1" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6wr-4z-EWj" userLabel="Right Field" customClass="CoordinatesTextField2" customModule="Squad_Mortar_Calculator" customModuleProvider="target">
-                                                                        <rect key="frame" x="322.5" y="0.0" width="141" height="141.5"/>
+                                                                        <rect key="frame" x="141.5" y="0.0" width="50.5" height="51"/>
                                                                         <attributedString key="attributedText"/>
                                                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                         <userDefinedRuntimeAttributes>
@@ -2230,7 +2224,7 @@
                                                                         </connections>
                                                                     </textField>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sgm-u1-B0L">
-                                                                        <rect key="frame" x="463.5" y="0.0" width="20" height="141.5"/>
+                                                                        <rect key="frame" x="192" y="0.0" width="20" height="51"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="34u-Ay-hsL"/>
                                                                         </constraints>
@@ -2242,7 +2236,7 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5u-qI-JlG">
-                                                                <rect key="frame" x="483.5" y="0.0" width="142.5" height="142"/>
+                                                                <rect key="frame" x="212" y="0.0" width="52" height="51.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="q5u-qI-JlG" secondAttribute="height" multiplier="1:1" id="EiK-by-cvw"/>
                                                                 </constraints>
@@ -2283,7 +2277,6 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="mA1-aX-91D" secondAttribute="trailing" id="DmC-P7-fGf"/>
                                     <constraint firstItem="mA1-aX-91D" firstAttribute="leading" secondItem="oiE-eg-zML" secondAttribute="leading" id="MMG-Ux-KSr"/>
@@ -2293,7 +2286,7 @@
                                 <viewLayoutGuide key="safeArea" id="Z8i-x0-W0H"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oiE-eg-zML" firstAttribute="trailing" secondItem="rdY-SY-jl1" secondAttribute="trailing" id="9Eo-cU-V3X"/>
                             <constraint firstItem="oiE-eg-zML" firstAttribute="leading" secondItem="rdY-SY-jl1" secondAttribute="leading" id="PZW-YR-jdU"/>
@@ -2318,17 +2311,17 @@
             <objects>
                 <viewController id="uds-1A-ZRX" customClass="BarrageGridViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e0e-pd-R9z">
-                        <rect key="frame" x="0.0" y="0.0" width="142.5" height="142"/>
+                        <rect key="frame" x="0.0" y="0.0" width="52" height="51.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nXF-l9-GdG" userLabel="Sub View">
-                                <rect key="frame" x="0.0" y="0.0" width="142.5" height="142"/>
+                                <rect key="frame" x="0.0" y="0.0" width="52" height="51.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-hz-TWn" userLabel="Target Grid">
-                                        <rect key="frame" x="0.0" y="0.0" width="142.5" height="142"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="52" height="51.5"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mortar_green_dot" translatesAutoresizingMaskIntoConstraints="NO" id="j4b-4A-9cq" userLabel="Mortar Pin">
-                                        <rect key="frame" x="22" y="22" width="5" height="5"/>
+                                        <rect key="frame" x="24" y="23" width="5" height="5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -2362,13 +2355,13 @@
         <!--Barrage Enlarged Target View Controller-->
         <scene sceneID="C2w-nf-2eM">
             <objects>
-                <viewController storyboardIdentifier="CorrectionsEnlargedBarrageView" id="AR8-C0-Ixq" customClass="BarrageEnlargedTargetViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BarrageEnlargedTargetView" id="AR8-C0-Ixq" customClass="BarrageEnlargedTargetViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rXf-Hm-I9C">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LgC-YY-J4a">
-                                <rect key="frame" x="0.0" y="171" width="1024" height="1024"/>
+                                <rect key="frame" x="0.0" y="80" width="320" height="320"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LgC-YY-J4a" secondAttribute="height" multiplier="1:1" id="yym-xr-AIh"/>
                                 </constraints>
@@ -2377,10 +2370,10 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Rv-m0-9Sv">
-                                <rect key="frame" x="0.0" y="1195" width="1024" height="171"/>
+                                <rect key="frame" x="0.0" y="400" width="320" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1C-q4-8ll">
-                                        <rect key="frame" x="0.0" y="60" width="1024" height="50"/>
+                                        <rect key="frame" x="0.0" y="19.5" width="320" height="40"/>
                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="750" constant="50" id="SfT-vc-Lds"/>
@@ -2404,10 +2397,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7C-qH-xTs">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="151"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rel-m4-Dyr">
-                                        <rect key="frame" x="0.0" y="50" width="1024" height="50"/>
+                                        <rect key="frame" x="0.0" y="14.5" width="320" height="30"/>
                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="750" constant="50" id="Fiw-NP-mE6"/>
@@ -2457,18 +2450,18 @@
             <objects>
                 <viewController id="1Yt-bv-Bw8" customClass="BarrageEnlargedTargetGridViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="URq-cf-gnw">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBL-r2-tBA" userLabel="Sub View">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="1004"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XjT-Nf-aJ5" userLabel="Target Grid">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1004"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mortar_green_dot" translatesAutoresizingMaskIntoConstraints="NO" id="rOE-6e-xTU" userLabel="Target Pin">
-                                        <rect key="frame" x="483" y="471" width="55" height="54"/>
+                                        <rect key="frame" x="151" y="150" width="17" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
