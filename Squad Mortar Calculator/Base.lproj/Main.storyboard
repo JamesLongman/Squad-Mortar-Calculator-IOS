@@ -235,7 +235,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I19-jA-0Od">
                                                                 <rect key="frame" x="193" y="0.0" width="20" height="51"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="20" id="bbM-Wg-6y2"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="bbM-Wg-6y2"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>

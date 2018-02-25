@@ -42,8 +42,7 @@ class MoreViewController: UITableViewController {
         } else if (moreTable[indexPath.row] == "About") {
             self.performSegue(withIdentifier: "aboutViewControllerSegue", sender: self)
         } else if (moreTable[indexPath.row] == "Leave A Review") {
-            // REPLACE: replace with id once registered on app store (must test with physical device not simulator)
-            UIApplication.shared.open(URL(string: "https://itunes.apple.com/app/id363590051?action=write-review")!, options: [:], completionHandler: nil)
+            UIApplication.shared.open(URL(string: "https://itunes.apple.com/app/id1352781413?action=write-review")!, options: [:], completionHandler: nil)
         } else if (moreTable[indexPath.row] == "Project Github Repository") {
             UIApplication.shared.open(URL(string : "https://github.com/JamesLongman/Squad-Mortar-Calculator-IOS")!, options: [:], completionHandler: nil)
         } else {
