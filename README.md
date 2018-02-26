@@ -2,7 +2,7 @@
 IOS App: Mortar calculator for the video game Squad
 
 There are a few websites out there with mortar calculators and even an android app but unfortunately there was no IOS app and many
-people including myself wanted one so I created it myself. This is the first IOS app I have made and my first time using Swift or
+people including myself wanted one so here it is! This is the first IOS app I have made and my first time using Swift or
 Xcode so contributions are definitely welcome there is certainly a lot that can be improved on I am sure.
 
 ## How it works
@@ -49,6 +49,6 @@ very much welcome. To report a bug or suggest a new feature simply open a new is
 quick search to check a duplicate issue does not already exist.
 
 For code contributions please first assign the relevant issue to yourself, then branch off the develop branch and create a PR to merge
-your work into the develop branch when you're ready.
+your work into the develop branch when you're ready. Comments on issues and pull requests are also very much welcome.
 
 The master branch is the current release and the develop branch is the next release.
