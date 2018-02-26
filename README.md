@@ -1,3 +1,5 @@
+![alt text](https://i.imgur.com/e0Hxbwp.png)
+
 # Squad-Mortar-Calculator-IOS
 IOS App: Mortar calculator for the video game Squad
 
@@ -50,5 +52,7 @@ quick search to check a duplicate issue does not already exist.
 
 For code contributions please first assign the relevant issue to yourself, then branch off the develop branch and create a PR to merge
 your work into the develop branch when you're ready. Comments on issues and pull requests are also very much welcome.
+
+Please leave comments on any code that isn't immediately obvious, tests aren't required as the entire project needs them currently.
 
 The master branch is the current release and the develop branch is the next release.
