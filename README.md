@@ -10,7 +10,7 @@ Xcode so contributions are definitely welcome there is certainly a lot that can 
 Unfortunately there are no readily available 3d mapping of Squad maps so the formula that this and as far as I know all calculators use
 is based on an interpolation of the provided figures for a 2d plane. There are many ways to accurately accomplish this interpolation and
 I have taken the simple method of using a 12th order polynomial calculated by polynomial regression. The formula was calculated by
-http://www.arachnoid.com/polysolve and provides a correlation coefficient of 0.9999994.
+[PolySolve](http://www.arachnoid.com/polysolve) and provides a correlation coefficient of 0.9999994.
 
 Fortunately user error is a far greater problem than error due to altitude differences as at all but extreme ranges mortars fall extremely
 steeply mitigating the error. The formula itself is accurate to about ±1 meter on a 2D plane, a value far smaller than the natural spread
