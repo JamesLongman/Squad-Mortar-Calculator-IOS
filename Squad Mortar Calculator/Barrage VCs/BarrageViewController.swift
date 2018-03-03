@@ -130,8 +130,8 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
          gives equal weight to all points in radius */
         var radius = Double(round(radiusSlider.value * 5))
         var barrageX = randomDouble(min: (calc.targetXPos - radius), max: (calc.targetXPos + radius))
-        var yTollerance = (radius * radius) - ((calc.targetXPos - barrageX) * (calc.targetXPos - barrageX))
-        var barrageY = randomDouble(min: (calc.targetYPos - yTollerance), max: (calc.targetYPos + yTollerance))
+        var yTolerance = ((radius * radius) - ((calc.targetXPos - barrageX) * (calc.targetXPos - barrageX))).squareRoot()
+        var barrageY = randomDouble(min: (calc.targetYPos - yTolerance), max: (calc.targetYPos + yTolerance))
         distance = CalcFunctions().distance(targetX: barrageX, targetY: barrageY)
         
         /* In the unlikely event the barrage point falls outside of the mortar's range recalculate, (this will never
@@ -139,8 +139,8 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
         while(distance > 1250 || distance < 50) {
             radius = Double(round(radiusSlider.value * 5))
             barrageX = randomDouble(min: (calc.targetXPos - radius), max: (calc.targetXPos + radius))
-            yTollerance = (radius * radius) - ((calc.targetXPos - barrageX) * (calc.targetXPos - barrageX))
-            barrageY = randomDouble(min: (calc.targetYPos - yTollerance), max: (calc.targetYPos + yTollerance))
+            yTolerance = (radius * radius) - ((calc.targetXPos - barrageX) * (calc.targetXPos - barrageX))
+            barrageY = randomDouble(min: (calc.targetYPos - yTolerance), max: (calc.targetYPos + yTolerance))
             distance = CalcFunctions().distance(targetX: barrageX, targetY: barrageY)
         }
         
