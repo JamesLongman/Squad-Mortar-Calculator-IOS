@@ -130,7 +130,7 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
          gives equal weight to all points in radius */
         var radius = Double(round(radiusSlider.value * 5))
         var barrageX = randomDouble(min: (calc.targetXPos - radius), max: (calc.targetXPos + radius))
-        var yTollerance = (radius * radius) - ((calc.targetXPos - barrageX) * (calc.targetXPos - barrageX))
+        var yTollerance = ((radius * radius) - ((calc.targetXPos - barrageX) * (calc.targetXPos - barrageX))).squareRoot()
         var barrageY = randomDouble(min: (calc.targetYPos - yTollerance), max: (calc.targetYPos + yTollerance))
         distance = CalcFunctions().distance(targetX: barrageX, targetY: barrageY)
         
