@@ -18,7 +18,6 @@ class CalculatorViewController: UIViewController, MortarLocations, TargetLocatio
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         midLabel.updateText(updatedText: " Awaiting input ")
     }
     
@@ -32,6 +31,12 @@ class CalculatorViewController: UIViewController, MortarLocations, TargetLocatio
             let targetSection = (segue.destination as! TargetViewController)
             targetSection.delegate = self
         }
+    }
+    
+    // Update results on view appearing (useful if target changes in other tabs)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        calculate()
     }
     
     // Functions from protocol called from subviews upon input
