@@ -128,19 +128,19 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
         /* First generate a random x value between min and max radius, then calc max and
          min y for that x using pythagoras and generate random y between those, method
          gives equal weight to all points in radius */
-        var radius = Double(round(radiusSlider.value))
+        var radius = Double(round(radiusSlider.value * 5))
         var barrageX = randomDouble(min: (calc.targetXPos - radius), max: (calc.targetXPos + radius))
-        var yTollerance = (radius * radius) - ((calc.targetXPos - barrageX) * (calc.targetXPos - barrageX))
-        var barrageY = randomDouble(min: (calc.targetYPos - yTollerance), max: (calc.targetYPos + yTollerance))
+        var yTolerance = ((radius * radius) - ((calc.targetXPos - barrageX) * (calc.targetXPos - barrageX))).squareRoot()
+        var barrageY = randomDouble(min: (calc.targetYPos - yTolerance), max: (calc.targetYPos + yTolerance))
         distance = CalcFunctions().distance(targetX: barrageX, targetY: barrageY)
         
         /* In the unlikely event the barrage point falls outside of the mortar's range recalculate, (this will never
          happen more than about half the time when the center point is at the edge of the mortar's range) */
         while(distance > 1250 || distance < 50) {
-            radius = Double(round(radiusSlider.value))
+            radius = Double(round(radiusSlider.value * 5))
             barrageX = randomDouble(min: (calc.targetXPos - radius), max: (calc.targetXPos + radius))
-            yTollerance = (radius * radius) - ((calc.targetXPos - barrageX) * (calc.targetXPos - barrageX))
-            barrageY = randomDouble(min: (calc.targetYPos - yTollerance), max: (calc.targetYPos + yTollerance))
+            yTolerance = (radius * radius) - ((calc.targetXPos - barrageX) * (calc.targetXPos - barrageX))
+            barrageY = randomDouble(min: (calc.targetYPos - yTolerance), max: (calc.targetYPos + yTolerance))
             distance = CalcFunctions().distance(targetX: barrageX, targetY: barrageY)
         }
         
@@ -153,16 +153,18 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
     
     // Update slider feedback labels when sliders are moved
     @IBAction func radiusSliderChanged(_ sender: Any) {
-        radiusLabel.text = "\(Int(round(radiusSlider.value)))m"
+        radiusSlider.value = round(radiusSlider.value)
+        radiusLabel.text = "\(Int(round(radiusSlider.value * 5)))m"
     }
     @IBAction func intervalSliderChanged(_ sender: Any) {
-        intervalLabel.text = "\(Int(round(intervalSlider.value)))s"
+        intervalSlider.value = round(intervalSlider.value)
+        intervalLabel.text = "\(Int(round(intervalSlider.value * 5)))s"
     }
     
     // When the start or stop button is pressed (same button, changes function)
     @IBAction func startStopButtonPressed(_ sender: Any) {
         if (timerIsOn == false) {
-            timeRemaining = Int(round(intervalSlider.value))
+            timeRemaining = Int(round(intervalSlider.value * 5))
             timerLabel.animateTo(text: "\(timeRemaining)", duration: animationDuration)
             timerIsOn = true
             shapeLayer.isHidden = false
@@ -175,7 +177,7 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
             timerIsOn = false
             shapeLayer.isHidden = true
             startStopButton.setTitle("Start", for: .normal)
-            timeRemaining = Int(round(intervalSlider.value))
+            timeRemaining = Int(round(intervalSlider.value * 5))
             timerLabel.animateTo(text: "\(timeRemaining)", duration: animationDuration)
             
         }
@@ -187,7 +189,7 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
             timer.invalidate()
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
         }
-        timeRemaining = Int(round(intervalSlider.value))
+        timeRemaining = Int(round(intervalSlider.value * 5))
         if (timerIsOn) {
             timerAnimation()
         } else {
@@ -203,7 +205,7 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
             timeRemaining -= 1
             timerLabel.animateTo(text: "\(timeRemaining)", duration: animationDuration)
         } else {
-            timeRemaining = Int(round(intervalSlider.value))
+            timeRemaining = Int(round(intervalSlider.value * 5))
             timerLabel.animateTo(text: "\(timeRemaining)", duration: animationDuration)
             timerAnimation()
             calculate()
@@ -220,7 +222,7 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
         let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
         basicAnimation.fromValue = 0
         basicAnimation.toValue = 1
-        basicAnimation.duration = Double(round(intervalSlider.value)) * 1.25
+        basicAnimation.duration = Double(round(intervalSlider.value * 5)) * 1.25
         shapeLayer.add(basicAnimation, forKey: "timeCircle")
     }
 }
