@@ -1,11 +1,13 @@
-# Squad-Mortar-Calculator-IOS
-<img src="https://i.imgur.com/e0Hxbwp.png" align="right" />
+<img src="https://i.imgur.com/p4Sh42i.jpg"/>
 
+# Squad-Mortar-Calculator-IOS
 IOS App: Mortar calculator for the video game Squad
 
 There are a few websites out there with mortar calculators and even an android app but unfortunately there was no IOS app and many
 people including myself wanted one so here it is! This is the first IOS app I have made and my first time using Swift or
 Xcode so contributions are definitely welcome there is certainly a lot that can be improved on I am sure.
+
+## Features
 
 ## How it works
 
@@ -58,3 +60,7 @@ Code requirements:
 - There is no particular syntax style guide.
 
 The master branch is the current release and the develop branch is the next release.
+
+## Acknowledgements
+<img src="https://i.imgur.com/e0Hxbwp.png" align="right" />
+- Quacken: In-game screenshot
