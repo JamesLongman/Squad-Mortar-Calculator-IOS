@@ -15,7 +15,7 @@ The application currently comes with 3 main features
 <img src="https://i.imgur.com/PWT1vBAt.jpg" align="right" />
 
 ### Calculate
-The calssic calculator.
+The classic calculator.
 
 This tab takes two inputs of mortar and target grids, and is capable of selecting sub-grid positions.
 
@@ -26,7 +26,7 @@ The calculator provides results for Distance, Azimuth and Milliradians.
 ### Correct
 Adjust results.
 
-This tab is used to correct the initial calculation if needed, it can be used to move the target an ammount of meters in any direction or simple add or subtract from the range.
+This tab is used to correct the initial calculation if needed, it can be used to move the target an ammount of meters in any direction or simply add or subtract from the range.
 
 This can be useful for when extra precision is required by the user.
 
