@@ -50,9 +50,11 @@ Thank you for considering contributing to the project, I am very much a beginner
 very much welcome. To report a bug or suggest a new feature simply open a new issue after making a
 quick search to check a duplicate issue does not already exist.
 
-For code contributions please first assign the relevant issue to yourself, then branch off the develop branch and create a PR to merge
-your work into the develop branch when you're ready. Comments on issues and pull requests are also very much welcome.
+For code contributions please first create an issue/comment on an issue stating you intend to try to tackle it. Then branch off the develop branch (fork if you like but it's not required), when you're ready PR your work to the develop branch for review. Comments on issues and pull requests are also very much welcome.
 
-Please leave comments on any code that isn't immediately obvious, tests aren't required as the entire project needs them currently.
+Code requirements:
+- Please leave comments on any code that isn't immediately obvious.
+- Tests are not required as the entire project needs them currently.
+- There is no particular syntax style guide.
 
 The master branch is the current release and the develop branch is the next release.
