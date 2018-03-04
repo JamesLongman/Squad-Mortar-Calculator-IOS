@@ -98,6 +98,7 @@ Code requirements:
 
 The master branch is the current release and the develop branch is the next release.
 
-### Acknowledgements
 <img src="https://i.imgur.com/e0Hxbwp.png" align="right" />
+
+### Acknowledgements
 - Quacken: In-game screenshot
