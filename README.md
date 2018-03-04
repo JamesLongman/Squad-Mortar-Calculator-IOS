@@ -1,6 +1,6 @@
-![alt text](https://i.imgur.com/e0Hxbwp.png)
-
 # Squad-Mortar-Calculator-IOS
+<img src="https://i.imgur.com/e0Hxbwp.png" align="right" />
+
 IOS App: Mortar calculator for the video game Squad
 
 There are a few websites out there with mortar calculators and even an android app but unfortunately there was no IOS app and many
