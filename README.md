@@ -50,7 +50,7 @@ Thank you for considering contributing to the project, I am very much a beginner
 very much welcome. To report a bug or suggest a new feature simply open a new issue after making a
 quick search to check a duplicate issue does not already exist.
 
-For code contributions please first create an issue/comment on an issue stating you intend to try to tackle it. Then branch off the develop branch (fork if you like but it's not required), when you're ready PR your work to the develop branch for review. Comments on issues and pull requests are also very much welcome.
+For code contributions please first create an issue/comment on an issue stating you intend to try to tackle it. Then branch off the develop branch (fork if you like but it's not required), when you're ready open a Pull Request to the develop branch for review. Comments on issues and pull requests are also very much welcome.
 
 Code requirements:
 - Please leave comments on any code that isn't immediately obvious.
