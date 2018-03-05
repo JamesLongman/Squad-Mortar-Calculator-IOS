@@ -1,6 +1,7 @@
 <img src="https://i.imgur.com/p4Sh42i.jpg"/>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f1b2432de4b4427fa7b0b6680384ead8)](https://www.codacy.com/app/JamesLongman/Squad-Mortar-Calculator-IOS?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JamesLongman/Squad-Mortar-Calculator-IOS&amp;utm_campaign=Badge_Grade)
 
 # Squad-Mortar-Calculator-IOS
 IOS App: Mortar calculator for the video game Squad
