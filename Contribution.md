@@ -11,4 +11,9 @@ Code requirements:
 - Tests are not required as the entire project needs them currently.
 - The project conforms to the recommended style guide by tailor. Codacy will automatically comment on PRs if style changes are required
 
+Linter:
+As previously mentioned the project conforms to a style guide powered by tailor. Codacy will automatically comment on your PRs if changes are required but the lintor can be run automatically in Xcode to ease conformation. If you wish to accomplish this instructions on tailer xcode intergration is available [here](https://github.com/sleekbyte/tailor)
+
+
+
 The master branch is the current release and the develop branch is the next release.
