@@ -99,7 +99,7 @@ For code contributions please first create an issue/comment on an issue stating 
 Code requirements:
 - Please leave comments on any code that isn't immediately obvious.
 - Tests are not required as the entire project needs them currently.
-- There is no particular syntax style guide.
+- The project conforms to the recommended style guide by tailor. Codacy will automatically comment on PRs if style changes are required
 
 The master branch is the current release and the develop branch is the next release.
 
