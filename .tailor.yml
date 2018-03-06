@@ -1,6 +1,14 @@
 include:
     - Squad\ Mortar\ Calculator
 
+exclude:
+    - Pods
+    - */ProgressBar.swift
+    - */CountDownTimer.swift
+    - */ShrinkingLTMorphingLabel.swift
+    
+    
+
 only:
     - lower-camel-case
     - constant-naming
