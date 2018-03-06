@@ -10,13 +10,13 @@ import Foundation
 
 class CorrectionsField: UITextField, UITextFieldDelegate {
     private var characterLimit: Int?
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         delegate = self
         autocorrectionType = .no
     }
-    
+
     @IBInspectable var acceptableCharacters: String = ""
     @IBInspectable var maxLength: Int {
         get {

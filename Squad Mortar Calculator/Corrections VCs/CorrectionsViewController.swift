@@ -112,6 +112,7 @@ class CorrectionsViewController: UIViewController, CorrectionsTargetLocations {
     @IBAction func westFieldEnded(_ sender: Any) {
         calculateCorrect()
     }
+
     @IBAction func eastFieldEnded(_ sender: Any) {
         calculateCorrect()
     }

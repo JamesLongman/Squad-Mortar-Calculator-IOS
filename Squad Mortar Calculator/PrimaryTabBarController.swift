@@ -35,7 +35,7 @@ class PrimaryTabBarController: UITabBarController {
         let userDefaults = UserDefaults.standard
         let now = Int(NSDate().timeIntervalSince1970)
         // If app was last opened more than an hour ago
-        if (now - userDefaults.integer(forKey: "lastUsed") > 3600) {
+        if now - userDefaults.integer(forKey: "lastUsed") > 3600 {
             if userDefaults.hasValue(forKey: "uses") {
                 let current = userDefaults.integer(forKey: "uses")
                 userDefaults.set(current + 1, forKey: "uses")
@@ -45,10 +45,10 @@ class PrimaryTabBarController: UITabBarController {
 
             userDefaults.synchronize()
             // If user has opened app more than 5 times request review once per month
-            if (userDefaults.integer(forKey: "uses") > 4) {
+            if userDefaults.integer(forKey: "uses") > 4 {
                 if userDefaults.hasValue(forKey: "lastNotified") {
                     // If last requested review more than month ago
-                    if (now - userDefaults.integer(forKey: "lastNotified") > 2592000) {
+                    if now - userDefaults.integer(forKey: "lastNotified") > 2592000 {
                         userDefaults.set(now, forKey: "lastNotified")
                         SKStoreReviewController.requestReview()
                     }
@@ -60,5 +60,5 @@ class PrimaryTabBarController: UITabBarController {
         }
         userDefaults.set(now, forKey: "lastUsed")
     }
-}
 
+}
