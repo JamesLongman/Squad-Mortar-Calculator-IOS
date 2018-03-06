@@ -25,7 +25,7 @@ The project is developed in the 'develop' branch, the next release is built in t
 - The project conforms to the recommended style guide by tailor. Codacy will automatically comment on PRs if style changes are required
 
 ### Linter
-As previously mentioned the project conforms to a style guide powered by tailor. Codacy will automatically comment on your PRs if changes are required but the lintor can be run automatically in Xcode to ease conformation. If you wish to accomplish this instructions on tailer xcode intergration is available [here](https://github.com/sleekbyte/tailor)
+As previously mentioned the project conforms to a style guide powered by tailor; Codacy will automatically comment on your PRs if changes are required but the lintor can be run automatically in Xcode to ease conformation, if you wish to accomplish this instructions on tailer xcode intergration is available [here](https://github.com/sleekbyte/tailor)
 
 
 
