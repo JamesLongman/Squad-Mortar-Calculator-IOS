@@ -560,7 +560,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"${CONFIGURATION}\" = \"Analyze\" ]; then\nif hash tailor 2>/dev/null; then\ntailor\nelse\necho \"warning: Please install Tailor from https://tailor.sh\"\nfi\nfi";
+			shellScript = "if hash tailor 2>/dev/null; then\n    tailor\nelse\n    echo \"warning: Please install Tailor from https://tailor.sh\"\nfi";
 		};
 		EDD4E5CDF380C42DF8DCD03F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
