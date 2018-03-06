@@ -13,8 +13,8 @@ only:
     - trailing-whitespace
     - comment-whitespace
     - function-whitespace
-    - max-line-length: 120
-    - min-name-length: 2
+    - max-line-length = 120
+    - min-name-length = 2
     - redundant-parentheses
     - brace-style
     - forced-type-cast
