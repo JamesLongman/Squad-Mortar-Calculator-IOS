@@ -18,24 +18,25 @@ class CorrectionsEnlargedTargetViewController: UIViewController, PassCorrections
 
     var correctionsEnlargedTargetGridViewController: CorrectionsEnlargedTargetGridViewController?
     var delegate: PassCorrectionsTargetLoc2?
-    
+
     @IBAction func doneButton(_ sender: Any) {
         presentingViewController?.dismiss(animated: true, completion: nil)
     }
-    
+
     @IBAction func centerButton(_ sender: Any) {
         correctionsEnlargedTargetGridViewController!.center()
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "embeddedEnlargedCorrectionsTargetGridSegue") {
             correctionsEnlargedTargetGridViewController = (segue.destination as! CorrectionsEnlargedTargetGridViewController)
             correctionsEnlargedTargetGridViewController!.delegate = self
         }
     }
-    
+
     func passCorrectionsTarget1() {
         delegate!.passCorrectionsTarget2()
     }
 
 }
+

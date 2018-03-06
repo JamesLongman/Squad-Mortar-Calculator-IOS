@@ -25,11 +25,11 @@ class PrimaryTabBarController: UITabBarController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         review()
     }
-    
+
     // Function to determine if a request for a review should be made upon app start
     func review() {
         let userDefaults = UserDefaults.standard
@@ -42,7 +42,7 @@ class PrimaryTabBarController: UITabBarController {
             } else {
                 userDefaults.set(1, forKey: "uses")
             }
-            
+
             userDefaults.synchronize()
             // If user has opened app more than 5 times request review once per month
             if (userDefaults.integer(forKey: "uses") > 4) {
@@ -61,3 +61,4 @@ class PrimaryTabBarController: UITabBarController {
         userDefaults.set(now, forKey: "lastUsed")
     }
 }
+

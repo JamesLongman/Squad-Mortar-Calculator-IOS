@@ -15,28 +15,28 @@ protocol TargetLocations {
 }
 
 class TargetViewController: UIViewController, UITextFieldDelegate, PassTargetLoc3 {
-    
+
     var delegate: TargetLocations?
     let calc = Calc.sharedInstance
-    
+
     @IBOutlet weak var leftTargetField: CoordinatesTextField1!
     @IBOutlet weak var middleTargetField: CoordinatesTextField2!
     @IBOutlet weak var rightTargetField: CoordinatesTextField2!
     @IBOutlet weak var targetGrid: UIView!
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         leftTargetField.resignFirstResponder()
         middleTargetField.resignFirstResponder()
         rightTargetField.resignFirstResponder()
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "embeddedTargetGridSegue") {
             let targetGridViewController = (segue.destination as! TargetGridViewController)
             targetGridViewController.delegate = self
         }
     }
-    
+
     /* When view is about to appear set the target input fields to most recent target value, note: this is not necesary for
      the mortar view as only the target can be changed from other tabs */
     override func viewWillAppear(_ animated: Bool) {
@@ -45,7 +45,7 @@ class TargetViewController: UIViewController, UITextFieldDelegate, PassTargetLoc
         middleTargetField.text = calc.targetMidField
         rightTargetField.text = calc.targetRightField
     }
-    
+
     @IBAction func leftTargetFieldEnded(_ sender: Any) {
         updateTarget()
     }
@@ -55,17 +55,17 @@ class TargetViewController: UIViewController, UITextFieldDelegate, PassTargetLoc
     @IBAction func rightTargetFieldEnded(_ sender: Any) {
         updateTarget()
     }
-    
+
     func passTarget3() {
         updateTarget()
     }
-    
+
     func updateTarget() {
         if !checkTargetFields() { return }
-        
+
         var targetXPos:Double = 0
         var targetYPos:Double = 0
-        
+
         let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         for letter in alphabet {
             if letter == leftTargetField.text!.uppercased()[0] {
@@ -73,14 +73,14 @@ class TargetViewController: UIViewController, UITextFieldDelegate, PassTargetLoc
             }
             targetXPos += 300
         }
-        
+
         if (leftTargetField.text!.count == 2) {
             targetYPos = (Double(String(leftTargetField.text![1]))! - 1) * 300
         } else {
             targetYPos = Double(String(leftTargetField.text![1]))! * 3000
             targetYPos = (Double(String(leftTargetField.text![2]))! - 1) * 300
         }
-        
+
         switch Int(middleTargetField.text!)! {
         case 1: targetYPos += 200
         case 2: targetYPos += 200; targetXPos += 100
@@ -92,7 +92,7 @@ class TargetViewController: UIViewController, UITextFieldDelegate, PassTargetLoc
         case 9: targetXPos += 200
         default: break
         }
-        
+
         let increment:Double = 100/3
         switch Int(rightTargetField.text!)! {
         case 1: targetYPos += increment * 2
@@ -105,15 +105,15 @@ class TargetViewController: UIViewController, UITextFieldDelegate, PassTargetLoc
         case 9: targetXPos += increment * 2
         default: break
         }
-        
+
         targetXPos += calc.targetSubgridXPos
         targetYPos += calc.targetSubgridYPos
-        
+
         calc.targetXPos = targetXPos
         calc.targetYPos = targetYPos
         delegate!.targetLocations()
     }
-    
+
     func checkTargetFields() -> Bool {
         if (leftTargetField.text == "") { return false }
         if !(leftTargetField.text!.count == 2 || leftTargetField.text!.count == 3) { rejectLeftTargetField(); return false }
@@ -123,23 +123,23 @@ class TargetViewController: UIViewController, UITextFieldDelegate, PassTargetLoc
             if !(leftTargetField.text![2].containedIn(matchCharacters: leftTargetField.acceptableSecondCharacters)) { rejectLeftTargetField(); return false }
         }
         if (leftTargetField.backgroundColor !== UIColor.white) { leftTargetField.backgroundColor = UIColor.white }
-        
+
         if (middleTargetField.text == "") { return false }
         if !(middleTargetField.text?.count == 1) { rejectMiddleTargetField(); return false }
         if !((middleTargetField.text?.containsOnlyCharactersIn(matchCharacters: middleTargetField.allowedChars))!) { rejectMiddleTargetField(); return false }
         if (middleTargetField.backgroundColor !== UIColor.white) { middleTargetField.backgroundColor = UIColor.white }
-        
+
         if (rightTargetField.text == "") { return false }
         if !(rightTargetField.text?.count == 1) { rejectRightTargetField(); return false }
         if !((rightTargetField.text?.containsOnlyCharactersIn(matchCharacters: rightTargetField.allowedChars))!) { rejectRightTargetField(); return false }
         if (rightTargetField.backgroundColor !== UIColor.white) { rightTargetField.backgroundColor = UIColor.white }
-        
+
         calc.targetLeftField = leftTargetField.text!
         calc.targetMidField = middleTargetField.text!
         calc.targetRightField = rightTargetField.text!
         return true
     }
-    
+
     func rejectLeftTargetField() {
         leftTargetField.backgroundColor = UIColor.red
     }
@@ -150,3 +150,4 @@ class TargetViewController: UIViewController, UITextFieldDelegate, PassTargetLoc
         rightTargetField.backgroundColor = UIColor.red
     }
 }
+

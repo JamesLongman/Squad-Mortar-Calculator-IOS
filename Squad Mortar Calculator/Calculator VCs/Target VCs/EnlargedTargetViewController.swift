@@ -17,23 +17,24 @@ protocol PassTargetLoc2 {
 class EnlargedTargetViewController: UIViewController, PassTargetLoc1 {
     var enlargedTargetGridViewController: EnlargedTargetGridViewController?
     var delegate: PassTargetLoc2?
-    
+
     @IBAction func doneButton(_ sender: Any) {
         presentingViewController?.dismiss(animated: true, completion: nil)
     }
-    
+
     @IBAction func centerButton(_ sender: Any) {
         enlargedTargetGridViewController!.center()
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "embeddedEnlargedTargetGridSegue") {
             enlargedTargetGridViewController = (segue.destination as! EnlargedTargetGridViewController)
             enlargedTargetGridViewController!.delegate = self
         }
     }
-    
+
     func passTarget1() {
         delegate!.passTarget2()
     }
 }
+

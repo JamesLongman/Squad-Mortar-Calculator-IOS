@@ -15,27 +15,28 @@ protocol PassBarrageTargetLoc2 {
 }
 
 class BarrageEnlargedTargetViewController: UIViewController, PassBarrageTargetLoc1 {
-    
+
     var barrageEnlargedTargetGridViewController: BarrageEnlargedTargetGridViewController?
     var delegate: PassBarrageTargetLoc2?
-    
+
     @IBAction func doneButton(_ sender: Any) {
         presentingViewController?.dismiss(animated: true, completion: nil)
     }
-    
+
     @IBAction func centerButton(_ sender: Any) {
         barrageEnlargedTargetGridViewController!.center()
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "embeddedEnlargedBarrageTargetGridSegue") {
             barrageEnlargedTargetGridViewController = (segue.destination as! BarrageEnlargedTargetGridViewController)
             barrageEnlargedTargetGridViewController!.delegate = self
         }
     }
-    
+
     func passBarrageTarget1() {
         delegate!.passBarrageTarget2()
     }
-    
+
 }
+
