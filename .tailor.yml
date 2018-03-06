@@ -1,5 +1,5 @@
 exclude:
-    - pods
+    - Pods
 
 only:
     - lower-camel-case
