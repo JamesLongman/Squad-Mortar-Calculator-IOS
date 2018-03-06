@@ -23,13 +23,13 @@ class CorrectionsEnlargedTargetGridViewController: UIViewController {
     @IBOutlet weak var targetPin: UIImageView!
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch : UITouch! = touches.first! as UITouch
+        let touch: UITouch! = touches.first! as UITouch
         updatePosition(position: touch.location(in: self.view))
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
-        let touch : UITouch! = touches.first! as UITouch
+        let touch: UITouch! = touches.first! as UITouch
         let candidatePosition = touch.location(in: self.view)
         if self.view.point(inside: candidatePosition, with: event) {
             updatePosition(position: candidatePosition)
@@ -37,8 +37,8 @@ class CorrectionsEnlargedTargetGridViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        let xPoint = ((calc.targetSubgridXPos * Double(self.view!.bounds.width)) / (100/3))
-        let yPoint = ((calc.targetSubgridYPos * Double(self.view!.bounds.height)) / (100/3))
+        let xPoint = (calc.targetSubgridXPos * Double(self.view!.bounds.width)) / (100/3)
+        let yPoint = (calc.targetSubgridYPos * Double(self.view!.bounds.height)) / (100/3)
         targetPin.center = CGPoint(x: xPoint, y: yPoint)
     }
 
@@ -56,4 +56,3 @@ class CorrectionsEnlargedTargetGridViewController: UIViewController {
     }
 
 }
-

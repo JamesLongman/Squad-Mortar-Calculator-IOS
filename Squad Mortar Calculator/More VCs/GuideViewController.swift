@@ -46,5 +46,5 @@ class GuideViewController: UIViewController {
         section5.text! += "\n\n•Please remember to mark your mortar targets with IDF markers, especially if you're targeting positions close to team-mates. You can also use team chat to remind your team not to go near IDF marks"
         section5.text! += "\n\n•Mortar travel time is about 20 seconds, when team-mates ask you to stop shooting make sure they know there are probably a few more volleys in the air"
     }
-}
 
+}

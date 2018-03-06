@@ -22,17 +22,17 @@ class MortarGridViewController: UIViewController, PassMortarLoc2 {
 
     // If the subgrid view section is touched, open the enlarged subgrid view
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let fullScreenGrid = storyboard!.instantiateViewController(withIdentifier: "EnlargedMortarView") as! EnlargedMortarViewController
-        fullScreenGrid.delegate = self
+        let fullScreenGrid = storyboard?.instantiateViewController(withIdentifier: "EnlargedMortarView") as? EnlargedMortarViewController
+        fullScreenGrid?.delegate = self
 
-        self.present(fullScreenGrid, animated: true, completion: nil)
+        self.present(fullScreenGrid!, animated: true, completion: nil)
     }
 
     // When the view will appear, set the pin to the most recent position stored in the calc singleton
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let xPoint = ((calc.mortarSubgridXPos * Double(self.view!.bounds.width)) / (100/3))
-        let yPoint = ((calc.mortarSubgridYPos * Double(self.view!.bounds.height)) / (100/3))
+        let xPoint = (calc.mortarSubgridXPos * Double(self.view!.bounds.width)) / (100/3)
+        let yPoint = (calc.mortarSubgridYPos * Double(self.view!.bounds.height)) / (100/3)
         mortarPin.center = CGPoint(x: xPoint, y: yPoint)
     }
 
@@ -40,8 +40,8 @@ class MortarGridViewController: UIViewController, PassMortarLoc2 {
      size of subview) */
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        let xPoint = ((calc.mortarSubgridXPos * Double(self.view!.bounds.width)) / (100/3))
-        let yPoint = ((calc.mortarSubgridYPos * Double(self.view!.bounds.height)) / (100/3))
+        let xPoint = (calc.mortarSubgridXPos * Double(self.view!.bounds.width)) / (100/3)
+        let yPoint = (calc.mortarSubgridYPos * Double(self.view!.bounds.height)) / (100/3)
         mortarPin.center = CGPoint(x: xPoint, y: yPoint)
     }
 
@@ -49,5 +49,5 @@ class MortarGridViewController: UIViewController, PassMortarLoc2 {
     func passMortar2() {
         delegate!.passMortar3()
     }
-}
 
+}

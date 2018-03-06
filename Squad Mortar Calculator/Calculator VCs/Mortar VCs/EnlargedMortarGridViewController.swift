@@ -23,14 +23,14 @@ class EnlargedMortarGridViewController: UIViewController {
 
     // Set pin position to the position of any touch within the view
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch : UITouch! = touches.first! as UITouch
+        let touch: UITouch! = touches.first! as UITouch
         updatePosition(position: touch.location(in: self.view))
     }
 
     // Allow the user to drag the pin as long as they don't drag it out of the view container
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
-        let touch : UITouch! = touches.first! as UITouch
+        let touch: UITouch! = touches.first! as UITouch
         let candidatePosition = touch.location(in: self.view)
         if self.view.point(inside: candidatePosition, with: event) {
             updatePosition(position: candidatePosition)
@@ -39,8 +39,8 @@ class EnlargedMortarGridViewController: UIViewController {
 
     // Upon apperance of view set pin to currently stored subgrid position
     override func viewWillAppear(_ animated: Bool) {
-        let xPoint = ((calc.mortarSubgridXPos * Double(self.view!.bounds.width)) / (100/3))
-        let yPoint = ((calc.mortarSubgridYPos * Double(self.view!.bounds.height)) / (100/3))
+        let xPoint = (calc.mortarSubgridXPos * Double(self.view!.bounds.width)) / (100/3)
+        let yPoint = (calc.mortarSubgridYPos * Double(self.view!.bounds.height)) / (100/3)
         mortarPin.center = CGPoint(x: xPoint, y: yPoint)
     }
 
@@ -59,4 +59,5 @@ class EnlargedMortarGridViewController: UIViewController {
         // Begining of notification chain
         delegate!.passMortar1()
     }
+
 }

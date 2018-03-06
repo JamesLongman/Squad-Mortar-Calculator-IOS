@@ -28,8 +28,8 @@ class BarrageEnlargedTargetViewController: UIViewController, PassBarrageTargetLo
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "embeddedEnlargedBarrageTargetGridSegue") {
-            barrageEnlargedTargetGridViewController = (segue.destination as! BarrageEnlargedTargetGridViewController)
+        if segue.identifier == "embeddedEnlargedBarrageTargetGridSegue" {
+            barrageEnlargedTargetGridViewController = (segue.destination as? BarrageEnlargedTargetGridViewController)
             barrageEnlargedTargetGridViewController!.delegate = self
         }
     }
@@ -39,4 +39,3 @@ class BarrageEnlargedTargetViewController: UIViewController, PassBarrageTargetLo
     }
 
 }
-

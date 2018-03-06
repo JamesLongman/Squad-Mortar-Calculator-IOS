@@ -24,20 +24,20 @@ class EnlargedMortarViewController: UIViewController, PassMortarLoc1 {
 
     // When the user presses the center button center the pin in the subgrid view
     @IBAction func centerButton(_ sender: Any) {
-        enlargedMortarGridViewController!.center()
+        enlargedMortarGridViewController?.center()
     }
 
     // Set self as a delegate of child view so view can be notified upon subgrid input
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "embeddedEnlargedMortarGridSegue") {
-            enlargedMortarGridViewController = (segue.destination as! EnlargedMortarGridViewController)
-            enlargedMortarGridViewController!.delegate = self
+        if segue.identifier == "embeddedEnlargedMortarGridSegue" {
+            enlargedMortarGridViewController = (segue.destination as? EnlargedMortarGridViewController)
+            enlargedMortarGridViewController?.delegate = self
         }
     }
 
     // Notification of subgrid input from child passed to parent
     func passMortar1() {
-        delegate!.passMortar2()
+        delegate?.passMortar2()
     }
-}
 
+}

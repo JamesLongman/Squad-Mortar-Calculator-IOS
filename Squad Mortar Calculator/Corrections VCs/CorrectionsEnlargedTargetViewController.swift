@@ -28,8 +28,8 @@ class CorrectionsEnlargedTargetViewController: UIViewController, PassCorrections
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "embeddedEnlargedCorrectionsTargetGridSegue") {
-            correctionsEnlargedTargetGridViewController = (segue.destination as! CorrectionsEnlargedTargetGridViewController)
+        if segue.identifier == "embeddedEnlargedCorrectionsTargetGridSegue" {
+            correctionsEnlargedTargetGridViewController = segue.destination as? CorrectionsEnlargedTargetGridViewController
             correctionsEnlargedTargetGridViewController!.delegate = self
         }
     }
@@ -39,4 +39,3 @@ class CorrectionsEnlargedTargetViewController: UIViewController, PassCorrections
     }
 
 }
-

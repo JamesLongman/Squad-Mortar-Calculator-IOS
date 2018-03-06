@@ -27,8 +27,8 @@ class EnlargedTargetViewController: UIViewController, PassTargetLoc1 {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "embeddedEnlargedTargetGridSegue") {
-            enlargedTargetGridViewController = (segue.destination as! EnlargedTargetGridViewController)
+        if segue.identifier == "embeddedEnlargedTargetGridSegue" {
+            enlargedTargetGridViewController = segue.destination as? EnlargedTargetGridViewController
             enlargedTargetGridViewController!.delegate = self
         }
     }
@@ -36,5 +36,5 @@ class EnlargedTargetViewController: UIViewController, PassTargetLoc1 {
     func passTarget1() {
         delegate!.passTarget2()
     }
-}
 
+}

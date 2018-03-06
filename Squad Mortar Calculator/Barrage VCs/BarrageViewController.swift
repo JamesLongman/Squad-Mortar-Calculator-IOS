@@ -29,7 +29,7 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
 
     var timer = Timer()
     var timerIsOn = false
-    var timeRemaining:Int = 10
+    var timeRemaining: Int = 10
 
     let calc = Calc.sharedInstance
 
@@ -41,8 +41,8 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
 
-        var timerRadius:CGFloat = 0
-        if (leftTimingView.frame.size.width > leftTimingView.frame.size.height) {
+        var timerRadius: CGFloat = 0
+        if leftTimingView.frame.size.width > leftTimingView.frame.size.height {
             timerRadius = (leftTimingView.frame.size.height/2) - 20
         } else {
             timerRadius = (leftTimingView.frame.size.width/2) - 20
@@ -69,27 +69,27 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
 
     // Set self as a delegate of child for updates upon target input
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "targetBarrageSectionSegue") {
-            let targetSection = (segue.destination as! BarrageTargetViewController)
-            targetSection.delegate = self
+        if segue.identifier == "targetBarrageSectionSegue" {
+            let targetSection = segue.destination as? BarrageTargetViewController
+            targetSection?.delegate = self
         }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // If no mortar input data inform user
-        if (calc.mortarXPos == 0) {
+        if calc.mortarXPos == 0 {
             midLabel.updateText(updatedText: " Awaiting mortar position input ")
             return
             // If no target input data inform target
-        } else if (calc.targetXPos == 0) {
+        } else if calc.targetXPos == 0 {
             midLabel.updateText(updatedText: " Awaiting target position input ")
             return
         }
 
         // If there is input data, but the middle label has not been updated since there wasn't, clear it
-        if (midLabel.text == " Awaiting target position input " ||
-            midLabel.text == " Awaiting mortar position input ") {
+        if midLabel.text == " Awaiting target position input " ||
+            midLabel.text == " Awaiting mortar position input " {
             midLabel.text = ""
         }
 
@@ -108,17 +108,19 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
 
     // Checks input values is good, then calculates a point to barrage within specified parameters
     func calculate() {
-        if (!CalcFunctions().verify()) { return }
+        if !CalcFunctions().verify() {
+            return
+        }
         calc.azimuth = CalcFunctions().azimuth(targetX: calc.targetXPos, targetY: calc.targetYPos)
 
         // Calculate distance of center barrage point
         var distance = CalcFunctions().distance(targetX: calc.targetXPos, targetY: calc.targetYPos)
-        if (distance < 50) {
+        if distance < 50 {
             topLabel.updateText(updatedText: " Distance to barrage center: \(Int(round(distance)))m ")
             midLabel.updateText(updatedText: " Target too close ")
             bottomLabel.text = ""
             return
-        } else if (distance > 1250) {
+        } else if distance > 1250 {
             topLabel.updateText(updatedText: " Distance to barrage center: \(Int(round(distance)))m ")
             midLabel.updateText(updatedText: " Target too far ")
             bottomLabel.text = ""
@@ -136,7 +138,7 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
 
         /* In the unlikely event the barrage point falls outside of the mortar's range recalculate, (this will never
          happen more than about half the time when the center point is at the edge of the mortar's range) */
-        while(distance > 1250 || distance < 50) {
+        while distance > 1250 || distance < 50 {
             radius = Double(round(radiusSlider.value * 5))
             barrageX = randomDouble(min: (calc.targetXPos - radius), max: (calc.targetXPos + radius))
             yTolerance = (radius * radius) - ((calc.targetXPos - barrageX) * (calc.targetXPos - barrageX))
@@ -156,6 +158,7 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
         radiusSlider.value = round(radiusSlider.value)
         radiusLabel.text = "\(Int(round(radiusSlider.value * 5)))m"
     }
+
     @IBAction func intervalSliderChanged(_ sender: Any) {
         intervalSlider.value = round(intervalSlider.value)
         intervalLabel.text = "\(Int(round(intervalSlider.value * 5)))s"
@@ -163,7 +166,7 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
 
     // When the start or stop button is pressed (same button, changes function)
     @IBAction func startStopButtonPressed(_ sender: Any) {
-        if (timerIsOn == false) {
+        if timerIsOn == false {
             timeRemaining = Int(round(intervalSlider.value * 5))
             timerLabel.animateTo(text: "\(timeRemaining)", duration: animationDuration)
             timerIsOn = true
@@ -185,12 +188,12 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
 
     // Skips to next target, provides target if timer not active
     @IBAction func nextTargetButtonPressed(_ sender: Any) {
-        if (timerIsOn) {
+        if timerIsOn {
             timer.invalidate()
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
         }
         timeRemaining = Int(round(intervalSlider.value * 5))
-        if (timerIsOn) {
+        if timerIsOn {
             timerAnimation()
         } else {
             shapeLayer.isHidden = true
@@ -201,7 +204,7 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
 
     // Objective C function, called every second, ObjC neccesary for timer functions as support not yet included in swift
     @objc func timerRunning() {
-        if (timeRemaining > 1) {
+        if timeRemaining > 1 {
             timeRemaining -= 1
             timerLabel.animateTo(text: "\(timeRemaining)", duration: animationDuration)
         } else {
@@ -225,4 +228,5 @@ class BarrageViewController: UIViewController, BarrageTargetLocations {
         basicAnimation.duration = Double(round(intervalSlider.value * 5)) * 1.25
         shapeLayer.add(basicAnimation, forKey: "timeCircle")
     }
+
 }
