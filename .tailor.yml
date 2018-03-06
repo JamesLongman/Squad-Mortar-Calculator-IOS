@@ -9,7 +9,6 @@ only:
     - operator-whitespace
     - leading-whitespace
     - terminating-newline
-    - parentheses-whitespace
     - trailing-whitespace
     - comment-whitespace
     - function-whitespace
@@ -19,7 +18,6 @@ only:
     - multiple-imports
     - terminating-semicolon
     - todo-syntax
-    - redundant-optional-binding
     - trailing-closure
     
     
