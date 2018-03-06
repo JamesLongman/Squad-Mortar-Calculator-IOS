@@ -1,2 +1,27 @@
-include:
-    - Squad\ Mortar\ Calculator            # Inspect all Swift files under "Squad Mortar Calculator/"
+only:
+    - lower-camel-case
+    - constant-naming
+    - constant-k-prefix
+    - arrow-whitespace
+    - angle-bracket-whitespace
+    - colon-whitespace
+    - comma-whitespace
+    - operator-whitespace
+    - leading-whitespace
+    - terminating-newline
+    - parentheses-whitespace
+    - trailing-whitespace
+    - comment-whitespace
+    - function-whitespace
+    - max-line-length 120
+    - min-name-length 2
+    - redundant-parentheses
+    - brace-style
+    - forced-type-cast
+    - multiple-imports
+    - terminating-semicolon
+    - todo-syntax
+    - redundant-optional-binding
+    - trailing-closure
+    
+    

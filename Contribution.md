@@ -1,14 +1,32 @@
 <img src="https://i.imgur.com/e0Hxbwp.png" align="right" />
 
 Thank you for considering contributing to the project, I am very much a beginner when it comes to swift so feedback and pull requests are
-very much welcome. To report a bug or suggest a new feature simply open a new issue after making a
+very much welcome. 
+
+## Bug Reports/Feature Requests
+To report a bug or suggest a new feature simply open a new issue after making a
 quick search to check a duplicate issue does not already exist.
 
-For code contributions please first create an issue/comment on an issue stating you intend to try to tackle it. Then branch off the develop branch (fork if you like but it's not required), when you're ready open a Pull Request to the develop branch for review. Comments on issues and pull requests are also very much welcome.
+## Code Contributions Guidelines For Developers
+Code contributions are very welcome, the following is a guide to assist in any contributions you may wish to make.
 
-Code requirements:
-- Please leave comments on any code that isn't immediately obvious.
-- Tests are not required as the entire project needs them currently.
+### Workflow
+The project is developed in the 'develop' branch, the next release is built in this branch and merged with master when submitted to the app store for release/review. Work is merged into the develop branch with the following workflow:
+- Firstly an issue is created to track the work that needs to be done and who is currently doing it. The issue is given a priority/status and possible assign to a milestone marking which release it will likely be included in.
+- Next the issue is assigned, feel free to comment on any open issue with the status: "Pending Assignment" stating you intend to attempt to tackle it
+- Work is then carried out on a feature branch, forking is not required but personal preference
+- After the work is complete in a feature branch a PR may be opened to merge the work into the develop branch, the code will be automatically reviewed for style by Codacy and tests will be ran by Travis (Testing not yet implimented so ignore), these tests must pass
+- Once work passes automated review, manual review will be required (feel free to assist in code review by commenting on code in any open PRs)
+- If no changes are required the issues branch is then merged into the develop branch, the issue is then marked completed and kept open until the next release
+
+### Code requirements
+- Please leave comments on any code that isn't immediately obvious
+- Tests are not required as the entire project needs them currently
 - The project conforms to the recommended style guide by tailor. Codacy will automatically comment on PRs if style changes are required
+
+### Linter
+As previously mentioned the project conforms to a style guide powered by tailor; Codacy will automatically comment on your PRs if changes are required but the lintor can be run automatically in Xcode to ease conformation, if you wish to accomplish this instructions on tailer xcode intergration is available [here](https://github.com/sleekbyte/tailor)
+
+
 
 The master branch is the current release and the develop branch is the next release.
