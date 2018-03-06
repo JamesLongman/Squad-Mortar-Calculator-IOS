@@ -4,6 +4,7 @@
     <h1>Squad-Mortar-Calculator-IOS</h1>
     <p>
         <a href="https://github.com/JamesLongman/squad-mortar-calculator-ios/blob/develop/LICENSE"><img src="https://img.shields.io/github/license/JamesLongman/squad-mortar-calculator-ios.svg"></a>
+        <a class="badge-align" href="https://www.codacy.com/app/JamesLongman/Squad-Mortar-Calculator-IOS?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JamesLongman/Squad-Mortar-Calculator-IOS&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/f1b2432de4b4427fa7b0b6680384ead8"/></a>
     </p>
 </div>
 
