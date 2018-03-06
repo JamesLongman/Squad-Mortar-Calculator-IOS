@@ -1,5 +1,5 @@
-exclude:
-    - Pods
+include:
+    - Squad\ Mortar\ Calculator
 
 only:
     - lower-camel-case
