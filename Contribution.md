@@ -1,3 +1,5 @@
+<img src="https://i.imgur.com/e0Hxbwp.png" align="right" />
+
 Thank you for considering contributing to the project, I am very much a beginner when it comes to swift so feedback and pull requests are
 very much welcome. To report a bug or suggest a new feature simply open a new issue after making a
 quick search to check a duplicate issue does not already exist.
@@ -10,5 +12,3 @@ Code requirements:
 - The project conforms to the recommended style guide by tailor. Codacy will automatically comment on PRs if style changes are required
 
 The master branch is the current release and the develop branch is the next release.
-
-<img src="https://i.imgur.com/e0Hxbwp.png" align="right" />
