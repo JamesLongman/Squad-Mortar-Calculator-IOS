@@ -92,5 +92,7 @@ Features that will hopefully be added to the project:
 
 Contribution guidelines for the project can be found [here](Contribution.md)
 
+<img src="https://i.imgur.com/e0Hxbwp.png" align="right" />
+
 ### Acknowledgements
 - Quacken: In-game screenshot
