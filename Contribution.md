@@ -10,6 +10,10 @@ quick search to check a duplicate issue does not already exist.
 ## Code Contributions Guidelines For Developers
 Code contributions are very welcome, the following is a guide to assist in any contributions you may wish to make.
 
+The project was built using:
+Xcode 9.2
+Swift 4.1
+
 ### Workflow
 The project is developed in the 'develop' branch, the next release is built in this branch and merged with master when submitted to the app store for release/review. Work is merged into the develop branch with the following workflow:
 - Firstly an issue is created to track the work that needs to be done and who is currently doing it. The issue is given a priority/status and possible assign to a milestone marking which release it will likely be included in.
