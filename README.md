@@ -1,8 +1,13 @@
 <img src="https://i.imgur.com/p4Sh42i.jpg"/>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+<div align="center">
+    <h1>Squad-Mortar-Calculator-IOS</h1>
+    <p>
+        <a href="https://github.com/JamesLongman/squad-mortar-calculator-ios/blob/develop/LICENSE"><img src="https://img.shields.io/github/license/JamesLongman/squad-mortar-calculator-ios.svg"></a>
+        <a class="badge-align" href="https://www.codacy.com/app/JamesLongman/Squad-Mortar-Calculator-IOS?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JamesLongman/Squad-Mortar-Calculator-IOS&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/f1b2432de4b4427fa7b0b6680384ead8"/></a>
+    </p>
+</div>
 
-# Squad-Mortar-Calculator-IOS
 IOS App: Mortar calculator for the video game Squad
 
 There are a few websites out there with mortar calculators and even an android app but unfortunately there was no IOS app and many
@@ -85,18 +90,7 @@ Features that will hopefully be added to the project:
 
 ### Contribution Guidelines
 
-Thank you for considering contributing to the project, I am very much a beginner when it comes to swift so feedback and pull requests are
-very much welcome. To report a bug or suggest a new feature simply open a new issue after making a
-quick search to check a duplicate issue does not already exist.
-
-For code contributions please first create an issue/comment on an issue stating you intend to try to tackle it. Then branch off the develop branch (fork if you like but it's not required), when you're ready open a Pull Request to the develop branch for review. Comments on issues and pull requests are also very much welcome.
-
-Code requirements:
-- Please leave comments on any code that isn't immediately obvious.
-- Tests are not required as the entire project needs them currently.
-- There is no particular syntax style guide.
-
-The master branch is the current release and the develop branch is the next release.
+Contribution guidelines for the project can be found [here](Contribution.md)
 
 <img src="https://i.imgur.com/e0Hxbwp.png" align="right" />
 

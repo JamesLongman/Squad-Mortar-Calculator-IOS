@@ -304,6 +304,7 @@
 				E6D4CFD92022EA0900FF5658 /* Resources */,
 				257682DC55791E1E3CA6F114 /* [CP] Embed Pods Frameworks */,
 				EDD4E5CDF380C42DF8DCD03F /* [CP] Copy Pods Resources */,
+				E6202B4B204EE8FD00154697 /* Run Tailor */,
 			);
 			buildRules = (
 			);
@@ -546,6 +547,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Squad Mortar CalculatorUITests/Pods-Squad Mortar CalculatorUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		E6202B4B204EE8FD00154697 /* Run Tailor */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Tailor";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if hash tailor 2>/dev/null; then\n    tailor --min-name-length=2 --max-line-length=120\nelse\n    echo \"warning: Please install Tailor from https://tailor.sh\"\nfi";
 		};
 		EDD4E5CDF380C42DF8DCD03F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

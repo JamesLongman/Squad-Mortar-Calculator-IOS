@@ -1,0 +1,32 @@
+include:
+    - Squad\ Mortar\ Calculator
+
+exclude:
+    - Pods
+    - '**ProgressBar.swift'
+    - '**CountDownTimer.swift'
+    - '**ShrinkingLTMorphingLabel.swift'
+
+only:
+    - lower-camel-case
+    - constant-naming
+    - constant-k-prefix
+    - arrow-whitespace
+    - angle-bracket-whitespace
+    - colon-whitespace
+    - comma-whitespace
+    - operator-whitespace
+    - leading-whitespace
+    - terminating-newline
+    - trailing-whitespace
+    - comment-whitespace
+    - function-whitespace
+    - redundant-parentheses
+    - brace-style
+    - forced-type-cast
+    - multiple-imports
+    - terminating-semicolon
+    - todo-syntax
+    - trailing-closure
+    
+    

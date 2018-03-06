@@ -11,7 +11,7 @@ import UIKit
 class AboutViewController: UIViewController {
 
     @IBOutlet weak var aboutText: UITextView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,15 +22,16 @@ class AboutViewController: UIViewController {
         body = body + "\nSwift 4.1"
         body = body + "\n\nLicense: MIT"
         body = body + "\n\nThe project's code and information on how to contribute (whether through reporting bugs or improving on the code) is available at the project's Github repository, a link is provided under the \"More\" tab"
-        
+
         aboutText.text = body
     }
 
     @IBAction func backButton(_ sender: Any) {
         presentingViewController?.dismiss(animated: true, completion: nil)
     }
+
     @IBAction func backTextButton(_ sender: Any) {
         presentingViewController?.dismiss(animated: true, completion: nil)
     }
-    
+
 }

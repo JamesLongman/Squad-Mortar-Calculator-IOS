@@ -18,21 +18,21 @@ class MoreViewController: UITableViewController {
         self.tableView.backgroundColor = UIColor(red:0.89, green:0.89, blue:0.89, alpha:1.0)
         self.tableView.tableFooterView = UIView()
     }
-    
+
     // Set sections to 1
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return moreTable.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let moreCell = self.tableView.dequeueReusableCell(withIdentifier: "moreCell", for: indexPath)
         moreCell.textLabel?.text = moreTable[indexPath.row]
         return moreCell
-        
+
     }
 
     // Actions to be taken upon a touch of a particular table item
@@ -49,12 +49,12 @@ class MoreViewController: UITableViewController {
             return
         }
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         animateTable()
     }
-    
+
     // Simple animation to bring rows into view when more view appears
     func animateTable() {
         tableView.reloadData()
@@ -63,13 +63,14 @@ class MoreViewController: UITableViewController {
         for cell in cells {
             cell.transform = CGAffineTransform(translationX: 0, y: tableViewHeight)
         }
-        
+
         var delayCounter = 0
         for cell in cells {
             UIView.animate(withDuration: 1.5, delay: Double(delayCounter) * 0.05, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 cell.transform = CGAffineTransform.identity
-                }, completion: nil)
+            }, completion: nil)
             delayCounter += 1
         }
     }
 }
+
