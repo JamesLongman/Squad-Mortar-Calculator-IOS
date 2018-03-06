@@ -11,28 +11,28 @@ import UIKit
 class CalculatorViewController: UIViewController, MortarLocations, TargetLocations {
     
     let calc = Calc.sharedInstance
-    
+
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var midLabel: UILabel!
     @IBOutlet weak var bottomLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         midLabel.updateText(updatedText: " Awaiting input ")
     }
-    
+
     // Declare self as a subview delegate so the view can be notified upon input
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "mortarSectionSegue") {
+        if segue.identifier == "mortarSectionSegue" {
             let mortarSection = (segue.destination as! MortarViewController)
             mortarSection.delegate = self
         }
-        if (segue.identifier == "targetSectionSegue") {
+        if segue.identifier == "targetSectionSegue" {
             let targetSection = (segue.destination as! TargetViewController)
             targetSection.delegate = self
         }
     }
-    
+
     // Update results on view appearing (useful if target changes in other tabs)
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
