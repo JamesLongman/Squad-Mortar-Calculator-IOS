@@ -1,3 +1,6 @@
+exclude:
+    - pods
+
 only:
     - lower-camel-case
     - constant-naming
