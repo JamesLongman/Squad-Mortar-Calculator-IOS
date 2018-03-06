@@ -62,7 +62,9 @@ class BarrageTargetViewController: UIViewController, UITextFieldDelegate, PassBa
     }
     
     func updateTarget() {
-        if !checkTargetFields() { return }
+        if !checkTargetFields() {
+            return
+        }
         
         var targetXPos:Double = 0
         var targetYPos:Double = 0
@@ -83,28 +85,54 @@ class BarrageTargetViewController: UIViewController, UITextFieldDelegate, PassBa
         }
         
         switch Int(middleTargetField.text!)! {
-        case 1: targetYPos += 200
-        case 2: targetYPos += 200; targetXPos += 100
-        case 3: targetYPos += 200; targetXPos += 200
-        case 4: targetYPos += 100
-        case 5: targetYPos += 100; targetXPos += 100
-        case 6: targetYPos += 100; targetXPos += 200
-        case 8: targetXPos += 100
-        case 9: targetXPos += 200
-        default: break
+            case 1:
+                targetYPos += 200
+            case 2:
+                targetYPos += 200
+                targetXPos += 100
+            case 3:
+                targetYPos += 200
+                targetXPos += 200
+            case 4:
+                targetYPos += 100
+            case 5:
+                targetYPos += 100
+                targetXPos += 100
+            case 6:
+                targetYPos += 100
+                targetXPos += 200
+            case 8:
+                targetXPos += 100
+            case 9:
+                targetXPos += 200
+            default:
+                break
         }
         
         let increment:Double = 100/3
         switch Int(rightTargetField.text!)! {
-        case 1: targetYPos += increment * 2
-        case 2: targetYPos += increment * 2; targetXPos += increment
-        case 3: targetYPos += increment * 2; targetXPos += increment * 2
-        case 4: targetYPos += increment
-        case 5: targetYPos += increment; targetXPos += increment
-        case 6: targetYPos += increment; targetXPos += increment * 2
-        case 8: targetXPos += increment
-        case 9: targetXPos += increment * 2
-        default: break
+            case 1:
+                targetYPos += increment * 2
+            case 2:
+                targetYPos += increment * 2
+                targetXPos += increment
+            case 3:
+                targetYPos += increment * 2
+                targetXPos += increment * 2
+            case 4:
+                targetYPos += increment
+            case 5:
+                targetYPos += increment
+                targetXPos += increment
+            case 6:
+                targetYPos += increment
+                targetXPos += increment * 2
+            case 8:
+                targetXPos += increment
+            case 9:
+                targetXPos += increment * 2
+            default:
+                break
         }
         
         targetXPos += calc.targetSubgridXPos
