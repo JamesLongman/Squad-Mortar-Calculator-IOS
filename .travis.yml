@@ -3,6 +3,8 @@ osx_image: xcode9.2
 language: objective-c
 
 # Paths
-xcode_project: ./Squad Mortar Calculator.xcodeproj
-xcode_scheme: ./Squad Mortar Calculator
 podfile: ./Podfile
+
+# Build script
+script:
+  - xcodebuild -scheme Squad Mortar Calculator -project Squad Mortar Calculator.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=11.2' build test
