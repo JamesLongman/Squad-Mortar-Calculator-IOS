@@ -7,4 +7,4 @@ podfile: ./Podfile
 
 # Build script
 script:
-  - xcodebuild clean build test -project Squad\ Mortar\ Calculator.xcodeproj -scheme Squad\ Mortar\ Calculator -destination "platform=iOS Simulator,name=iPhone 7,OS=11.2" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
+  - xcodebuild clean build test -workspace Squad\ Mortar\ Calculator.xcworkspace -scheme Squad\ Mortar\ Calculator -destination "platform=iOS Simulator,name=iPhone 7,OS=11.2" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
