@@ -8,3 +8,7 @@ podfile: ./Podfile
 # Build script
 script:
   - xcodebuild clean build test -workspace Squad\ Mortar\ Calculator.xcworkspace -scheme Squad\ Mortar\ Calculator -destination "platform=iOS Simulator,name=iPhone 7,OS=11.2" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
+
+# After tests have completed send report to codecov for coverage review
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
