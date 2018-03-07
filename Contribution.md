@@ -25,7 +25,7 @@ The project is developed in the 'develop' branch, the next release is built in t
 
 ### Code requirements
 - Please leave comments on any code that isn't immediately obvious
-- Tests are not required for all swift files, if it can be tested it should be tested with as high coverage as possible and as robustly as appropirate. If you happen to write some swift code but are unable to write tests for it simply request help with the PR
+- Tests are required for all of the project's swift files, if it can be tested it should be tested with as high coverage as possible and as robustly as appropirate. If you happen to write some swift code but are unable to write tests for it simply request help with the PR
 - The project conforms to the recommended style guide by tailor. Codacy will automatically comment on PRs if style changes are required
 
 ### Linter
