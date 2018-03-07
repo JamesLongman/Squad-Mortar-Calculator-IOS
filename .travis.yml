@@ -3,6 +3,6 @@ osx_image: xcode9.2
 language: objective-c
 
 # Paths
-xcode_project: ./Squad\ Mortar\ Calculator.xcodeproj
-xcode_scheme: ./Squad\ Mortar\ CalculatorTests
+xcode_project: ./Squad Mortar Calculator.xcodeproj
+xcode_scheme: ./Squad Mortar CalculatorTests
 podfile: ./Podfile
