@@ -7,4 +7,4 @@ podfile: ./Podfile
 
 # Build script
 script:
-  - xcodebuild -scheme Squad Mortar Calculator -project Squad Mortar Calculator.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=11.2' build test
+  - xcodebuild clean build test -project Squad Mortar Calculator.xcodeproj -scheme Squad Mortar Calculator
