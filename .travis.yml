@@ -4,5 +4,5 @@ language: objective-c
 
 # Paths
 xcode_project: ./Squad Mortar Calculator.xcodeproj
-xcode_scheme: ./Squad Mortar CalculatorTests
+xcode_scheme: ./Squad Mortar Calculator
 podfile: ./Podfile
