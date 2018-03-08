@@ -3,9 +3,6 @@ include:
 
 exclude:
     - Pods
-    - '**ProgressBar.swift'
-    - '**CountDownTimer.swift'
-    - '**ShrinkingLTMorphingLabel.swift'
 
 only:
     - lower-camel-case
