@@ -39,8 +39,9 @@
 		E6D4CFE42022EA0900FF5658 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6D4CFE22022EA0900FF5658 /* Main.storyboard */; };
 		E6D4CFE62022EA0900FF5658 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6D4CFE52022EA0900FF5658 /* Assets.xcassets */; };
 		E6D4CFE92022EA0900FF5658 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6D4CFE72022EA0900FF5658 /* LaunchScreen.storyboard */; };
-		E6D4CFF42022EA0900FF5658 /* Squad_Mortar_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D4CFF32022EA0900FF5658 /* Squad_Mortar_CalculatorTests.swift */; };
 		E6D4CFFF2022EA0A00FF5658 /* Squad_Mortar_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D4CFFE2022EA0A00FF5658 /* Squad_Mortar_CalculatorUITests.swift */; };
+		E6D838822050B338005DB005 /* PrimaryTabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D838812050B338005DB005 /* PrimaryTabBarControllerTests.swift */; };
+		E6D838842050B3CF005DB005 /* calcFunctionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D838832050B3CF005DB005 /* calcFunctionsTests.swift */; };
 		EBA8004579C9A4058C3C71D3 /* Pods_Squad_Mortar_CalculatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8903A7461EA3030E50B3C3 /* Pods_Squad_Mortar_CalculatorUITests.framework */; };
 		EF446836F3104420057AAFB8 /* Pods_Squad_Mortar_CalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D56A95C97B09F08F2BEDD6 /* Pods_Squad_Mortar_CalculatorTests.framework */; };
 /* End PBXBuildFile section */
@@ -105,11 +106,12 @@
 		E6D4CFE82022EA0900FF5658 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6D4CFEA2022EA0900FF5658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6D4CFEF2022EA0900FF5658 /* Squad Mortar CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Squad Mortar CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E6D4CFF32022EA0900FF5658 /* Squad_Mortar_CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squad_Mortar_CalculatorTests.swift; sourceTree = "<group>"; };
 		E6D4CFF52022EA0900FF5658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6D4CFFA2022EA0900FF5658 /* Squad Mortar CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Squad Mortar CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6D4CFFE2022EA0A00FF5658 /* Squad_Mortar_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squad_Mortar_CalculatorUITests.swift; sourceTree = "<group>"; };
 		E6D4D0002022EA0A00FF5658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6D838812050B338005DB005 /* PrimaryTabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTabBarControllerTests.swift; sourceTree = "<group>"; };
+		E6D838832050B3CF005DB005 /* calcFunctionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calcFunctionsTests.swift; sourceTree = "<group>"; };
 		FB7206AC631971228284313E /* Pods-Squad Mortar CalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad Mortar CalculatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Squad Mortar CalculatorUITests/Pods-Squad Mortar CalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -276,8 +278,9 @@
 		E6D4CFF22022EA0900FF5658 /* Squad Mortar CalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				E6D4CFF32022EA0900FF5658 /* Squad_Mortar_CalculatorTests.swift */,
 				E6D4CFF52022EA0900FF5658 /* Info.plist */,
+				E6D838812050B338005DB005 /* PrimaryTabBarControllerTests.swift */,
+				E6D838832050B3CF005DB005 /* calcFunctionsTests.swift */,
 			);
 			path = "Squad Mortar CalculatorTests";
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 					};
 					E6D4CFEE2022EA0900FF5658 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = E6D4CFDA2022EA0900FF5658;
 					};
@@ -634,7 +638,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6D4CFF42022EA0900FF5658 /* Squad_Mortar_CalculatorTests.swift in Sources */,
+				E6D838842050B3CF005DB005 /* calcFunctionsTests.swift in Sources */,
+				E6D838822050B338005DB005 /* PrimaryTabBarControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -836,12 +841,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5SS98SJ973;
 				INFOPLIST_FILE = "Squad Mortar CalculatorTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JamesLongman.Squad-Mortar-CalculatorTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Squad Mortar Calculator.app/Squad Mortar Calculator";
@@ -854,6 +861,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5SS98SJ973;
 				INFOPLIST_FILE = "Squad Mortar CalculatorTests/Info.plist";
