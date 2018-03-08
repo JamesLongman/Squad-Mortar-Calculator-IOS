@@ -1,5 +1,5 @@
 # Configure environment
-osx_image: xcode9
+osx_image: xcode9.2
 language: objective-c
 xcode_sdk: iphonesimulator11.2
 xcode_configuration: Release
