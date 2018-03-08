@@ -564,7 +564,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -x\n\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n    if hash tailor 2>/dev/null; then\n        tailor --min-name-length=2 --max-line-length=120\n    else\n        echo \"warning: Please install Tailor from https://tailor.sh\"\n    fi\nfi";
+			shellScript = "set -x\n\nif [ \"${CONFIGURATION}\" = \"Analyze\" ]; then\n    if hash tailor 2>/dev/null; then\n        tailor --min-name-length=2 --max-line-length=120\n    else\n        echo \"warning: Please install Tailor from https://tailor.sh\"\n    fi\nfi";
 		};
 		EDD4E5CDF380C42DF8DCD03F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
