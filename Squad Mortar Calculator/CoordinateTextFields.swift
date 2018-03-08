@@ -107,6 +107,3 @@ class CoordinatesTextField2: UITextField, UITextFieldDelegate {
     }
 
 }
-
-
-
