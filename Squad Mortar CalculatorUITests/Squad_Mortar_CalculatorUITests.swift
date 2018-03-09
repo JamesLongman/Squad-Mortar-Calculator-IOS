@@ -34,4 +34,3 @@ class Squad_Mortar_CalculatorUITests: XCTestCase {
     }
 
 }
-

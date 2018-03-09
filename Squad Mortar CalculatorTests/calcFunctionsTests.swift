@@ -24,7 +24,7 @@ class calcFunctionsTests: XCTestCase {
     }
 
     // Verify should return false if there is no mortarXPos
-    func testVerifyWith_mortarXPos() {
+    func testVerifyWithMortarXPos() {
         calc.mortarXPos = -1
         calc.mortarYPos = 1
         calc.targetXPos = 1
@@ -33,7 +33,7 @@ class calcFunctionsTests: XCTestCase {
     }
 
     // Verify should return false if there is no mortarYPos
-    func testVerifyWith_mortarYPos() {
+    func testVerifyWithMortarYPos() {
         calc.mortarXPos = 1
         calc.mortarYPos = -1
         calc.targetXPos = 1
@@ -42,7 +42,7 @@ class calcFunctionsTests: XCTestCase {
     }
 
     // Verify should return false if there is no targetXPos
-    func testVerifyWith_targetXPos() {
+    func testVerifyWithTargetXPos() {
         calc.mortarXPos = 1
         calc.mortarYPos = 1
         calc.targetXPos = -1
@@ -51,7 +51,7 @@ class calcFunctionsTests: XCTestCase {
     }
 
     // Verify should return false if there is no targetYPos
-    func testVerifyWith_targetYPos() {
+    func testVerifyWithTargetYPos() {
         calc.mortarXPos = 1
         calc.mortarYPos = 1
         calc.targetXPos = 1
@@ -88,10 +88,10 @@ class calcFunctionsTests: XCTestCase {
         XCTAssertEqual(calcFunctions.azimuth(targetX: 3, targetY: 2), 90)
 
         // Should return 135 when target is bottom right
-        XCTAssertEqual(calcFunctions.azimuth(targetX: 3, targetY: 3),135)
+        XCTAssertEqual(calcFunctions.azimuth(targetX: 3, targetY: 3), 135)
 
         // Should return 180 when target is straight down
-        XCTAssertEqual(calcFunctions.azimuth(targetX: 2, targetY: 3),180)
+        XCTAssertEqual(calcFunctions.azimuth(targetX: 2, targetY: 3), 180)
 
         // Should return 225 when target is bottom left
         XCTAssertEqual(calcFunctions.azimuth(targetX: 1, targetY: 3), 225)
@@ -102,4 +102,5 @@ class calcFunctionsTests: XCTestCase {
         // Should return 315 when target is top left
         XCTAssertEqual(calcFunctions.azimuth(targetX: 1, targetY: 1), 315)
     }
+
 }
