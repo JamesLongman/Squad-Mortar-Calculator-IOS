@@ -1,16 +1,19 @@
 # Configure environment
-osx_image: xcode9
+osx_image: xcode9.2
 language: objective-c
-xcode_sdk: iphonesimulator8.3
+xcode_sdk: iphonesimulator11.2
 
 # Paths
 podfile: ./Podfile
-xcode_project: Squad Mortar Calculator.xcodeproj
-xcode_scheme: Squad Mortar CalculatorTests
 
 # Build script
 script:
-  - xcodebuild clean build test -workspace Squad\ Mortar\ Calculator.xcworkspace -scheme Squad\ Mortar\ CalculatorTests CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+  - xcodebuild -version
+  - xcodebuild -showsdks
+  - xcodebuild clean build test -workspace Squad\ Mortar\ Calculator.xcworkspace -scheme Squad\ Mortar\ Calculator -enableCodeCoverage YES ENABLE_TESTABILITY=YES -destination "platform=iOS Simulator,name=iPhone 7,OS=11.2" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+
+notifications:
+  email: false
 
 # After tests have completed send report to codecov for coverage review
 after_success:
