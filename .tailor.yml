@@ -1,11 +1,10 @@
 include:
     - Squad\ Mortar\ Calculator
+    - Squad\ Mortar\ CalculatorTests
+    - Squad\ Mortar\ CalculatorUITests
 
 exclude:
     - Pods
-    - '**ProgressBar.swift'
-    - '**CountDownTimer.swift'
-    - '**ShrinkingLTMorphingLabel.swift'
 
 only:
     - lower-camel-case
