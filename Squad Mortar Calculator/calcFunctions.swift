@@ -16,16 +16,16 @@ class CalcFunctions {
         if calc.input {
             return true
         }
-        if calc.mortarXPos == 0 {
+        if calc.mortarXPos == -1 {
             return false
         }
-        if calc.mortarYPos == 0 {
+        if calc.mortarYPos == -1 {
             return false
         }
-        if calc.targetXPos == 0 {
+        if calc.targetXPos == -1 {
             return false
         }
-        if calc.targetYPos == 0 {
+        if calc.targetYPos == -1 {
             return false
         }
         calc.input = true
@@ -44,6 +44,10 @@ class CalcFunctions {
             angle = 90 - tanAngle
         } else if tanAngle <= 180 {
             angle = 450 - tanAngle
+        }
+
+        if angle == Double(360) {
+            angle = 0
         }
 
         return angle

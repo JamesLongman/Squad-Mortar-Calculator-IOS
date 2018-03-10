@@ -29,8 +29,12 @@ extension String {
 
     // Allows reference such as "STRING"[2] == R
     subscript (i: Int) -> Character {
+        if i > self.count - 1 || i < 0 {
+            return " "
+        }
         return self[index(startIndex, offsetBy: i)]
     }
+
 }
 
 extension Character {

@@ -4,7 +4,12 @@
     <h1>Squad-Mortar-Calculator-IOS</h1>
     <p>
         <a href="https://github.com/JamesLongman/squad-mortar-calculator-ios/blob/develop/LICENSE"><img src="https://img.shields.io/github/license/JamesLongman/squad-mortar-calculator-ios.svg"></a>
-        <a class="badge-align" href="https://www.codacy.com/app/JamesLongman/Squad-Mortar-Calculator-IOS?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JamesLongman/Squad-Mortar-Calculator-IOS&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/f1b2432de4b4427fa7b0b6680384ead8"/></a>
+        <a class="badge-align" href="https://www.codacy.com/app/JamesLongman/Squad-Mortar-Calculator-IOS?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JamesLongman/Squad-Mortar-Calculator-IOS&amp;utm_campaign=Badge_Grade">              <img src="https://api.codacy.com/project/badge/Grade/f1b2432de4b4427fa7b0b6680384ead8"/>
+        </a>
+        <a href="https://travis-ci.org/JamesLongman/Squad-Mortar-Calculator-IOS"><img src="https://travis-ci.org/JamesLongman/Squad-Mortar-Calculator-IOS.svg?branch=develop"></a>
+        <a href="https://codecov.io/gh/JamesLongman/Squad-Mortar-Calculator-IOS">
+            <img src="https://codecov.io/gh/JamesLongman/Squad-Mortar-Calculator-IOS/branch/develop/graph/badge.svg" />
+        </a>
     </p>
     <a href="https://itunes.apple.com/app/id1352781413">
         <img src="https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg" style="height: 60px;"/>

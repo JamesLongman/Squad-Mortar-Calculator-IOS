@@ -14,18 +14,16 @@ import Foundation
 class Calc {
     static let sharedInstance = Calc()
 
-    func network() {} // TODO: Not sure what this is but scared to delete, will look at in testing #5
-
     private init() {}
 
     // Has the calculator recieved valid input
     var input: Bool = false
 
     // Absolute map values in meters, y inverted
-    var mortarXPos: Double = 0
-    var mortarYPos: Double = 0
-    var targetXPos: Double = 0
-    var targetYPos: Double = 0
+    var mortarXPos: Double = -1
+    var mortarYPos: Double = -1
+    var targetXPos: Double = -1
+    var targetYPos: Double = -1
 
     // Most recent calculated values (obviously not from a tab such as barrage)
     var azimuth: Double = 0
