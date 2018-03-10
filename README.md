@@ -16,6 +16,7 @@
     </a>
 </div>
 
+<br />
 IOS App: Mortar calculator for the video game Squad
 
 There are a few websites out there with mortar calculators and even an android app but unfortunately there was no IOS app and many
