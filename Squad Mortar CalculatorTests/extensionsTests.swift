@@ -140,4 +140,22 @@ class extensionsTests: XCTestCase {
         XCTAssertFalse(Character("F").containedIn(matchCharacters: set))
     }
 
+    // TODO: Not sure how to test UILabel extensions, issue #35
+
+    // Be careful when testing user defaults to clear after testing
+    func testUserDefaultsHasValue() {
+        let userDefaults = UserDefaults.standard
+
+        // Should return false if UserDefaults does not have a value for key
+        XCTAssertFalse(userDefaults.hasValue(forKey: "test"))
+
+        // Should return true if UserDefaults has value
+        userDefaults.set(false, forKey: "test")
+        XCTAssertTrue(userDefaults.hasValue(forKey: "test"))
+
+        // Should not have value after tests complete (effectively a test of the test)
+        userDefaults.removeObject(forKey: "test")
+        XCTAssertFalse(userDefaults.hasValue(forKey: "test"))
+    }
+
 }
