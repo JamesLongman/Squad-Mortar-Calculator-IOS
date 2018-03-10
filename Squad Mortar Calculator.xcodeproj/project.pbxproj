@@ -34,6 +34,8 @@
 		E66FFE94202735A2007B730B /* EnlargedMortarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66FFE93202735A2007B730B /* EnlargedMortarViewController.swift */; };
 		E66FFE98202890E6007B730B /* EnlargedMortarGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66FFE97202890E6007B730B /* EnlargedMortarGridViewController.swift */; };
 		E6891B64202369DD0065492F /* MortarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6891B63202369DD0065492F /* MortarViewController.swift */; };
+		E699512A204B7A43003AA11D /* NumpadKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6995129204B7A43003AA11D /* NumpadKeyboard.xib */; };
+		E699512C204B80AE003AA11D /* NumpadKeyboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E699512B204B80AE003AA11D /* NumpadKeyboardController.swift */; };
 		E6A11E872023AEE400A0643A /* CoordinateTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A11E862023AEE400A0643A /* CoordinateTextFields.swift */; };
 		E6BB542F2053706400BBBD04 /* calcValuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BB542E2053706400BBBD04 /* calcValuesTests.swift */; };
 		E6D4CFDF2022EA0900FF5658 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D4CFDE2022EA0900FF5658 /* AppDelegate.swift */; };
@@ -103,6 +105,8 @@
 		E66FFE93202735A2007B730B /* EnlargedMortarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargedMortarViewController.swift; sourceTree = "<group>"; };
 		E66FFE97202890E6007B730B /* EnlargedMortarGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargedMortarGridViewController.swift; sourceTree = "<group>"; };
 		E6891B63202369DD0065492F /* MortarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortarViewController.swift; sourceTree = "<group>"; };
+		E6995129204B7A43003AA11D /* NumpadKeyboard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumpadKeyboard.xib; sourceTree = "<group>"; };
+		E699512B204B80AE003AA11D /* NumpadKeyboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumpadKeyboardController.swift; sourceTree = "<group>"; };
 		E6A11E862023AEE400A0643A /* CoordinateTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateTextFields.swift; sourceTree = "<group>"; };
 		E6BB542E2053706400BBBD04 /* calcValuesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calcValuesTests.swift; sourceTree = "<group>"; };
 		E6D4CFDB2022EA0900FF5658 /* Squad Mortar Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Squad Mortar Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,6 +246,15 @@
 			path = "Barrage VCs";
 			sourceTree = "<group>";
 		};
+		E6995128204B79F6003AA11D /* Keyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E6995129204B7A43003AA11D /* NumpadKeyboard.xib */,
+				E699512B204B80AE003AA11D /* NumpadKeyboardController.swift */,
+			);
+			path = Keyboards;
+			sourceTree = "<group>";
+		};
 		E6D4CFD22022EA0900FF5658 = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +280,7 @@
 		E6D4CFDD2022EA0900FF5658 /* Squad Mortar Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				E6995128204B79F6003AA11D /* Keyboards */,
 				E61407DD203286FA00F6FB49 /* Calculator VCs */,
 				E61407EB203A94A800F6FB49 /* Corrections VCs */,
 				E61407EE203A959B00F6FB49 /* Barrage VCs */,
@@ -425,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6D4CFE92022EA0900FF5658 /* LaunchScreen.storyboard in Resources */,
+				E699512A204B7A43003AA11D /* NumpadKeyboard.xib in Resources */,
 				E6D4CFE62022EA0900FF5658 /* Assets.xcassets in Resources */,
 				E6D4CFE42022EA0900FF5658 /* Main.storyboard in Resources */,
 			);
@@ -639,6 +654,7 @@
 				E61407E02032881C00F6FB49 /* GuideViewController.swift in Sources */,
 				E61407E42035275300F6FB49 /* PrimaryTabBarController.swift in Sources */,
 				E61407ED203A950100F6FB49 /* CorrectionsViewController.swift in Sources */,
+				E699512C204B80AE003AA11D /* NumpadKeyboardController.swift in Sources */,
 				E6140800203B9FB100F6FB49 /* BarrageEnlargedTargetViewController.swift in Sources */,
 				E61407F8203B162A00F6FB49 /* CorrectionsEnlargedTargetGridViewController.swift in Sources */,
 				E61407E62039CD1500F6FB49 /* calcValues.swift in Sources */,
