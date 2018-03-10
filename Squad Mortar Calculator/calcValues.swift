@@ -14,8 +14,6 @@ import Foundation
 class Calc {
     static let sharedInstance = Calc()
 
-    func network() {} // TODO: Not sure what this is but scared to delete, will look at in testing #5
-
     private init() {}
 
     // Has the calculator recieved valid input

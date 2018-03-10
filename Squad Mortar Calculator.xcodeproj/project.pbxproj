@@ -35,6 +35,7 @@
 		E66FFE98202890E6007B730B /* EnlargedMortarGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66FFE97202890E6007B730B /* EnlargedMortarGridViewController.swift */; };
 		E6891B64202369DD0065492F /* MortarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6891B63202369DD0065492F /* MortarViewController.swift */; };
 		E6A11E872023AEE400A0643A /* CoordinateTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A11E862023AEE400A0643A /* CoordinateTextFields.swift */; };
+		E6BB542F2053706400BBBD04 /* calcValuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BB542E2053706400BBBD04 /* calcValuesTests.swift */; };
 		E6D4CFDF2022EA0900FF5658 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D4CFDE2022EA0900FF5658 /* AppDelegate.swift */; };
 		E6D4CFE12022EA0900FF5658 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D4CFE02022EA0900FF5658 /* CalculatorViewController.swift */; };
 		E6D4CFE42022EA0900FF5658 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6D4CFE22022EA0900FF5658 /* Main.storyboard */; };
@@ -103,6 +104,7 @@
 		E66FFE97202890E6007B730B /* EnlargedMortarGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargedMortarGridViewController.swift; sourceTree = "<group>"; };
 		E6891B63202369DD0065492F /* MortarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortarViewController.swift; sourceTree = "<group>"; };
 		E6A11E862023AEE400A0643A /* CoordinateTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateTextFields.swift; sourceTree = "<group>"; };
+		E6BB542E2053706400BBBD04 /* calcValuesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calcValuesTests.swift; sourceTree = "<group>"; };
 		E6D4CFDB2022EA0900FF5658 /* Squad Mortar Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Squad Mortar Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6D4CFDE2022EA0900FF5658 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6D4CFE02022EA0900FF5658 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				E6D838812050B338005DB005 /* PrimaryTabBarControllerTests.swift */,
 				E6D838832050B3CF005DB005 /* calcFunctionsTests.swift */,
 				E627A58F2052F7080055D2BD /* extensionsTests.swift */,
+				E6BB542E2053706400BBBD04 /* calcValuesTests.swift */,
 			);
 			path = "Squad Mortar CalculatorTests";
 			sourceTree = "<group>";
@@ -649,6 +652,7 @@
 			files = (
 				E627A5902052F7080055D2BD /* extensionsTests.swift in Sources */,
 				E6D838842050B3CF005DB005 /* calcFunctionsTests.swift in Sources */,
+				E6BB542F2053706400BBBD04 /* calcValuesTests.swift in Sources */,
 				E6D838822050B338005DB005 /* PrimaryTabBarControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
