@@ -23,9 +23,11 @@ The project is developed in the 'develop' branch, the next release is built in t
 - Once work passes automated review, manual review will be required (feel free to assist in code review by commenting on code in any open PRs)
 - If no changes are required the issues branch is then merged into the develop branch, the issue is then marked completed and kept open until the next release
 
+For hotfixes that are very small and not requiring of an issue (litteraly a couple line commit for example) bypass the above workflow and just PR to develop
+
 ### Code requirements
 - Please leave comments on any code that isn't immediately obvious
-- Tests are required for all of the project's swift files, if it can be tested it should be tested with as high coverage as possible and as robustly as appropirate. If you happen to write some swift code but are unable to write tests for it simply request help with the PR
+- Tests are required for all return style functions in the project's swift files, if it can be tested it should be tested with as high coverage as possible and as robustly as appropirate. For now tests are not required for code other than functions that return some value. If you happen to write some swift code but are unable to write tests for it simply request help with the PR
 - The project conforms to the recommended style guide by tailor. Codacy will automatically comment on PRs if style changes are required
 
 ### Linter
