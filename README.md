@@ -2,7 +2,7 @@
 
 <div align="center">
     <h1>Squad-Mortar-Calculator-IOS</h1>
-    <a href="https://itunes.apple.com/us/app/reading-list-book-log/id1217139955?mt=8">
+    <a href="https://itunes.apple.com/app/id1352781413">
         <img src="https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg" style="height: 60px;"/>
     </a>
     <p>
