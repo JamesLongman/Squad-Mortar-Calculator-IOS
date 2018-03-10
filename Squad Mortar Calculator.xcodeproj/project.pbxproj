@@ -29,6 +29,7 @@
 		E61407FE203B9F7B00F6FB49 /* BarrageGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61407FD203B9F7B00F6FB49 /* BarrageGridViewController.swift */; };
 		E6140800203B9FB100F6FB49 /* BarrageEnlargedTargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61407FF203B9FB100F6FB49 /* BarrageEnlargedTargetViewController.swift */; };
 		E6140802203B9FCF00F6FB49 /* BarrageEnlargedTargetGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6140801203B9FCF00F6FB49 /* BarrageEnlargedTargetGridViewController.swift */; };
+		E627A5902052F7080055D2BD /* extensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627A58F2052F7080055D2BD /* extensionsTests.swift */; };
 		E66FFE922026692B007B730B /* MortarGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66FFE912026692B007B730B /* MortarGridViewController.swift */; };
 		E66FFE94202735A2007B730B /* EnlargedMortarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66FFE93202735A2007B730B /* EnlargedMortarViewController.swift */; };
 		E66FFE98202890E6007B730B /* EnlargedMortarGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66FFE97202890E6007B730B /* EnlargedMortarGridViewController.swift */; };
@@ -36,13 +37,15 @@
 		E699512A204B7A43003AA11D /* NumpadKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6995129204B7A43003AA11D /* NumpadKeyboard.xib */; };
 		E699512C204B80AE003AA11D /* NumpadKeyboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E699512B204B80AE003AA11D /* NumpadKeyboardController.swift */; };
 		E6A11E872023AEE400A0643A /* CoordinateTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A11E862023AEE400A0643A /* CoordinateTextFields.swift */; };
+		E6BB542F2053706400BBBD04 /* calcValuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BB542E2053706400BBBD04 /* calcValuesTests.swift */; };
 		E6D4CFDF2022EA0900FF5658 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D4CFDE2022EA0900FF5658 /* AppDelegate.swift */; };
 		E6D4CFE12022EA0900FF5658 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D4CFE02022EA0900FF5658 /* CalculatorViewController.swift */; };
 		E6D4CFE42022EA0900FF5658 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6D4CFE22022EA0900FF5658 /* Main.storyboard */; };
 		E6D4CFE62022EA0900FF5658 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6D4CFE52022EA0900FF5658 /* Assets.xcassets */; };
 		E6D4CFE92022EA0900FF5658 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6D4CFE72022EA0900FF5658 /* LaunchScreen.storyboard */; };
-		E6D4CFF42022EA0900FF5658 /* Squad_Mortar_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D4CFF32022EA0900FF5658 /* Squad_Mortar_CalculatorTests.swift */; };
 		E6D4CFFF2022EA0A00FF5658 /* Squad_Mortar_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D4CFFE2022EA0A00FF5658 /* Squad_Mortar_CalculatorUITests.swift */; };
+		E6D838822050B338005DB005 /* PrimaryTabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D838812050B338005DB005 /* PrimaryTabBarControllerTests.swift */; };
+		E6D838842050B3CF005DB005 /* calcFunctionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D838832050B3CF005DB005 /* calcFunctionsTests.swift */; };
 		EBA8004579C9A4058C3C71D3 /* Pods_Squad_Mortar_CalculatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8903A7461EA3030E50B3C3 /* Pods_Squad_Mortar_CalculatorUITests.framework */; };
 		EF446836F3104420057AAFB8 /* Pods_Squad_Mortar_CalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D56A95C97B09F08F2BEDD6 /* Pods_Squad_Mortar_CalculatorTests.framework */; };
 /* End PBXBuildFile section */
@@ -67,8 +70,11 @@
 /* Begin PBXFileReference section */
 		0E8903A7461EA3030E50B3C3 /* Pods_Squad_Mortar_CalculatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Squad_Mortar_CalculatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10D56A95C97B09F08F2BEDD6 /* Pods_Squad_Mortar_CalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Squad_Mortar_CalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E9E0C967C9E8C71079FDA1B /* Pods-Squad Mortar CalculatorTests.analyze.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad Mortar CalculatorTests.analyze.xcconfig"; path = "Pods/Target Support Files/Pods-Squad Mortar CalculatorTests/Pods-Squad Mortar CalculatorTests.analyze.xcconfig"; sourceTree = "<group>"; };
+		43FCA64BD7F9F2E42BCB4D04 /* Pods-Squad Mortar CalculatorUITests.analyze.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad Mortar CalculatorUITests.analyze.xcconfig"; path = "Pods/Target Support Files/Pods-Squad Mortar CalculatorUITests/Pods-Squad Mortar CalculatorUITests.analyze.xcconfig"; sourceTree = "<group>"; };
 		4E0A137450BEFCA3007DD525 /* Pods-Squad Mortar Calculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad Mortar Calculator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Squad Mortar Calculator/Pods-Squad Mortar Calculator.debug.xcconfig"; sourceTree = "<group>"; };
 		7B459B319504599F88B8F69B /* Pods-Squad Mortar CalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad Mortar CalculatorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Squad Mortar CalculatorUITests/Pods-Squad Mortar CalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C3FD35C3D6049C1AABCD9B4C /* Pods-Squad Mortar Calculator.analyze.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad Mortar Calculator.analyze.xcconfig"; path = "Pods/Target Support Files/Pods-Squad Mortar Calculator/Pods-Squad Mortar Calculator.analyze.xcconfig"; sourceTree = "<group>"; };
 		CD612CD50EAB5F04AC174FA3 /* Pods_Squad_Mortar_Calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Squad_Mortar_Calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36218B670B17AAF55F87804 /* Pods-Squad Mortar CalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad Mortar CalculatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Squad Mortar CalculatorTests/Pods-Squad Mortar CalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		D62F5606306EC61445179FAB /* Pods-Squad Mortar CalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad Mortar CalculatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Squad Mortar CalculatorTests/Pods-Squad Mortar CalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +100,7 @@
 		E61407FD203B9F7B00F6FB49 /* BarrageGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrageGridViewController.swift; sourceTree = "<group>"; };
 		E61407FF203B9FB100F6FB49 /* BarrageEnlargedTargetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrageEnlargedTargetViewController.swift; sourceTree = "<group>"; };
 		E6140801203B9FCF00F6FB49 /* BarrageEnlargedTargetGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrageEnlargedTargetGridViewController.swift; sourceTree = "<group>"; };
+		E627A58F2052F7080055D2BD /* extensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionsTests.swift; sourceTree = "<group>"; };
 		E66FFE912026692B007B730B /* MortarGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortarGridViewController.swift; sourceTree = "<group>"; };
 		E66FFE93202735A2007B730B /* EnlargedMortarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargedMortarViewController.swift; sourceTree = "<group>"; };
 		E66FFE97202890E6007B730B /* EnlargedMortarGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargedMortarGridViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +108,7 @@
 		E6995129204B7A43003AA11D /* NumpadKeyboard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumpadKeyboard.xib; sourceTree = "<group>"; };
 		E699512B204B80AE003AA11D /* NumpadKeyboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumpadKeyboardController.swift; sourceTree = "<group>"; };
 		E6A11E862023AEE400A0643A /* CoordinateTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateTextFields.swift; sourceTree = "<group>"; };
+		E6BB542E2053706400BBBD04 /* calcValuesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calcValuesTests.swift; sourceTree = "<group>"; };
 		E6D4CFDB2022EA0900FF5658 /* Squad Mortar Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Squad Mortar Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6D4CFDE2022EA0900FF5658 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6D4CFE02022EA0900FF5658 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
@@ -109,11 +117,12 @@
 		E6D4CFE82022EA0900FF5658 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E6D4CFEA2022EA0900FF5658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6D4CFEF2022EA0900FF5658 /* Squad Mortar CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Squad Mortar CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E6D4CFF32022EA0900FF5658 /* Squad_Mortar_CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squad_Mortar_CalculatorTests.swift; sourceTree = "<group>"; };
 		E6D4CFF52022EA0900FF5658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6D4CFFA2022EA0900FF5658 /* Squad Mortar CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Squad Mortar CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6D4CFFE2022EA0A00FF5658 /* Squad_Mortar_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squad_Mortar_CalculatorUITests.swift; sourceTree = "<group>"; };
 		E6D4D0002022EA0A00FF5658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6D838812050B338005DB005 /* PrimaryTabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTabBarControllerTests.swift; sourceTree = "<group>"; };
+		E6D838832050B3CF005DB005 /* calcFunctionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calcFunctionsTests.swift; sourceTree = "<group>"; };
 		FB7206AC631971228284313E /* Pods-Squad Mortar CalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Squad Mortar CalculatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Squad Mortar CalculatorUITests/Pods-Squad Mortar CalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +173,9 @@
 				D36218B670B17AAF55F87804 /* Pods-Squad Mortar CalculatorTests.release.xcconfig */,
 				FB7206AC631971228284313E /* Pods-Squad Mortar CalculatorUITests.debug.xcconfig */,
 				7B459B319504599F88B8F69B /* Pods-Squad Mortar CalculatorUITests.release.xcconfig */,
+				C3FD35C3D6049C1AABCD9B4C /* Pods-Squad Mortar Calculator.analyze.xcconfig */,
+				1E9E0C967C9E8C71079FDA1B /* Pods-Squad Mortar CalculatorTests.analyze.xcconfig */,
+				43FCA64BD7F9F2E42BCB4D04 /* Pods-Squad Mortar CalculatorUITests.analyze.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -290,8 +302,11 @@
 		E6D4CFF22022EA0900FF5658 /* Squad Mortar CalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				E6D4CFF32022EA0900FF5658 /* Squad_Mortar_CalculatorTests.swift */,
 				E6D4CFF52022EA0900FF5658 /* Info.plist */,
+				E6D838812050B338005DB005 /* PrimaryTabBarControllerTests.swift */,
+				E6D838832050B3CF005DB005 /* calcFunctionsTests.swift */,
+				E627A58F2052F7080055D2BD /* extensionsTests.swift */,
+				E6BB542E2053706400BBBD04 /* calcValuesTests.swift */,
 			);
 			path = "Squad Mortar CalculatorTests";
 			sourceTree = "<group>";
@@ -318,6 +333,7 @@
 				E6D4CFD92022EA0900FF5658 /* Resources */,
 				257682DC55791E1E3CA6F114 /* [CP] Embed Pods Frameworks */,
 				EDD4E5CDF380C42DF8DCD03F /* [CP] Copy Pods Resources */,
+				E6202B4B204EE8FD00154697 /* Run Tailor */,
 			);
 			buildRules = (
 			);
@@ -386,6 +402,7 @@
 					};
 					E6D4CFEE2022EA0900FF5658 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = E6D4CFDA2022EA0900FF5658;
 					};
@@ -562,6 +579,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Squad Mortar CalculatorUITests/Pods-Squad Mortar CalculatorUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E6202B4B204EE8FD00154697 /* Run Tailor */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Tailor";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -x\n\nif [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n    if hash tailor 2>/dev/null; then\n        tailor --min-name-length=2 --max-line-length=120\n    else\n        echo \"warning: Please install Tailor from https://tailor.sh\"\n    fi\nfi";
+		};
 		EDD4E5CDF380C42DF8DCD03F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -635,7 +666,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6D4CFF42022EA0900FF5658 /* Squad_Mortar_CalculatorTests.swift in Sources */,
+				E627A5902052F7080055D2BD /* extensionsTests.swift in Sources */,
+				E6D838842050B3CF005DB005 /* calcFunctionsTests.swift in Sources */,
+				E6BB542F2053706400BBBD04 /* calcValuesTests.swift in Sources */,
+				E6D838822050B338005DB005 /* PrimaryTabBarControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +716,124 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E627A58B2052A3E10055D2BD /* Analyze */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: James Longman (5SS98SJ973)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Analyze;
+		};
+		E627A58C2052A3E10055D2BD /* Analyze */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3FD35C3D6049C1AABCD9B4C /* Pods-Squad Mortar Calculator.analyze.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5SS98SJ973;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "Squad Mortar Calculator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_MAP_FILE_PATH = "$(TARGET_TEMP_DIR)/$(PRODUCT_NAME)-LinkMap-$(CURRENT_VARIANT)-$(CURRENT_ARCH).txt";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JamesLongman.Squad-Mortar-Calculator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Analyze;
+		};
+		E627A58D2052A3E10055D2BD /* Analyze */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E9E0C967C9E8C71079FDA1B /* Pods-Squad Mortar CalculatorTests.analyze.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5SS98SJ973;
+				INFOPLIST_FILE = "Squad Mortar CalculatorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JamesLongman.Squad-Mortar-CalculatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Squad Mortar Calculator.app/Squad Mortar Calculator";
+			};
+			name = Analyze;
+		};
+		E627A58E2052A3E10055D2BD /* Analyze */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43FCA64BD7F9F2E42BCB4D04 /* Pods-Squad Mortar CalculatorUITests.analyze.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5SS98SJ973;
+				INFOPLIST_FILE = "Squad Mortar CalculatorUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JamesLongman.Squad-Mortar-CalculatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Squad Mortar Calculator";
+			};
+			name = Analyze;
+		};
 		E6D4D0012022EA0A00FF5658 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -837,12 +989,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5SS98SJ973;
 				INFOPLIST_FILE = "Squad Mortar CalculatorTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.JamesLongman.Squad-Mortar-CalculatorTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Squad Mortar Calculator.app/Squad Mortar Calculator";
@@ -855,6 +1009,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5SS98SJ973;
 				INFOPLIST_FILE = "Squad Mortar CalculatorTests/Info.plist";
@@ -908,6 +1063,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E6D4D0012022EA0A00FF5658 /* Debug */,
+				E627A58B2052A3E10055D2BD /* Analyze */,
 				E6D4D0022022EA0A00FF5658 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -917,6 +1073,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E6D4D0042022EA0A00FF5658 /* Debug */,
+				E627A58C2052A3E10055D2BD /* Analyze */,
 				E6D4D0052022EA0A00FF5658 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -926,6 +1083,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E6D4D0072022EA0A00FF5658 /* Debug */,
+				E627A58D2052A3E10055D2BD /* Analyze */,
 				E6D4D0082022EA0A00FF5658 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -935,6 +1093,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E6D4D00A2022EA0A00FF5658 /* Debug */,
+				E627A58E2052A3E10055D2BD /* Analyze */,
 				E6D4D00B2022EA0A00FF5658 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

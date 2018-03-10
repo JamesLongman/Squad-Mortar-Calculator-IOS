@@ -1,11 +1,57 @@
-![alt text](https://i.imgur.com/e0Hxbwp.png)
+<img src="https://i.imgur.com/p4Sh42i.jpg"/>
 
-# Squad-Mortar-Calculator-IOS
-IOS App: Mortar calculator for the video game Squad
+<div align="center">
+    <h1>Squad-Mortar-Calculator-IOS</h1>
+    <h4>IOS App: Mortar calculator for the video game Squad</h4>
+    <p>
+        <a href="https://github.com/JamesLongman/squad-mortar-calculator-ios/blob/develop/LICENSE"><img src="https://img.shields.io/github/license/JamesLongman/squad-mortar-calculator-ios.svg"></a>
+        <a class="badge-align" href="https://www.codacy.com/app/JamesLongman/Squad-Mortar-Calculator-IOS?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JamesLongman/Squad-Mortar-Calculator-IOS&amp;utm_campaign=Badge_Grade">              <img src="https://api.codacy.com/project/badge/Grade/f1b2432de4b4427fa7b0b6680384ead8"/>
+        </a>
+        <a href="https://travis-ci.org/JamesLongman/Squad-Mortar-Calculator-IOS"><img src="https://travis-ci.org/JamesLongman/Squad-Mortar-Calculator-IOS.svg?branch=develop"></a>
+        <a href="https://codecov.io/gh/JamesLongman/Squad-Mortar-Calculator-IOS">
+            <img src="https://codecov.io/gh/JamesLongman/Squad-Mortar-Calculator-IOS/branch/develop/graph/badge.svg" />
+        </a>
+    </p>
+    <a href="https://itunes.apple.com/app/id1352781413">
+        <img src="https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg" style="height: 60px;"/>
+    </a>
+</div>
+
+<br />
 
 There are a few websites out there with mortar calculators and even an android app but unfortunately there was no IOS app and many
 people including myself wanted one so here it is! This is the first IOS app I have made and my first time using Swift or
 Xcode so contributions are definitely welcome there is certainly a lot that can be improved on I am sure.
+
+## Features
+The application currently comes with 3 main features
+
+<img src="https://i.imgur.com/PWT1vBAt.jpg" align="right" />
+
+### Calculate
+The classic calculator.
+
+This tab takes two inputs of mortar and target grids, and is capable of selecting sub-grid positions.
+
+The calculator provides results for Distance, Azimuth and Milliradians.
+
+<img src="https://i.imgur.com/RfvVjDtt.jpg" align="left" />
+
+### Correct
+Adjust results.
+
+This tab is used to correct the initial calculation if needed, it can be used to move the target an ammount of meters in any direction or simply add or subtract from the range.
+
+This can be useful for when extra precision is required by the user.
+
+<img src="https://i.imgur.com/z8UEeijt.jpg" align="right" />
+
+### Barrage
+Spread fire.
+
+This tab is used to give regular calibrations to target points within a specified area.
+
+This can be useful for when the user wishes to suppress an entire zone.
 
 ## How it works
 
@@ -24,7 +70,7 @@ on the user's screen.
 
 After both the Mortar and Target positions are accepted and converted to meters in the XY plane, the distance and azimuth are found
 by simple trigonometry. The milliradian value is then calculated from the meter value using the formula discussed previously. The precise
-formula used for those interested is:
+formula currently used for those interested is:
 >
     func rads(distance: Double) -> Double {
         var rads:Double = 1603.9273942850821 // const from polynomial
@@ -44,15 +90,18 @@ formula used for those interested is:
         return rads
     }
     
-## Contribution Guidelines
+## Development
 
-Thank you for considering contributing to the project, I am very much a beginner when it comes to swift so feedback and pull requests are
-very much welcome. To report a bug or suggest a new feature simply open a new issue after making a
-quick search to check a duplicate issue does not already exist.
+### Future Features
+Features that will hopefully be added to the project:
+- A map UI for input
+- Accounting for height differences in calculations
 
-For code contributions please first assign the relevant issue to yourself, then branch off the develop branch and create a PR to merge
-your work into the develop branch when you're ready. Comments on issues and pull requests are also very much welcome.
+### Contribution Guidelines
 
-Please leave comments on any code that isn't immediately obvious, tests aren't required as the entire project needs them currently.
+Contribution guidelines for the project can be found [here](Contribution.md)
 
-The master branch is the current release and the develop branch is the next release.
+<img src="https://i.imgur.com/e0Hxbwp.png" align="right" />
+
+### Acknowledgements
+- Quacken: In-game screenshot

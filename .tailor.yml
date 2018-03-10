@@ -1,0 +1,31 @@
+include:
+    - Squad\ Mortar\ Calculator
+    - Squad\ Mortar\ CalculatorTests
+    - Squad\ Mortar\ CalculatorUITests
+
+exclude:
+    - Pods
+
+only:
+    - lower-camel-case
+    - constant-naming
+    - constant-k-prefix
+    - arrow-whitespace
+    - angle-bracket-whitespace
+    - colon-whitespace
+    - comma-whitespace
+    - operator-whitespace
+    - leading-whitespace
+    - terminating-newline
+    - trailing-whitespace
+    - comment-whitespace
+    - function-whitespace
+    - redundant-parentheses
+    - brace-style
+    - forced-type-cast
+    - multiple-imports
+    - terminating-semicolon
+    - todo-syntax
+    - trailing-closure
+    
+    
