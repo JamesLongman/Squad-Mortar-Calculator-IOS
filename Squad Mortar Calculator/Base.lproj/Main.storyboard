@@ -206,7 +206,6 @@
                                                                     <userDefinedRuntimeAttribute type="string" keyPath="allowedChars" value="123456789"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
-                                                                    <action selector="middleMortarFieldBegun:" destination="MPQ-Uw-oEX" eventType="editingDidBegin" id="XZ0-bm-zSO"/>
                                                                     <action selector="middleMortarFieldEnded:" destination="MPQ-Uw-oEX" eventType="editingDidEnd" id="0ke-0C-7TD"/>
                                                                 </connections>
                                                             </textField>

@@ -13,11 +13,10 @@ protocol MortarLocations {
     func mortarLocations()
 }
 
-class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc3, NumpadKeyboardDelegate {
+class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc3 {
 
     var delegate: MortarLocations?
     let calc = Calc.sharedInstance
-    var activeTextField = UITextField()
 
     // 3 fields and grid in Mortar view
     @IBOutlet weak var leftMortarField: CoordinatesTextField1!
@@ -25,23 +24,11 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
     @IBOutlet weak var rightMortarField: CoordinatesTextField2!
     @IBOutlet weak var mortarGrid: UIView!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        middleMortarField.delegate = self
-
-        // initialize custom keyboard
-        let numpadKeyboardView = NumpadKeyboardViewController(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
-        numpadKeyboardView.delegate = self // the view controller will be notified by the keyboard whenever a key is tapped
-
-        // replace system keyboard with custom keyboard
-        middleMortarField.inputView = numpadKeyboardView
-    }
-
-    //Allow keyboard to be dismissed via touching elsewhere on the view
-
+    // Allow keyboard to be dismissed via touching elsewhere on the view
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        resignFields()
+        leftMortarField.resignFirstResponder()
+        middleMortarField.resignFirstResponder()
+        rightMortarField.resignFirstResponder()
     }
 
     // Declare self as a delegate of sub view so can be notified upon input
@@ -50,10 +37,6 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
             let mortarGridViewController = segue.destination as? MortarGridViewController
             mortarGridViewController?.delegate = self
         }
-    }
-
-    @IBAction func middleMortarFieldBegun(_ sender: Any) {
-        activeTextField = middleMortarField
     }
 
     // When edditting ends in any input field, check to see if input is of a complete format
@@ -247,24 +230,6 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
 
     func rejectRightMortarField() {
         rightMortarField.backgroundColor = UIColor.red
-    }
-
-    func numpadKeyWasTapped(number: String) {
-        activeTextField.insertText(number)
-    }
-
-    func doneKeyWasTapped() {
-        resignFields()
-    }
-
-    func resignFields() {
-        leftMortarField.resignFirstResponder()
-        middleMortarField.resignFirstResponder()
-        rightMortarField.resignFirstResponder()
-    }
-
-    func backspaceWasTapped() {
-        activeTextField.deleteBackward()
     }
 
 }
