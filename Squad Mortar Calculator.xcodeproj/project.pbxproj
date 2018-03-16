@@ -30,6 +30,7 @@
 		E6140800203B9FB100F6FB49 /* BarrageEnlargedTargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61407FF203B9FB100F6FB49 /* BarrageEnlargedTargetViewController.swift */; };
 		E6140802203B9FCF00F6FB49 /* BarrageEnlargedTargetGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6140801203B9FCF00F6FB49 /* BarrageEnlargedTargetGridViewController.swift */; };
 		E627A5902052F7080055D2BD /* extensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E627A58F2052F7080055D2BD /* extensionsTests.swift */; };
+		E636AFE3205BF40200F65465 /* GuideViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E636AFE2205BF40200F65465 /* GuideViewControllerTests.swift */; };
 		E66FFE922026692B007B730B /* MortarGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66FFE912026692B007B730B /* MortarGridViewController.swift */; };
 		E66FFE94202735A2007B730B /* EnlargedMortarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66FFE93202735A2007B730B /* EnlargedMortarViewController.swift */; };
 		E66FFE98202890E6007B730B /* EnlargedMortarGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66FFE97202890E6007B730B /* EnlargedMortarGridViewController.swift */; };
@@ -99,6 +100,7 @@
 		E61407FF203B9FB100F6FB49 /* BarrageEnlargedTargetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrageEnlargedTargetViewController.swift; sourceTree = "<group>"; };
 		E6140801203B9FCF00F6FB49 /* BarrageEnlargedTargetGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrageEnlargedTargetGridViewController.swift; sourceTree = "<group>"; };
 		E627A58F2052F7080055D2BD /* extensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionsTests.swift; sourceTree = "<group>"; };
+		E636AFE2205BF40200F65465 /* GuideViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewControllerTests.swift; sourceTree = "<group>"; };
 		E66FFE912026692B007B730B /* MortarGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortarGridViewController.swift; sourceTree = "<group>"; };
 		E66FFE93202735A2007B730B /* EnlargedMortarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargedMortarViewController.swift; sourceTree = "<group>"; };
 		E66FFE97202890E6007B730B /* EnlargedMortarGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargedMortarGridViewController.swift; sourceTree = "<group>"; };
@@ -242,6 +244,14 @@
 			path = "Barrage VCs";
 			sourceTree = "<group>";
 		};
+		E636AFE1205BF37700F65465 /* More VCsTests */ = {
+			isa = PBXGroup;
+			children = (
+				E636AFE2205BF40200F65465 /* GuideViewControllerTests.swift */,
+			);
+			path = "More VCsTests";
+			sourceTree = "<group>";
+		};
 		E6D4CFD22022EA0900FF5658 = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +298,7 @@
 		E6D4CFF22022EA0900FF5658 /* Squad Mortar CalculatorTests */ = {
 			isa = PBXGroup;
 			children = (
+				E636AFE1205BF37700F65465 /* More VCsTests */,
 				E6D4CFF52022EA0900FF5658 /* Info.plist */,
 				E6D838812050B338005DB005 /* PrimaryTabBarControllerTests.swift */,
 				E6D838832050B3CF005DB005 /* calcFunctionsTests.swift */,
@@ -576,7 +587,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -x\n\nif [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n    if hash tailor 2>/dev/null; then\n        tailor --min-name-length=2 --max-line-length=120\n    else\n        echo \"warning: Please install Tailor from https://tailor.sh\"\n    fi\nfi";
+			shellScript = "set -x\n\nif [ \"${CONFIGURATION}\" = \"Analyze\" ]; then\n    if hash tailor 2>/dev/null; then\n        tailor --min-name-length=2 --max-line-length=120\n    else\n        echo \"warning: Please install Tailor from https://tailor.sh\"\n    fi\nfi";
 		};
 		EDD4E5CDF380C42DF8DCD03F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -653,6 +664,7 @@
 				E627A5902052F7080055D2BD /* extensionsTests.swift in Sources */,
 				E6D838842050B3CF005DB005 /* calcFunctionsTests.swift in Sources */,
 				E6BB542F2053706400BBBD04 /* calcValuesTests.swift in Sources */,
+				E636AFE3205BF40200F65465 /* GuideViewControllerTests.swift in Sources */,
 				E6D838822050B338005DB005 /* PrimaryTabBarControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

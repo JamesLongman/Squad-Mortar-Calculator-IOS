@@ -28,6 +28,7 @@ class PrimaryTabBarController: UITabBarController {
 
     // Function to determine if a request for a review should be made upon app start
     func review() {
+        SKStoreReviewController.requestReview()
         let userDefaults = UserDefaults.standard
         let now = Int(NSDate().timeIntervalSince1970)
         // If app was last opened more than an hour ago
