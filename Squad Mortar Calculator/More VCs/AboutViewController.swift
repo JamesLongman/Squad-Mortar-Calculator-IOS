@@ -26,12 +26,4 @@ class AboutViewController: UIViewController {
         aboutText.text = body
     }
 
-    @IBAction func backButton(_ sender: Any) {
-        presentingViewController?.dismiss(animated: true, completion: nil)
-    }
-
-    @IBAction func backTextButton(_ sender: Any) {
-        presentingViewController?.dismiss(animated: true, completion: nil)
-    }
-
 }
