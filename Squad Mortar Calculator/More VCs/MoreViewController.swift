@@ -32,7 +32,6 @@ class MoreViewController: UITableViewController {
         let moreCell = self.tableView.dequeueReusableCell(withIdentifier: "moreCell", for: indexPath)
         moreCell.textLabel?.text = moreTable[indexPath.row]
         return moreCell
-
     }
 
     // Actions to be taken upon a touch of a particular table item
