@@ -939,7 +939,7 @@
         <!--Barrage-->
         <scene sceneID="mO6-wZ-K1V">
             <objects>
-                <viewController id="qVG-jB-rgn" customClass="BarrageViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BarrageView" id="qVG-jB-rgn" customClass="BarrageViewController" customModule="Squad_Mortar_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2UY-c2-cBV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
