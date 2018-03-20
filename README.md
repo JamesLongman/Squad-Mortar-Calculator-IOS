@@ -99,7 +99,7 @@ Features that will hopefully be added to the project:
 
 ### Contribution Guidelines
 
-Contribution guidelines for the project can be found [here](Contribution.md)
+Contribution guidelines for the project can be found [here](CONTRIBUTING.md)
 
 <img src="https://i.imgur.com/e0Hxbwp.png" align="right" />
 
