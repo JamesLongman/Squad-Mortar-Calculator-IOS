@@ -80,7 +80,7 @@ class MortarViewController: UIViewController, UITextFieldDelegate, PassMortarLoc
             mortarYPos = (Double(String(leftMortarField.text![1]))! - 1) * 300
         } else {
             mortarYPos = Double(String(leftMortarField.text![1]))! * 3000
-            mortarYPos = (Double(String(leftMortarField.text![2]))! - 1) * 300
+            mortarYPos += (Double(String(leftMortarField.text![2]))! - 1) * 300
         }
         
         // Convert second field to meters and add to sum
