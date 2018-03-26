@@ -79,7 +79,7 @@ class CorrectionsTargetViewController: UIViewController, UITextFieldDelegate, Pa
             targetYPos = (Double(String(leftTargetField.text![1]))! - 1) * 300
         } else {
             targetYPos = Double(String(leftTargetField.text![1]))! * 3000
-            targetYPos = (Double(String(leftTargetField.text![2]))! - 1) * 300
+            targetYPos += (Double(String(leftTargetField.text![2]))! - 1) * 300
         }
         
         switch Int(middleTargetField.text!)! {
