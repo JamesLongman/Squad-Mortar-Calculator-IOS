@@ -105,3 +105,4 @@ Contribution guidelines for the project can be found [here](CONTRIBUTING.md)
 
 ### Acknowledgements
 - Quacken: In-game screenshot
+- Askatykus: Reported bug #37
